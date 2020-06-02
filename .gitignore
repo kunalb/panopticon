@@ -1,0 +1,8 @@
+# -*- mode: gitignore; -*-
+\#*\#
+.\#*
+*.pyc
+__pycache__
+.mypy_cache
+panopticon/__pycache__
+

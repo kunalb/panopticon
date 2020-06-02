@@ -6,7 +6,7 @@ import os
 import sys
 import threading
 
-from .trace import Trace, DurationTraceEvent, TraceEvent
+from .trace import *
 
 
 class Tracer:
@@ -52,23 +52,18 @@ class FunctionTracer(Tracer):
         code = frame.f_code
 
         if event == 'call' or event == 'return':
-            ph = "B" if event == 'call' else 'E'
+            ph = Phase.Duration.START if event == 'call' else Phase.Duration.END
             self._trace.add_event(DurationTraceEvent(
                 name=f"{code.co_name}",
                 cat=f"{code.co_filename}",
                 ph=ph,
-                pid=os.getpid(),
-                tid=threading.get_ident(), # get_native_id()
             ))
         elif event == 'line':
-            self._trace.add_event(TraceEvent(
+            self._trace.add_event(InstantTraceEvent(
                 name=f"{code.co_name}:{frame.f_lineno}",
                 cat=f"{code.co_filename}",
-                ph="I",
-                pid=os.getpid(),
-                tid=threading.get_ident(), # get_native_id()
             ))
-        else:
-            print(frame, event, arg)
+        # else:
+        #   print(frame, event, arg)
         
         return self

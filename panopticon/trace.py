@@ -5,13 +5,16 @@
 from __future__ import annotations
 
 import json
+import os
+import threading
 
-from typing import Dict
 from dataclasses import asdict, dataclass, field
+from enum import Enum
+from typing import Dict
 from time import perf_counter_ns
 
-class Trace:
 
+class Trace:
     def __init__(self):
         self._events = []
 
@@ -19,28 +22,85 @@ class Trace:
         self._events.append(event)
 
     def __str__(self) -> str:
-        return json.dumps({
-            "traceEvents": [asdict(x) for x in self._events],
-            "displayTimeUnit": "ns",
-            "otherData": {
-                "version": "Panopticon 0.1"
-            },
-        })
-        
+        return json.dumps(
+            {
+                "traceEvents": [asdict(x) for x in self._events],
+                "displayTimeUnit": "ns",
+                "otherData": {"version": "Panopticon 0.1"},
+            }
+        )
+
+
+class _SerializableEnum(str, Enum):
+    ...
+
+
+class Phase:
+    class Duration(_SerializableEnum):
+        START = "B"
+        END = "E"
+
+    class Instant(_SerializableEnum):
+        INSTANT = "i"
+
+    class Counter(_SerializableEnum):
+        COUNTER = "c"
+
+    class Complete(_SerializableEnum):
+        INSTANT = "X"
+
+    class Async(_SerializableEnum):
+        START = "b"
+        INSTANT = "n"
+        END = "e"
+
+    class Flow(_SerializableEnum):
+        START = "s"
+        INSTANT = "t"
+        END = "f"
+
+    class Object(_SerializableEnum):
+        NEW = "N"
+        SNAPSHOT = "O"
+        DESTROY = "D"
+
 
 @dataclass
 class TraceEvent:
     name: str
     cat: str
     ph: str
-    pid: int
-    tid: int
     args: Optional[Dict[str, Any]] = None
     ts: int = field(init=False)
+    pid: int = field(init=False)
+    tid: int = field(init=False)
 
     def __post_init__(self):
         self.ts = perf_counter_ns()
+        self.pid = os.getpid()
+        self.tid = _get_thread_id()
+
 
 @dataclass
 class DurationTraceEvent(TraceEvent):
-    ...
+    ph: Phase.Duration
+
+
+class InstantScope(_SerializableEnum):
+    GLOBAL = "g"
+    PROCESS = "p"
+    THREAD = "t"
+
+
+@dataclass
+class InstantTraceEvent(TraceEvent):
+
+    ph: Phase.Instant = Phase.Instant.INSTANT
+    s: InstantTraceEvent.Scope = InstantScope.THREAD
+
+
+def _get_thread_id() -> int:
+    try:
+        return threading.get_native_id()
+    except AttributeError:
+        return threading.get_ident()
