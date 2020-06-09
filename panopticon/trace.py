@@ -76,7 +76,7 @@ class TraceEvent:
     tid: int = field(init=False)
 
     def __post_init__(self):
-        self.ts = perf_counter_ns()
+        self.ts = perf_counter_ns() / 1000
         self.pid = os.getpid()
         self.tid = _get_thread_id()
 

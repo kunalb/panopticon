@@ -36,17 +36,13 @@ class Tracer:
         raise NotImplementedError()
     
 
-class AsyncioTracer(Tracer):
-    ...
-
-
 class FunctionTracer(Tracer):
+    """TODO Fix the file names being shown, this isn't very useful"""
 
     def __init__(self):
         super().__init__()
         self._state = threading.local()
         self._state.active = None
-
 
     def __call__(self, frame, event, arg):
         code = frame.f_code
@@ -54,7 +50,7 @@ class FunctionTracer(Tracer):
         if event == 'call' or event == 'return':
             ph = Phase.Duration.START if event == 'call' else Phase.Duration.END
             self._trace.add_event(DurationTraceEvent(
-                name=f"{code.co_name}",
+                name=f"{self._name(code)}",
                 cat=f"{code.co_filename}",
                 ph=ph,
             ))
@@ -63,7 +59,22 @@ class FunctionTracer(Tracer):
                 name=f"{code.co_name}:{frame.f_lineno}",
                 cat=f"{code.co_filename}",
             ))
+
+        # TODO Figure out how to print native calls here
         # else:
         #   print(frame, event, arg)
         
         return self
+
+    @staticmethod
+    def _name(code):
+        name = os.path.splitext(os.path.basename(code.co_filename))[0]
+        return f"{name}.{code.co_name}"
+
+
+class AsyncioTracer(FunctionTracer):
+    """
+    TODO Add support for intercepting Task creation and Handle running
+    """
+    ...
+

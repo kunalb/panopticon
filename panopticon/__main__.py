@@ -1,15 +1,17 @@
 #!/bin/env python3
 
+import asyncio
 import sys 
 
 from .tracer import FunctionTracer
 
-def custom_print():
+async def sleepy_hello():
+    await asyncio.sleep(.01)
     print(f"Hello, World")
 
 def main():
     with FunctionTracer() as ft:
-        custom_print()
+        asyncio.run(sleepy_hello())
 
     print(ft.get_trace(), file=sys.stderr)
 
