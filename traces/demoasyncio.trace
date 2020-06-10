@@ -1,0 +1,6815 @@
+{
+  "traceEvents": [
+    {
+      "name": "threading.settrace",
+      "cat": "/usr/lib/python3.8/threading.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944252.213,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "threading.settrace",
+      "cat": "/usr/lib/python3.8/threading.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944275.965,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "runners.run",
+      "cat": "/usr/lib/python3.8/asyncio/runners.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944293.117,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944311.725,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944332.52,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.new_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944345.601,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944357.52,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._init_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944371.402,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "<frozen importlib.parent",
+      "cat": "<frozen importlib._bootstrap>",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944390.058,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "<frozen importlib.parent",
+      "cat": "<frozen importlib._bootstrap>",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944404.704,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "<frozen importlib._handle_fromlist",
+      "cat": "<frozen importlib._bootstrap>",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944417.72,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "<frozen importlib._handle_fromlist",
+      "cat": "<frozen importlib._bootstrap>",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944442.279,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944456.664,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944469.368,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944485.582,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944498.34,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._init_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944508.876,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944520.21,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.new_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944530.767,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944544.568,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944558.278,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944570.956,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines._is_debug_mode",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944613.293,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_collections_abc.get",
+      "cat": "/usr/lib/python3.8/_collections_abc.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944629.948,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "os.__getitem__",
+      "cat": "/usr/lib/python3.8/os.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944644.91,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "os.encode",
+      "cat": "/usr/lib/python3.8/os.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944660.197,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "os.encode",
+      "cat": "/usr/lib/python3.8/os.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944675.431,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "os.__getitem__",
+      "cat": "/usr/lib/python3.8/os.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944701.82,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_collections_abc.get",
+      "cat": "/usr/lib/python3.8/_collections_abc.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944718.303,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines._is_debug_mode",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944729.914,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.set_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944740.228,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944755.88,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944767.679,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.set_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944777.643,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__init__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944801.149,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__init__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944824.839,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944837.991,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944854.096,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944866.533,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944881.7,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944894.225,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944904.474,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944923.609,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__.debug",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944938.976,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__.isEnabledFor",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944952.239,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__._acquireLock",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209944975.528,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__._acquireLock",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209944989.989,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__.getEffectiveLevel",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945008.32,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__.getEffectiveLevel",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945031.476,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__._releaseLock",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945046.645,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__._releaseLock",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945059.871,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__.isEnabledFor",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945071.528,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "__init__.debug",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945081.442,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._make_self_pipe",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945096.054,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.socketpair",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945109.543,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.__init__",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945146.706,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.__init__",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945169.684,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.__init__",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945183.279,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.__init__",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945202.226,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.socketpair",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945214.891,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._add_reader",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945240.227,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945254.187,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945266.071,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945280.243,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945310.059,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945321.697,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945333.551,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.get_key",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945349.568,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.get_map",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945366.08,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.get_map",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945377.706,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__getitem__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945393.791,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945408.606,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945427.447,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945445.635,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945455.629,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__getitem__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945478.185,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.get_key",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945497.25,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.register",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945527.413,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.register",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945542.879,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945559.403,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945573.945,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945591.338,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945604.212,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "<string>.__new__",
+      "cat": "<string>",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945616.154,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "<string>.__new__",
+      "cat": "<string>",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945628.897,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.register",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945645.255,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.register",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945677.762,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._add_reader",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945689.922,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._make_self_pipe",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945700.394,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "weakref.__init__",
+      "cat": "/usr/lib/python3.8/weakref.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945715.016,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "weakref.update",
+      "cat": "/usr/lib/python3.8/weakref.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945740.258,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "weakref.update",
+      "cat": "/usr/lib/python3.8/weakref.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945772.042,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "weakref.__init__",
+      "cat": "/usr/lib/python3.8/weakref.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945782.697,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945795.127,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945807.981,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.new_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945817.829,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.new_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945827.448,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945841.452,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945852.859,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945865.263,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945876.099,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945891.069,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945921.288,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945943.79,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945954.351,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.set_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945967.142,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209945981.476,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209945994.83,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.set_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946005.316,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.run_until_complete",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946022.144,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946035.555,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946047.836,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946061.528,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946073.872,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946085.888,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946098.802,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_futures.isfuture",
+      "cat": "/usr/lib/python3.8/asyncio/base_futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946112.692,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_futures.isfuture",
+      "cat": "/usr/lib/python3.8/asyncio/base_futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946129.356,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946145.633,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946175.483,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946280.089,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946298.838,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946315.753,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946340.772,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946373.913,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946387.284,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946408.853,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946423.295,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946435.536,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946451.912,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946465.952,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946491.357,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946503.398,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946518.975,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946537.732,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946554.579,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946567.527,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946587.021,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-1",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209946603.999,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 0,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hellos",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946614.318,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946629.935,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.run_forever",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946653.768,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946667.114,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946679.25,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946692.234,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946704.413,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946716.36,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946729.179,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946742.88,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946758.182,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946807.059,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946841.14,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946879.577,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946894.633,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946907.7,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946921.368,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209946933.77,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946968.145,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "demoasyncio.hellos",
+      "cat": "demoasyncio.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209946986.409,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-1",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209946992.785,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 0,
+      "bp": "e"
+    },
+    {
+      "name": "tasks.gather",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947008.972,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947044.943,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947057.091,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947070.165,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947091.132,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947103.917,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947115.165,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947130.77,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947142.017,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947155.325,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947168.009,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947179.287,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947193.722,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947214.905,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947239.456,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947251.048,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947265.433,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947281.856,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947295.575,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947306.179,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947320.37,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-2",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209947331.538,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 1,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947339.908,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947353.567,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947369.978,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947386.183,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947420.673,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947433.468,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947446.56,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947461.165,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947473.295,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947486.577,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947502.09,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947513.577,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947530.907,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947543.297,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947554.574,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947569.072,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947581.673,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947604.915,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947616.122,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947627.635,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947643.955,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947657.464,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947667.858,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947681.914,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209947692.685,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947700.794,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947714.091,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947747.325,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947759.437,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947772.25,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947786.413,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947798.467,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947809.894,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947827.897,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947839.626,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947852.259,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947867.442,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947879.229,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947893.656,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947906.282,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947929.483,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947940.724,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947952.164,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947967.66,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209947981.055,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209947991.272,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948005.24,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209948015.736,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948023.807,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948037.284,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948069.685,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948087.441,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948099.657,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948114.491,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.gather",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948127.56,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-1",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209948136.343,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 0,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hellos",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948144.522,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948163.034,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948180.749,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948196.169,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948227.445,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948278.308,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948293.955,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948308.073,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948322.545,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948337.869,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948371.997,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948390.044,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-2",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209948408.528,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 1,
+      "bp": "e"
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948423.438,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_future",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948444.826,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948457.504,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948468.823,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_future",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948478.587,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_later",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948501.478,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948516.886,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948529.018,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_at",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948545.689,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948558.268,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948569.537,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948586.232,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948601.311,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948628.547,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948639.962,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948652.039,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948668.143,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_at",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948688.028,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_later",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948702.53,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948717.406,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-2",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209948723.867,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 1,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948731.881,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948745.231,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948770.158,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948785.971,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209948791.003,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948803.553,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_future",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948823.24,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948840.272,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948852.122,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_future",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948862.166,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_later",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948880.246,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948892.578,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948904.272,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_at",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948919.804,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948931.934,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209948943.2,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948958.341,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948972.368,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209948997.678,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949008.916,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949020.609,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949035.853,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__lt__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949052.043,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__lt__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949064.268,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_at",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949078.283,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_later",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949095.529,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949109.93,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209949116.372,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949124.564,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949137.863,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949162.415,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949177.874,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209949182.9,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949195.151,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_future",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949214.857,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949227.251,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949238.703,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_future",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949248.553,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_later",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949288.306,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949301.905,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949313.626,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_at",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949329.335,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949341.585,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949353.112,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949368.168,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949382.308,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949407.506,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949418.875,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949430.439,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949448.188,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__lt__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949463.7,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__lt__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949475.196,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_at",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949488.976,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_later",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949503.227,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949516.984,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209949523.257,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949531.328,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949544.603,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949561.173,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949576.22,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949610.656,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949622.308,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949638.361,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949674.048,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949688.65,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949701.492,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949714.96,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949733.6,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__lt__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949757.415,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__lt__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949769.208,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949812.753,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._set_result_unless_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949834.101,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949849.762,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949862.026,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949873.259,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949887.582,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949900.107,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209949922.741,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949934.1,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949945.693,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949961.426,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949974.856,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._set_result_unless_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949985.233,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209949998.327,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950013.717,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950028.293,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950058.967,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950093.45,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950107.555,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950120.249,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950133.306,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950144.797,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950197.963,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950214.38,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-2",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209950219.771,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 1,
+      "bp": "e"
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950229.385,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950245.751,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._timer_handle_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950260.387,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._timer_handle_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950271.869,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950288.358,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950305.693,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950317.353,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950330.094,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950339.654,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950351.145,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-2",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209950388.342,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 1,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950416.363,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950431.131,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950444.574,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950460.274,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950475.792,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950489.196,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950513.283,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950528.307,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950546.212,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950563.288,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950577.739,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950592.281,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950618.976,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._set_result_unless_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950635.779,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950651.277,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950664.097,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950675.858,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950690.904,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950704.174,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950727.948,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950739.873,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950752.034,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950768.503,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950782.814,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._set_result_unless_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950796.363,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950810.314,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950827.007,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950843.101,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950876.748,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950914.273,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950929.404,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950943.186,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209950957.246,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209950969.629,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951019.052,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks._done_callback",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951037.013,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks._done_callback",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951066.068,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951079.903,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951104.919,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951121.845,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209951127.918,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951144.402,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951161.595,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._timer_handle_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951189.312,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._timer_handle_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951204.468,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951221.197,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951236.066,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951247.419,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951260.106,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951269.543,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951281.101,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209951307.604,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951332.526,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951345.572,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951358.914,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951423.181,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951442.829,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951471.423,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951494.97,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951506.094,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951517.47,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951532.943,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951546.26,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951559.67,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951583.635,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._set_result_unless_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951599.326,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951613.862,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951625.984,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951637.239,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951651.418,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951663.729,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951686.239,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951697.531,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951709.074,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951724.355,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951737.444,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._set_result_unless_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951747.484,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951760.238,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951775.915,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951790.641,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951821.516,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951857.07,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951871.484,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951884.13,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951897.355,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951909.511,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951946.533,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks._done_callback",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209951963.553,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks._done_callback",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209951991.763,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952004.665,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952028.425,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952044.22,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209952049.489,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952059.098,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952073.986,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._timer_handle_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952090.28,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._timer_handle_cancelled",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952102.336,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952114.115,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952128.52,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952139.607,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952152.332,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952161.8,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.sleep",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952173.325,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209952198.062,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hello",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952225.164,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952238.345,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952251.457,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952263.528,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952282.375,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952299.968,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952324.221,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952336.266,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952361.201,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952376.924,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952390.163,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952403.552,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952420.163,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952435.171,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952465.639,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952502.875,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952517.245,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952529.961,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209952543.214,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209952554.77,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953068.007,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks._done_callback",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953088.692,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953171.257,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953183.924,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953195.203,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953209.533,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953230.289,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953253.405,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953264.702,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953276.102,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953291.746,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953305.244,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks._done_callback",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953315.57,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953328.367,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953345.048,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953359.863,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953390.355,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953425.107,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953439.184,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953452.204,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953465.375,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953477.06,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953509.797,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "demoasyncio.hellos",
+      "cat": "demoasyncio.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953528.799,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-1",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209953534.448,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 0,
+      "bp": "e"
+    },
+    {
+      "name": "Task-1",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209953546.607,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 0,
+      "bp": "e"
+    },
+    {
+      "name": "demoasyncio.hellos",
+      "cat": "demoasyncio.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953555.092,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953566.311,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953578.46,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953589.483,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953603.411,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953615.672,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953638.164,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953649.33,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953660.82,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953676.372,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953689.725,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953702.794,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953726.742,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953742.298,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953772.912,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953807.153,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953821.225,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953834.064,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953847.172,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953858.649,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953888.895,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_until_complete_cb",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953904.583,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953924.417,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953939.601,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.stop",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209953950.613,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209953955.723,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209953964.194,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "base_events.stop",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953974.681,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_until_complete_cb",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953985.06,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209953997.86,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954014.191,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954037.57,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954051.324,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.run_forever",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954065.511,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.run_until_complete",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954083.5,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954094.72,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954112.108,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "runners._cancel_all_tasks",
+      "cat": "/usr/lib/python3.8/asyncio/runners.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954127.752,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.all_tasks",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954141.025,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954160.791,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209954165.867,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209954174.399,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954182.499,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954198.83,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209954203.854,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209954211.896,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954219.888,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__iter__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954230.799,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__init__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954244.205,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__init__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954257.197,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__enter__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954268.071,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__enter__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954285.269,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__exit__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954298.785,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset._commit_removals",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954321.766,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset._commit_removals",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954339.821,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__exit__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954350.223,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.__iter__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954360.919,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.<setcomp>",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954377.247,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.<setcomp>",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954394.189,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.all_tasks",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954404.747,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "runners._cancel_all_tasks",
+      "cat": "/usr/lib/python3.8/asyncio/runners.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954418.613,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.run_until_complete",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954432.543,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954444.51,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954455.797,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954468.085,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954480.201,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954491.534,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954503.92,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_futures.isfuture",
+      "cat": "/usr/lib/python3.8/asyncio/base_futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954516.892,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_futures.isfuture",
+      "cat": "/usr/lib/python3.8/asyncio/base_futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954533.031,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954546.36,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954559.453,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954575.842,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954590.927,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954602.923,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954614.126,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954630.124,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954641.719,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954656.768,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954669.251,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954680.345,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954694.462,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954706.935,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954729.815,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954743.55,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954755.613,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954771.46,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954784.764,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954795.472,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954809.637,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-5",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209954821.699,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 4,
+      "bp": "e"
+    },
+    {
+      "name": "base_events.shutdown_asyncgens",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954829.926,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954843.449,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.run_forever",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954863.137,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954875.209,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954886.417,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954898.235,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954922.664,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954935.284,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954954.704,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209954973.95,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209954989.044,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955035.532,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955066.886,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955102.744,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955117.045,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955134.196,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955147.544,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955159.264,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955190.542,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.shutdown_asyncgens",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955211.442,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-5",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209955216.859,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 4,
+      "bp": "e"
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955234.032,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209955241.059,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "Task-4",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209955250.271,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 3,
+      "bp": "e"
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955258.505,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-5",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209955268.4,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 4,
+      "bp": "e"
+    },
+    {
+      "name": "base_events.shutdown_asyncgens",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955276.448,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955288.21,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955300.484,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955318.397,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955342.589,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955364.173,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955405.1,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955440.02,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955459.743,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955477.228,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955492.194,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955513.54,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955563.412,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955591.457,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955665.667,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955729.241,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955761.47,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955798.088,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955821.553,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209955859.83,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955911.235,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_until_complete_cb",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209955964.886,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956014.377,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956061.979,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.stop",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956081.189,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "f",
+      "args": null,
+      "ts": 494209956095.884,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "Task-3",
+      "cat": "async task",
+      "ph": "s",
+      "args": null,
+      "ts": 494209956110.814,
+      "pid": 448187,
+      "tid": 448187,
+      "id": 2,
+      "bp": "e"
+    },
+    {
+      "name": "base_events.stop",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956126.75,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_until_complete_cb",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956145.553,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956168.964,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956197.742,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956251.589,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956293.423,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.run_forever",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956318.207,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.run_until_complete",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956348.325,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956388.663,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956422.352,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956448.563,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956469.191,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956494.197,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956514.756,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956538.446,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956566.263,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956586.992,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956604.981,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956639.906,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956667.098,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956690.774,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956717.993,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956745.662,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956761.35,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._close_self_pipe",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956778.886,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._remove_reader",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956795.507,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956812.848,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956827.09,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.get_key",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956843.231,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.get_map",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956856.669,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.get_map",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956869.157,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__getitem__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956885.701,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956900.996,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956915.965,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956934.292,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956944.738,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.__getitem__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956957.145,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.get_key",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209956967.439,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.unregister",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209956992.302,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.unregister",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957006.525,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957021.392,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957035.415,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957052.363,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957062.645,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.unregister",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957075.85,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.unregister",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957099.43,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957114.523,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957134.212,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957146.28,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957159.992,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._remove_reader",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957172.121,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957186.903,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket._real_close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957203.316,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket._real_close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957228.343,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957242.512,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957268.623,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket._real_close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957291.18,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket._real_close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957312.177,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "socket.close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957323.239,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events._close_self_pipe",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957341.237,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957359.148,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957372.776,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957385.474,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957432.221,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.close",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957449.204,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.close",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957470.172,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.close",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957486.917,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selectors.close",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957497.677,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "selector_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957510.723,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "unix_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957531.753,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "runners.run",
+      "cat": "/usr/lib/python3.8/asyncio/runners.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957545.216,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.__del__",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957560.85,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957573.727,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957585.689,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "base_events.__del__",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 494209957596.376,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tracer.__exit__",
+      "cat": "/home/knl/.local/lib/python3.8/site-packages/panopticon/tracer.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957618.905,
+      "pid": 448187,
+      "tid": 448187
+    },
+    {
+      "name": "tracer.stop",
+      "cat": "/home/knl/.local/lib/python3.8/site-packages/panopticon/tracer.py",
+      "ph": "B",
+      "args": null,
+      "ts": 494209957633.071,
+      "pid": 448187,
+      "tid": 448187
+    }
+  ],
+  "displayTimeUnit": "ns",
+  "otherData": {
+    "version": "Panopticon 0.1"
+  }
+}

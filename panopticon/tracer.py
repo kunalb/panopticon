@@ -37,7 +37,6 @@ class Tracer:
     
 
 class FunctionTracer(Tracer):
-    """TODO Fix the file names being shown, this isn't very useful"""
 
     def __init__(self):
         super().__init__()
@@ -54,16 +53,6 @@ class FunctionTracer(Tracer):
                 cat=f"{code.co_filename}",
                 ph=ph,
             ))
-        elif event == 'line':
-            self._trace.add_event(InstantTraceEvent(
-                name=f"{code.co_name}:{frame.f_lineno}",
-                cat=f"{code.co_filename}",
-            ))
-
-        # TODO Figure out how to print native calls here
-        # else:
-        #   print(frame, event, arg)
-        
         return self
 
     @staticmethod
@@ -73,8 +62,54 @@ class FunctionTracer(Tracer):
 
 
 class AsyncioTracer(FunctionTracer):
-    """
-    TODO Add support for intercepting Task creation and Handle running
-    """
-    ...
+
+    def __init__(self):
+        super().__init__()
+        self._ids = {}
+
+    def __call__(self, frame, event, arg):
+        code = frame.f_code
+
+        # Emit the flow event before closing it out 
+        if (code.co_filename.endswith("asyncio/base_events.py") and
+            code.co_name == "create_task" and
+            event == "return"):
+            flow_id = len(self._ids)
+            frame = arg.get_coro().cr_frame
+            task_name = arg.get_name()
+            self._ids[id(frame)] = (task_name, flow_id)
+            self._trace.add_event(FlowTraceEvent(
+                name=task_name,
+                cat="async task",
+                ph=Phase.Flow.START,
+                id=flow_id
+            ))
+        elif id(frame) in self._ids and event == "return":
+            details = self._ids[id(frame)]
+            # optimistically add another line
+            self._trace.add_event(FlowTraceEvent(
+                name=details[0],
+                cat="async task",
+                ph=Phase.Flow.START,
+                bp=FlowBindingPoint.ENCLOSING,
+                id=details[1],
+            ))
+
+        super().__call__(frame, event, arg)
+
+        # Emit the end point after starting the run
+        if id(frame) in self._ids and event == "call":
+            details = self._ids[id(frame)]
+            self._trace.add_event(FlowTraceEvent(
+                name=details[0],
+                cat="async task",
+                ph=Phase.Flow.END,
+                bp=FlowBindingPoint.ENCLOSING,
+                id=details[1],
+            ))
+
+        
+
+        return self
+            
 

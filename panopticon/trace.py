@@ -27,7 +27,8 @@ class Trace:
                 "traceEvents": [asdict(x) for x in self._events],
                 "displayTimeUnit": "ns",
                 "otherData": {"version": "Panopticon 0.1"},
-            }
+            },
+            indent="  "
         )
 
 
@@ -96,7 +97,19 @@ class InstantScope(_SerializableEnum):
 class InstantTraceEvent(TraceEvent):
 
     ph: Phase.Instant = Phase.Instant.INSTANT
-    s: InstantTraceEvent.Scope = InstantScope.THREAD
+    s: InstantScope = InstantScope.THREAD
+
+
+class FlowBindingPoint(_SerializableEnum):
+    ENCLOSING = "e"
+    NEXT = "n"
+
+
+@dataclass
+class FlowTraceEvent(TraceEvent):
+    id: int = 0  #  ick
+    ph: Phase.Flow = Phase.Flow.START
+    bp: FlowBindingPoint = FlowBindingPoint.ENCLOSING
 
 
 def _get_thread_id() -> int:

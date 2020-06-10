@@ -3,17 +3,19 @@
 import asyncio
 import sys 
 
-from .tracer import FunctionTracer
+from .tracer import AsyncioTracer
 
 async def sleepy_hello():
-    await asyncio.sleep(.01)
-    print(f"Hello, World")
+    for x in range(4):
+        await asyncio.sleep(.01)
+        print(f"Hello,", end=" ")
+    print("World")
 
 def main():
-    with FunctionTracer() as ft:
+    with AsyncioTracer() as at:
         asyncio.run(sleepy_hello())
 
-    print(ft.get_trace(), file=sys.stderr)
+    print(at.get_trace(), file=sys.stderr)
 
 if __name__ == "__main__":
     main()
