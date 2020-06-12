@@ -58,15 +58,18 @@ class FunctionTracer(Tracer):
 
         if event == 'c_call' or event == 'c_return':
             name = str(arg)
+            cat = 'c function'
         elif event == 'call' or event == 'return':
             name = self._name(code)
+            cat = code.co_filename
         else:
             name = None
+            cat = None
 
-        if ph and name:
+        if ph:
             self._trace.add_event(DurationTraceEvent(
                 name=name,
-                cat=f"{code.co_filename}",
+                cat=cat,
                 ph=ph,
             ))
 
