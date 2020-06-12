@@ -15,13 +15,13 @@ class Tracer:
         self._trace = Trace()
 
     def start(self):
-        sys.settrace(self)
-        threading.settrace(self)
+        threading.setprofile(self) # Avoid noise
+        sys.setprofile(self)
         return self
 
     def stop(self):
-        sys.settrace(None)
-        threading.settrace(None)
+        sys.setprofile(None)
+        threading.setprofile(None)
 
     def get_trace(self):
         return self._trace
@@ -44,16 +44,36 @@ class FunctionTracer(Tracer):
         self._state.active = None
 
     def __call__(self, frame, event, arg):
+        if self._skip(frame):
+            return
+
         code = frame.f_code
 
-        if event == 'call' or event == 'return':
-            ph = Phase.Duration.START if event == 'call' else Phase.Duration.END
+        if event == 'call' or event == 'c_call':
+            ph = Phase.Duration.START
+        elif event == 'return' or event == 'c_return':
+            ph = Phase.Duration.END
+        else:
+            ph = None
+
+        if event == 'c_call' or event == 'c_return':
+            name = str(arg)
+        elif event == 'call' or event == 'return':
+            name = self._name(code)
+        else:
+            name = None
+
+        if ph and name:
             self._trace.add_event(DurationTraceEvent(
-                name=f"{self._name(code)}",
+                name=name,
                 cat=f"{code.co_filename}",
                 ph=ph,
             ))
-        return self
+
+    @staticmethod
+    def _skip(frame):
+        # TODO Move this into Tracer
+        return isinstance(frame.f_locals.get('self'), Tracer)
 
     @staticmethod
     def _name(code):
@@ -107,9 +127,3 @@ class AsyncioTracer(FunctionTracer):
                 bp=FlowBindingPoint.ENCLOSING,
                 id=details[1],
             ))
-
-        
-
-        return self
-            
-
