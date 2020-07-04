@@ -1,0 +1,359 @@
+# tracer: function
+#
+# entries-in-buffer/entries-written: 336/336   #P:4
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+     threaded-ml-32307 [001] d..3 21926.770086: sched_waking: comm=AudioOutputDevi pid=32308 prio=120 target_cpu=003
+     threaded-ml-32307 [001] d..3 21926.770101: sched_migrate_task: comm=AudioOutputDevi pid=32308 prio=120 orig_cpu=3 dest_cpu=2
+     threaded-ml-32307 [001] d..4 21926.770122: sched_wake_idle_without_ipi: cpu=2
+     threaded-ml-32307 [001] d..4 21926.770128: sched_wakeup: comm=AudioOutputDevi pid=32308 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.770185: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=AudioOutputDevi next_pid=32308 next_prio=120
+ AudioOutputDevi-32308 [002] d..2 21926.770213: sched_stat_runtime: comm=AudioOutputDevi pid=32308 runtime=100814 [ns] vruntime=1115808415504 [ns]
+     threaded-ml-32307 [001] d..3 21926.770224: sched_waking: comm=AudioOutputDevi pid=32308 prio=120 target_cpu=002
+ AudioOutputDevi-32308 [002] d..2 21926.770225: sched_switch: prev_comm=AudioOutputDevi prev_pid=32308 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+     threaded-ml-32307 [001] d..4 21926.770241: sched_wake_idle_without_ipi: cpu=2
+     threaded-ml-32307 [001] d..4 21926.770245: sched_wakeup: comm=AudioOutputDevi pid=32308 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.770261: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=AudioOutputDevi next_pid=32308 next_prio=120
+           <...>-34421 [003] d..4 21926.770331: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=003
+           <...>-34421 [003] d..4 21926.770345: sched_migrate_task: comm=kworker/u8:2 pid=34380 prio=120 orig_cpu=3 dest_cpu=0
+     threaded-ml-32307 [001] d..3 21926.770357: sched_waking: comm=pulseaudio pid=2657 prio=120 target_cpu=001
+           <...>-34421 [003] d..5 21926.770364: sched_wake_idle_without_ipi: cpu=0
+           <...>-34421 [003] d..5 21926.770368: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=000
+          <idle>-0     [000] d..2 21926.770382: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+ AudioOutputDevi-32308 [002] d..2 21926.770385: sched_waking: comm=Media pid=32304 prio=120 target_cpu=002
+     threaded-ml-32307 [001] dN.4 21926.770387: sched_wakeup: comm=pulseaudio pid=2657 prio=120 target_cpu=001
+     threaded-ml-32307 [001] dN.2 21926.770393: sched_stat_runtime: comm=threaded-ml pid=32307 runtime=460865 [ns] vruntime=1112949224876 [ns]
+           <...>-34380 [000] d..3 21926.770405: sched_waking: comm=tmux: server pid=1613 prio=120 target_cpu=001
+ AudioOutputDevi-32308 [002] d..3 21926.770406: sched_stat_runtime: comm=AudioOutputDevi pid=32308 runtime=167199 [ns] vruntime=1115808582703 [ns]
+     threaded-ml-32307 [001] d..2 21926.770409: sched_switch: prev_comm=threaded-ml prev_pid=32307 prev_prio=120 prev_state=R+ ==> next_comm=pulseaudio next_pid=2657 next_prio=120
+           <...>-34380 [000] d..3 21926.770418: sched_migrate_task: comm=tmux: server pid=1613 prio=120 orig_cpu=1 dest_cpu=0
+ AudioOutputDevi-32308 [002] d..3 21926.770418: sched_wakeup: comm=Media pid=32304 prio=120 target_cpu=002
+           <...>-34380 [000] d..4 21926.770433: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=71207 [ns] vruntime=4164553811426 [ns]
+           <...>-34380 [000] d..4 21926.770442: sched_wakeup: comm=tmux: server pid=1613 prio=120 target_cpu=000
+           <...>-34380 [000] d..2 21926.770456: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=28935 [ns] vruntime=4164553840361 [ns]
+           <...>-34380 [000] d..2 21926.770469: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=tmux: server next_pid=1613 next_prio=120
+ AudioOutputDevi-32308 [002] d..2 21926.770545: sched_stat_runtime: comm=AudioOutputDevi pid=32308 runtime=138063 [ns] vruntime=1115808720766 [ns]
+ AudioOutputDevi-32308 [002] d..2 21926.770570: sched_switch: prev_comm=AudioOutputDevi prev_pid=32308 prev_prio=120 prev_state=S ==> next_comm=Media next_pid=32304 next_prio=120
+      pulseaudio-2657  [001] d..3 21926.770575: sched_waking: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=000
+      pulseaudio-2657  [001] d..4 21926.770609: sched_wakeup: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=000
+      pulseaudio-2657  [001] d.h2 21926.770736: sched_stat_runtime: comm=pulseaudio pid=2657 runtime=366557 [ns] vruntime=58902745346 [ns]
+           <...>-34421 [003] d.h1 21926.770736: sched_stat_runtime: comm=trace.sh pid=34421 runtime=853331 [ns] vruntime=23982001065 [ns]
+           Media-32304 [002] d.h1 21926.770738: sched_stat_runtime: comm=Media pid=32304 runtime=198801 [ns] vruntime=1115817340009 [ns]
+    tmux: server-1613  [000] d.h1 21926.770742: sched_stat_runtime: comm=tmux: server pid=1613 runtime=289081 [ns] vruntime=34838457642 [ns]
+           <...>-34421 [003] d.s3 21926.770790: sched_waking: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+           <...>-34421 [003] d.s4 21926.770803: sched_wakeup: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+      pulseaudio-2657  [001] d..2 21926.770809: sched_switch: prev_comm=pulseaudio prev_pid=2657 prev_prio=120 prev_state=S ==> next_comm=threaded-ml next_pid=32307 next_prio=120
+    tmux: server-1613  [000] d..2 21926.770816: sched_switch: prev_comm=tmux: server prev_pid=1613 prev_prio=120 prev_state=R ==> next_comm=rcu_preempt next_pid=11 next_prio=98
+     rcu_preempt-11    [000] d..2 21926.770844: sched_switch: prev_comm=rcu_preempt prev_pid=11 prev_prio=98 prev_state=I ==> next_comm=tmux: server next_pid=1613 next_prio=120
+           <...>-34421 [003] d..4 21926.770884: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=000
+     threaded-ml-32307 [001] d..2 21926.770900: sched_stat_runtime: comm=threaded-ml pid=32307 runtime=88667 [ns] vruntime=1112949313543 [ns]
+           <...>-34421 [003] d..5 21926.770905: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=000
+     threaded-ml-32307 [001] d..2 21926.770944: sched_migrate_task: comm=alsa-sink-CS420 pid=2675 prio=120 orig_cpu=0 dest_cpu=1
+    tmux: server-1613  [000] d..2 21926.770963: sched_stat_runtime: comm=tmux: server pid=1613 runtime=126735 [ns] vruntime=34838584377 [ns]
+     threaded-ml-32307 [001] d..2 21926.770972: sched_switch: prev_comm=threaded-ml prev_pid=32307 prev_prio=120 prev_state=S ==> next_comm=alsa-sink-CS420 next_pid=2675 next_prio=120
+    tmux: server-1613  [000] d..2 21926.770972: sched_switch: prev_comm=tmux: server prev_pid=1613 prev_prio=120 prev_state=D ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+           <...>-34380 [000] d..3 21926.770986: sched_waking: comm=tmux: server pid=1613 prio=120 target_cpu=000
+           <...>-34380 [000] d..4 21926.770999: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=35408 [ns] vruntime=4164553875769 [ns]
+           <...>-34380 [000] d..4 21926.771005: sched_wakeup: comm=tmux: server pid=1613 prio=120 target_cpu=000
+           <...>-34380 [000] d..2 21926.771012: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=16812 [ns] vruntime=4164553892581 [ns]
+           <...>-34380 [000] d..2 21926.771017: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=tmux: server next_pid=1613 next_prio=120
+           Media-32304 [002] d..2 21926.771144: sched_waking: comm=chrome pid=7777 prio=120 target_cpu=003
+    tmux: server-1613  [000] d..4 21926.771146: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=000
+           Media-32304 [002] d..2 21926.771155: sched_migrate_task: comm=chrome pid=7777 prio=120 orig_cpu=3 dest_cpu=2
+    tmux: server-1613  [000] d..5 21926.771160: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=000
+           Media-32304 [002] d..3 21926.771168: sched_stat_runtime: comm=Media pid=32304 runtime=360452 [ns] vruntime=1115817700461 [ns]
+ alsa-sink-CS420-2675  [001] d..2 21926.771179: sched_stat_runtime: comm=alsa-sink-CS420 pid=2675 runtime=219709 [ns] vruntime=58902965055 [ns]
+           Media-32304 [002] d..3 21926.771180: sched_wakeup: comm=chrome pid=7777 prio=120 target_cpu=002
+ alsa-sink-CS420-2675  [001] d..2 21926.771216: sched_switch: prev_comm=alsa-sink-CS420 prev_pid=2675 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+    tmux: server-1613  [000] d..2 21926.771314: sched_stat_runtime: comm=tmux: server pid=1613 runtime=299545 [ns] vruntime=34838883922 [ns]
+    tmux: server-1613  [000] d..2 21926.771321: sched_switch: prev_comm=tmux: server prev_pid=1613 prev_prio=120 prev_state=S ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+           <...>-34380 [000] d..3 21926.771330: sched_waking: comm=st pid=9107 prio=120 target_cpu=000
+           <...>-34380 [000] d..3 21926.771333: sched_migrate_task: comm=st pid=9107 prio=120 orig_cpu=0 dest_cpu=1
+           <...>-34380 [000] d..4 21926.771344: sched_wake_idle_without_ipi: cpu=1
+           <...>-34380 [000] d..4 21926.771346: sched_wakeup: comm=st pid=9107 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.771358: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=st next_pid=9107 next_prio=120
+           <...>-34380 [000] d..2 21926.771360: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=44475 [ns] vruntime=4164553937056 [ns]
+           <...>-34380 [000] d..2 21926.771376: sched_stat_runtime: comm=Media pid=32304 runtime=212497 [ns] vruntime=1115817912958 [ns]
+           <...>-34380 [000] d..2 21926.771379: sched_migrate_task: comm=chrome pid=7777 prio=120 orig_cpu=2 dest_cpu=0
+           <...>-34380 [000] d..2 21926.771384: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=28068 [ns] vruntime=4164553965124 [ns]
+           <...>-34380 [000] d..2 21926.771389: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=chrome next_pid=7777 next_prio=120
+           <...>-34421 [003] d..2 21926.771399: sched_stat_runtime: comm=trace.sh pid=34421 runtime=579074 [ns] vruntime=23982580139 [ns]
+           Media-32304 [002] d..2 21926.771459: sched_stat_runtime: comm=Media pid=32304 runtime=83823 [ns] vruntime=1115817996781 [ns]
+           Media-32304 [002] d..2 21926.771474: sched_switch: prev_comm=Media prev_pid=32304 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+          chrome-7777  [000] d..2 21926.771503: sched_stat_runtime: comm=chrome pid=7777 runtime=119117 [ns] vruntime=1075123221740 [ns]
+          chrome-7777  [000] d..2 21926.771508: sched_switch: prev_comm=chrome prev_pid=7777 prev_prio=120 prev_state=S ==> next_comm=swapper/0 next_pid=0 next_prio=120
+           <...>-34421 [003] .... 21926.771611: sched_process_fork: comm=trace.sh pid=34421 child_comm=trace.sh child_pid=34422
+           <...>-34421 [003] d..2 21926.771628: sched_wakeup_new: comm=trace.sh pid=34422 prio=120 target_cpu=000
+           <...>-34421 [003] d..2 21926.771629: sched_wake_idle_without_ipi: cpu=0
+          <idle>-0     [000] d..2 21926.771667: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=trace.sh next_pid=34422 next_prio=120
+           <...>-34421 [003] .... 21926.771789: sched_process_wait: comm=trace.sh pid=0 prio=120
+           <...>-34421 [003] d..2 21926.771795: sched_stat_runtime: comm=trace.sh pid=34421 runtime=393919 [ns] vruntime=23982974058 [ns]
+           <...>-34421 [003] d..2 21926.771802: sched_switch: prev_comm=trace.sh prev_pid=34421 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120
+              st-9107  [001] d..5 21926.771841: sched_waking: comm=Xorg pid=1243 prio=120 target_cpu=001
+              st-9107  [001] d..5 21926.771858: sched_migrate_task: comm=Xorg pid=1243 prio=120 orig_cpu=1 dest_cpu=2
+              st-9107  [001] d..6 21926.771867: sched_wake_idle_without_ipi: cpu=2
+              st-9107  [001] d..6 21926.771869: sched_wakeup: comm=Xorg pid=1243 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.771888: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=Xorg next_pid=1243 next_prio=120
+              st-9107  [001] d..2 21926.771899: sched_stat_runtime: comm=st pid=9107 runtime=560477 [ns] vruntime=6398739204 [ns]
+              st-9107  [001] d..2 21926.771904: sched_switch: prev_comm=st prev_pid=9107 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+           <...>-34422 [000] .... 21926.772425: sched_process_exec: filename=/usr/bin/ls pid=34422 old_pid=34422
+            Xorg-1243  [002] d..2 21926.772954: sched_stat_runtime: comm=Xorg pid=1243 runtime=1087722 [ns] vruntime=107377984258 [ns]
+            Xorg-1243  [002] d..2 21926.772967: sched_switch: prev_comm=Xorg prev_pid=1243 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+           <...>-34422 [000] d..4 21926.774036: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=000
+           <...>-34422 [000] d..4 21926.774042: sched_migrate_task: comm=kworker/u8:2 pid=34380 prio=120 orig_cpu=0 dest_cpu=1
+           <...>-34422 [000] d..5 21926.774050: sched_wake_idle_without_ipi: cpu=1
+           <...>-34422 [000] d..5 21926.774052: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+           <...>-34422 [000] d.h2 21926.774068: sched_stat_runtime: comm=ls pid=34422 runtime=2447946 [ns] vruntime=21364400969 [ns]
+          <idle>-0     [001] d..2 21926.774104: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+           <...>-34380 [001] d..3 21926.774115: sched_waking: comm=tmux: server pid=1613 prio=120 target_cpu=000
+           <...>-34380 [001] d..3 21926.774121: sched_migrate_task: comm=tmux: server pid=1613 prio=120 orig_cpu=0 dest_cpu=2
+           <...>-34380 [001] d..4 21926.774132: sched_wake_idle_without_ipi: cpu=2
+           <...>-34380 [001] d..4 21926.774134: sched_wakeup: comm=tmux: server pid=1613 prio=120 target_cpu=002
+           <...>-34380 [001] d..2 21926.774141: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=35821 [ns] vruntime=4263698987827 [ns]
+           <...>-34422 [000] d..4 21926.774144: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+           <...>-34380 [001] d..2 21926.774146: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0     [002] d..2 21926.774146: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=tmux: server next_pid=1613 next_prio=120
+           <...>-34422 [000] d..5 21926.774153: sched_wake_idle_without_ipi: cpu=1
+           <...>-34422 [000] d..5 21926.774154: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.774160: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+           <...>-34380 [001] d..2 21926.774164: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=14057 [ns] vruntime=4263699001884 [ns]
+           <...>-34380 [001] d..2 21926.774166: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=swapper/1 next_pid=0 next_prio=120
+    tmux: server-1613  [002] d..4 21926.774357: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+    tmux: server-1613  [002] d..5 21926.774367: sched_wake_idle_without_ipi: cpu=1
+    tmux: server-1613  [002] d..5 21926.774369: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+    tmux: server-1613  [002] d..2 21926.774412: sched_stat_runtime: comm=tmux: server pid=1613 runtime=282900 [ns] vruntime=35734153588 [ns]
+          <idle>-0     [001] d..2 21926.774413: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+    tmux: server-1613  [002] d..2 21926.774420: sched_switch: prev_comm=tmux: server prev_pid=1613 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+           <...>-34380 [001] d..3 21926.774425: sched_waking: comm=st pid=9107 prio=120 target_cpu=001
+           <...>-34380 [001] d..3 21926.774430: sched_migrate_task: comm=st pid=9107 prio=120 orig_cpu=1 dest_cpu=2
+           <...>-34380 [001] d..4 21926.774443: sched_wake_idle_without_ipi: cpu=2
+           <...>-34380 [001] d..4 21926.774445: sched_wakeup: comm=st pid=9107 prio=120 target_cpu=002
+           <...>-34380 [001] d..2 21926.774452: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=87699 [ns] vruntime=4263699089583 [ns]
+          <idle>-0     [002] d..2 21926.774453: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=st next_pid=9107 next_prio=120
+           <...>-34380 [001] d..2 21926.774457: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=swapper/1 next_pid=0 next_prio=120
+           <...>-34422 [000] .... 21926.774459: sched_process_exit: comm=ls pid=34422 prio=120
+           <...>-34422 [000] d..2 21926.774481: sched_stat_runtime: comm=ls pid=34422 runtime=327472 [ns] vruntime=21364728441 [ns]
+           <...>-34422 [000] dN.2 21926.774493: sched_stat_runtime: comm=ls pid=34422 runtime=14483 [ns] vruntime=4164562754702 [ns]
+           <...>-34422 [000] d..5 21926.774505: sched_waking: comm=trace.sh pid=34421 prio=120 target_cpu=003
+           <...>-34422 [000] d..6 21926.774516: sched_wake_idle_without_ipi: cpu=3
+           <...>-34422 [000] d..6 21926.774518: sched_wakeup: comm=trace.sh pid=34421 prio=120 target_cpu=003
+           <...>-34422 [000] d..2 21926.774524: sched_stat_runtime: comm=ls pid=34422 runtime=29051 [ns] vruntime=4164562783753 [ns]
+           <...>-34422 [000] d..2 21926.774528: sched_switch: prev_comm=ls prev_pid=34422 prev_prio=120 prev_state=Z ==> next_comm=swapper/0 next_pid=0 next_prio=120
+              st-9107  [002] d..2 21926.774564: sched_stat_runtime: comm=st pid=9107 runtime=128502 [ns] vruntime=6342348024 [ns]
+              st-9107  [002] d..2 21926.774569: sched_switch: prev_comm=st prev_pid=9107 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+          <idle>-0     [003] d..2 21926.774571: sched_switch: prev_comm=swapper/3 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=trace.sh next_pid=34421 next_prio=120
+           <...>-34421 [003] .... 21926.775075: sched_process_wait: comm=trace.sh pid=0 prio=120
+           <...>-34421 [003] d..4 21926.775155: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+           <...>-34421 [003] d..5 21926.775162: sched_wake_idle_without_ipi: cpu=1
+           <...>-34421 [003] d..5 21926.775164: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.775170: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+           <...>-34380 [001] d..3 21926.775177: sched_waking: comm=tmux: server pid=1613 prio=120 target_cpu=002
+           <...>-34380 [001] d..4 21926.775186: sched_wake_idle_without_ipi: cpu=2
+           <...>-34380 [001] d..4 21926.775187: sched_wakeup: comm=tmux: server pid=1613 prio=120 target_cpu=002
+           <...>-34380 [001] d..2 21926.775193: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=33537 [ns] vruntime=4263699123120 [ns]
+           <...>-34380 [001] d..2 21926.775197: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0     [002] d..2 21926.775225: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=tmux: server next_pid=1613 next_prio=120
+    tmux: server-1613  [002] d..4 21926.775337: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+    tmux: server-1613  [002] d..5 21926.775345: sched_wake_idle_without_ipi: cpu=1
+    tmux: server-1613  [002] d..5 21926.775346: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.775350: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+           <...>-34380 [001] d..3 21926.775355: sched_waking: comm=st pid=9107 prio=120 target_cpu=002
+           <...>-34380 [001] d..3 21926.775360: sched_migrate_task: comm=st pid=9107 prio=120 orig_cpu=2 dest_cpu=0
+           <...>-34421 [003] d..2 21926.775362: sched_stat_runtime: comm=trace.sh pid=34421 runtime=852780 [ns] vruntime=23983826838 [ns]
+           <...>-34380 [001] d..4 21926.775368: sched_wake_idle_without_ipi: cpu=0
+           <...>-34380 [001] d..4 21926.775369: sched_wakeup: comm=st pid=9107 prio=120 target_cpu=000
+    tmux: server-1613  [002] d..2 21926.775371: sched_stat_runtime: comm=tmux: server pid=1613 runtime=187151 [ns] vruntime=35734340739 [ns]
+           <...>-34380 [001] d..2 21926.775373: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=30309 [ns] vruntime=4263699153429 [ns]
+           <...>-34380 [001] d..2 21926.775376: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0     [000] d..2 21926.775377: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=st next_pid=9107 next_prio=120
+    tmux: server-1613  [002] d..2 21926.775377: sched_switch: prev_comm=tmux: server prev_pid=1613 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+              st-9107  [000] d..2 21926.775444: sched_stat_runtime: comm=st pid=9107 runtime=80021 [ns] vruntime=6714502347 [ns]
+              st-9107  [000] d..2 21926.775449: sched_switch: prev_comm=st prev_pid=9107 prev_prio=120 prev_state=S ==> next_comm=swapper/0 next_pid=0 next_prio=120
+           <...>-34421 [003] .... 21926.775484: sched_process_fork: comm=trace.sh pid=34421 child_comm=trace.sh child_pid=34423
+           <...>-34421 [003] d..2 21926.775495: sched_wakeup_new: comm=trace.sh pid=34423 prio=120 target_cpu=000
+           <...>-34421 [003] d..2 21926.775496: sched_wake_idle_without_ipi: cpu=0
+          <idle>-0     [000] d..2 21926.775534: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=trace.sh next_pid=34423 next_prio=120
+           <...>-34421 [003] .... 21926.775625: sched_process_wait: comm=trace.sh pid=0 prio=120
+           <...>-34421 [003] d..2 21926.775629: sched_stat_runtime: comm=trace.sh pid=34421 runtime=265759 [ns] vruntime=23984092597 [ns]
+           <...>-34421 [003] d..2 21926.775633: sched_switch: prev_comm=trace.sh prev_pid=34421 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120
+          <idle>-0     [001] d.h3 21926.777229: sched_waking: comm=chrome pid=32422 prio=120 target_cpu=001
+          <idle>-0     [001] dNh4 21926.777245: sched_wakeup: comm=chrome pid=32422 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.777258: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=chrome next_pid=32422 next_prio=120
+          chrome-32422 [001] d.h1 21926.777393: sched_stat_runtime: comm=chrome pid=32422 runtime=132497 [ns] vruntime=1112940676144 [ns]
+           <...>-34423 [000] d.h1 21926.777395: sched_stat_runtime: comm=cat pid=34423 runtime=1903038 [ns] vruntime=21375631471 [ns]
+          chrome-32422 [001] d..2 21926.777481: sched_stat_runtime: comm=chrome pid=32422 runtime=55045 [ns] vruntime=1112940731189 [ns]
+          chrome-32422 [001] d..2 21926.777488: sched_switch: prev_comm=chrome prev_pid=32422 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+           <...>-34423 [000] .... 21926.777552: sched_process_exec: filename=/usr/bin/cat pid=34423 old_pid=34423
+           <...>-34423 [000] d..2 21926.778448: sched_stat_runtime: comm=cat pid=34423 runtime=1013659 [ns] vruntime=21376645130 [ns]
+           <...>-34423 [000] d..2 21926.778455: sched_switch: prev_comm=cat prev_pid=34423 prev_prio=120 prev_state=D ==> next_comm=swapper/0 next_pid=0 next_prio=120
+          <idle>-0     [001] d.h3 21926.779411: sched_waking: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+          <idle>-0     [002] d.h3 21926.779423: sched_waking: comm=tmux: server pid=1613 prio=120 target_cpu=002
+          <idle>-0     [001] dNh4 21926.779438: sched_wakeup: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+          <idle>-0     [002] dNh4 21926.779443: sched_wakeup: comm=tmux: server pid=1613 prio=120 target_cpu=002
+          <idle>-0     [001] d..2 21926.779456: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=alsa-sink-CS420 next_pid=2675 next_prio=120
+          <idle>-0     [002] d..2 21926.779457: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=tmux: server next_pid=1613 next_prio=120
+    tmux: server-1613  [002] d..2 21926.779588: sched_stat_runtime: comm=tmux: server pid=1613 runtime=122918 [ns] vruntime=35734463657 [ns]
+    tmux: server-1613  [002] d..2 21926.779603: sched_switch: prev_comm=tmux: server prev_pid=1613 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+ alsa-sink-CS420-2675  [001] d..2 21926.779725: sched_stat_runtime: comm=alsa-sink-CS420 pid=2675 runtime=259664 [ns] vruntime=58903224719 [ns]
+ alsa-sink-CS420-2675  [001] d..2 21926.779736: sched_switch: prev_comm=alsa-sink-CS420 prev_pid=2675 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0     [000] d.s3 21926.780761: sched_waking: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+          <idle>-0     [000] dNs4 21926.780786: sched_wakeup: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+          <idle>-0     [000] d..2 21926.780817: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=rcu_preempt next_pid=11 next_prio=98
+     rcu_preempt-11    [000] d..2 21926.780845: sched_switch: prev_comm=rcu_preempt prev_pid=11 prev_prio=98 prev_state=I ==> next_comm=swapper/0 next_pid=0 next_prio=120
+          <idle>-0     [002] d.h3 21926.780997: sched_waking: comm=Xorg pid=1243 prio=120 target_cpu=002
+          <idle>-0     [002] dNh4 21926.781012: sched_wakeup: comm=Xorg pid=1243 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.781022: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=Xorg next_pid=1243 next_prio=120
+            Xorg-1243  [002] d..4 21926.781120: sched_waking: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+            Xorg-1243  [002] d..5 21926.781130: sched_wake_idle_without_ipi: cpu=1
+            Xorg-1243  [002] d..5 21926.781133: sched_wakeup: comm=kworker/u8:2 pid=34380 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.781187: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/u8:2 next_pid=34380 next_prio=120
+           <...>-34380 [001] d..2 21926.781204: sched_stat_runtime: comm=kworker/u8:2 pid=34380 runtime=74449 [ns] vruntime=4263699227878 [ns]
+           <...>-34380 [001] d..2 21926.781212: sched_switch: prev_comm=kworker/u8:2 prev_pid=34380 prev_prio=120 prev_state=I ==> next_comm=swapper/1 next_pid=0 next_prio=120
+            Xorg-1243  [002] d..2 21926.781217: sched_stat_runtime: comm=Xorg pid=1243 runtime=190341 [ns] vruntime=107378174599 [ns]
+            Xorg-1243  [002] d..2 21926.781224: sched_switch: prev_comm=Xorg prev_pid=1243 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+          <idle>-0     [000] d.h3 21926.783861: sched_waking: comm=st pid=9107 prio=120 target_cpu=000
+          <idle>-0     [000] dNh4 21926.783887: sched_wakeup: comm=st pid=9107 prio=120 target_cpu=000
+          <idle>-0     [000] d..2 21926.783907: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=st next_pid=9107 next_prio=120
+              st-9107  [000] d.h1 21926.784057: sched_stat_runtime: comm=st pid=9107 runtime=147421 [ns] vruntime=6714649768 [ns]
+              st-9107  [000] d..5 21926.784075: sched_waking: comm=Xorg pid=1243 prio=120 target_cpu=002
+              st-9107  [000] d..6 21926.784081: sched_wake_idle_without_ipi: cpu=2
+              st-9107  [000] d..6 21926.784083: sched_wakeup: comm=Xorg pid=1243 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.784091: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=Xorg next_pid=1243 next_prio=120
+              st-9107  [000] d..2 21926.784100: sched_stat_runtime: comm=st pid=9107 runtime=28007 [ns] vruntime=6714677775 [ns]
+              st-9107  [000] d..2 21926.784104: sched_switch: prev_comm=st prev_pid=9107 prev_prio=120 prev_state=S ==> next_comm=swapper/0 next_pid=0 next_prio=120
+            Xorg-1243  [002] d..2 21926.784815: sched_stat_runtime: comm=Xorg pid=1243 runtime=729373 [ns] vruntime=107378903972 [ns]
+            Xorg-1243  [002] d..2 21926.784826: sched_switch: prev_comm=Xorg prev_pid=1243 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+          <idle>-0     [001] d.h3 21926.789793: sched_waking: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+          <idle>-0     [001] dNh4 21926.789822: sched_wakeup: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.789847: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=alsa-sink-CS420 next_pid=2675 next_prio=120
+ alsa-sink-CS420-2675  [001] d..3 21926.789991: sched_waking: comm=pulseaudio pid=2657 prio=120 target_cpu=001
+ alsa-sink-CS420-2675  [001] d..3 21926.789998: sched_migrate_task: comm=pulseaudio pid=2657 prio=120 orig_cpu=1 dest_cpu=2
+ alsa-sink-CS420-2675  [001] d..4 21926.790011: sched_wake_idle_without_ipi: cpu=2
+ alsa-sink-CS420-2675  [001] d..4 21926.790013: sched_wakeup: comm=pulseaudio pid=2657 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.790072: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=pulseaudio next_pid=2657 next_prio=120
+ alsa-sink-CS420-2675  [001] d..2 21926.790178: sched_stat_runtime: comm=alsa-sink-CS420 pid=2675 runtime=328284 [ns] vruntime=58903553003 [ns]
+ alsa-sink-CS420-2675  [001] d..2 21926.790189: sched_switch: prev_comm=alsa-sink-CS420 prev_pid=2675 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+      pulseaudio-2657  [002] d..3 21926.790221: sched_waking: comm=threaded-ml pid=32307 prio=120 target_cpu=001
+      pulseaudio-2657  [002] d..4 21926.790240: sched_wake_idle_without_ipi: cpu=1
+      pulseaudio-2657  [002] d..4 21926.790243: sched_wakeup: comm=threaded-ml pid=32307 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.790261: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=threaded-ml next_pid=32307 next_prio=120
+      pulseaudio-2657  [002] d..2 21926.790309: sched_stat_runtime: comm=pulseaudio pid=2657 runtime=301610 [ns] vruntime=59610370623 [ns]
+      pulseaudio-2657  [002] d..2 21926.790319: sched_switch: prev_comm=pulseaudio prev_pid=2657 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+     threaded-ml-32307 [001] d..3 21926.790397: sched_waking: comm=AudioOutputDevi pid=32308 prio=120 target_cpu=002
+     threaded-ml-32307 [001] d..4 21926.790413: sched_wake_idle_without_ipi: cpu=2
+     threaded-ml-32307 [001] d..4 21926.790416: sched_wakeup: comm=AudioOutputDevi pid=32308 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.790470: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=AudioOutputDevi next_pid=32308 next_prio=120
+     threaded-ml-32307 [001] d..3 21926.790536: sched_waking: comm=pulseaudio pid=2657 prio=120 target_cpu=002
+     threaded-ml-32307 [001] d..3 21926.790546: sched_migrate_task: comm=pulseaudio pid=2657 prio=120 orig_cpu=2 dest_cpu=3
+     threaded-ml-32307 [001] d..4 21926.790560: sched_wake_idle_without_ipi: cpu=3
+     threaded-ml-32307 [001] d..4 21926.790564: sched_wakeup: comm=pulseaudio pid=2657 prio=120 target_cpu=003
+          <idle>-0     [003] dN.3 21926.790572: sched_waking: comm=ksoftirqd/3 pid=35 prio=120 target_cpu=003
+          <idle>-0     [003] dN.4 21926.790594: sched_wakeup: comm=ksoftirqd/3 pid=35 prio=120 target_cpu=003
+ AudioOutputDevi-32308 [002] d..2 21926.790600: sched_waking: comm=Media pid=32304 prio=120 target_cpu=002
+ AudioOutputDevi-32308 [002] d..2 21926.790606: sched_migrate_task: comm=Media pid=32304 prio=120 orig_cpu=2 dest_cpu=0
+          <idle>-0     [003] d..2 21926.790617: sched_switch: prev_comm=swapper/3 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=pulseaudio next_pid=2657 next_prio=120
+ AudioOutputDevi-32308 [002] d..3 21926.790620: sched_wake_idle_without_ipi: cpu=0
+ AudioOutputDevi-32308 [002] d..3 21926.790623: sched_wakeup: comm=Media pid=32304 prio=120 target_cpu=000
+     threaded-ml-32307 [001] d..2 21926.790630: sched_stat_runtime: comm=threaded-ml pid=32307 runtime=397005 [ns] vruntime=1112949710548 [ns]
+          <idle>-0     [000] d..2 21926.790641: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=Media next_pid=32304 next_prio=120
+     threaded-ml-32307 [001] d..2 21926.790699: sched_switch: prev_comm=threaded-ml prev_pid=32307 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+ AudioOutputDevi-32308 [002] d..2 21926.790708: sched_stat_runtime: comm=AudioOutputDevi pid=32308 runtime=302936 [ns] vruntime=1115809299717 [ns]
+      pulseaudio-2657  [003] d.h2 21926.790721: sched_stat_runtime: comm=pulseaudio pid=2657 runtime=143690 [ns] vruntime=59571231698 [ns]
+           Media-32304 [000] d.h1 21926.790722: sched_stat_runtime: comm=Media pid=32304 runtime=112793 [ns] vruntime=1075123334533 [ns]
+ AudioOutputDevi-32308 [002] d..2 21926.790730: sched_switch: prev_comm=AudioOutputDevi prev_pid=32308 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+           Media-32304 [000] d.s2 21926.790730: sched_waking: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+      pulseaudio-2657  [003] d..3 21926.790733: sched_waking: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+           Media-32304 [000] dNs3 21926.790736: sched_wakeup: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+      pulseaudio-2657  [003] d..4 21926.790740: sched_wakeup: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+           Media-32304 [000] dN.2 21926.790743: sched_stat_runtime: comm=Media pid=32304 runtime=4171 [ns] vruntime=1075123338704 [ns]
+           Media-32304 [000] d..2 21926.790749: sched_switch: prev_comm=Media prev_pid=32304 prev_prio=120 prev_state=R ==> next_comm=rcu_preempt next_pid=11 next_prio=98
+          <idle>-0     [001] d..2 21926.790755: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=alsa-sink-CS420 next_pid=2675 next_prio=120
+     rcu_preempt-11    [000] d..2 21926.790759: sched_switch: prev_comm=rcu_preempt prev_pid=11 prev_prio=98 prev_state=I ==> next_comm=Media next_pid=32304 next_prio=120
+      pulseaudio-2657  [003] d..2 21926.790782: sched_stat_runtime: comm=pulseaudio pid=2657 runtime=47194 [ns] vruntime=59571278892 [ns]
+      pulseaudio-2657  [003] d..2 21926.790788: sched_switch: prev_comm=pulseaudio prev_pid=2657 prev_prio=120 prev_state=S ==> next_comm=ksoftirqd/3 next_pid=35 next_prio=120
+     ksoftirqd/3-35    [003] d..2 21926.790799: sched_stat_runtime: comm=ksoftirqd/3 pid=35 runtime=19157 [ns] vruntime=4250128174322 [ns]
+     ksoftirqd/3-35    [003] d..2 21926.790804: sched_switch: prev_comm=ksoftirqd/3 prev_pid=35 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120
+ alsa-sink-CS420-2675  [001] d..2 21926.790823: sched_stat_runtime: comm=alsa-sink-CS420 pid=2675 runtime=63340 [ns] vruntime=58903616343 [ns]
+ alsa-sink-CS420-2675  [001] d..2 21926.790826: sched_switch: prev_comm=alsa-sink-CS420 prev_pid=2675 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+           Media-32304 [000] d..2 21926.790849: sched_waking: comm=chrome pid=7777 prio=120 target_cpu=000
+           Media-32304 [000] d..2 21926.790850: sched_migrate_task: comm=chrome pid=7777 prio=120 orig_cpu=0 dest_cpu=3
+           Media-32304 [000] d..3 21926.790863: sched_wake_idle_without_ipi: cpu=3
+           Media-32304 [000] d..3 21926.790863: sched_wakeup: comm=chrome pid=7777 prio=120 target_cpu=003
+          <idle>-0     [003] d..2 21926.790896: sched_switch: prev_comm=swapper/3 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=chrome next_pid=7777 next_prio=120
+          chrome-7777  [003] d..2 21926.790947: sched_stat_runtime: comm=chrome pid=7777 runtime=85754 [ns] vruntime=1108510427636 [ns]
+           Media-32304 [000] d..2 21926.790947: sched_stat_runtime: comm=Media pid=32304 runtime=190426 [ns] vruntime=1075123529130 [ns]
+          chrome-7777  [003] d..2 21926.790949: sched_switch: prev_comm=chrome prev_pid=7777 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120
+           Media-32304 [000] d..2 21926.790951: sched_switch: prev_comm=Media prev_pid=32304 prev_prio=120 prev_state=S ==> next_comm=swapper/0 next_pid=0 next_prio=120
+          <idle>-0     [002] d.h3 21926.796892: sched_waking: comm=Xorg pid=1243 prio=120 target_cpu=002
+          <idle>-0     [002] dNh4 21926.796922: sched_wakeup: comm=Xorg pid=1243 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.796940: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=Xorg next_pid=1243 next_prio=120
+            Xorg-1243  [002] d..2 21926.797040: sched_stat_runtime: comm=Xorg pid=1243 runtime=90329 [ns] vruntime=107378994301 [ns]
+            Xorg-1243  [002] d..2 21926.797050: sched_switch: prev_comm=Xorg prev_pid=1243 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+          <idle>-0     [001] d.h3 21926.799649: sched_waking: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+          <idle>-0     [001] dNh4 21926.799675: sched_wakeup: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.799700: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=alsa-sink-CS420 next_pid=2675 next_prio=120
+ alsa-sink-CS420-2675  [001] d..2 21926.799952: sched_stat_runtime: comm=alsa-sink-CS420 pid=2675 runtime=248614 [ns] vruntime=58903864957 [ns]
+ alsa-sink-CS420-2675  [001] d..2 21926.799964: sched_switch: prev_comm=alsa-sink-CS420 prev_pid=2675 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0     [000] d.s3 21926.800768: sched_waking: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+          <idle>-0     [000] dNs4 21926.800778: sched_wakeup: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+          <idle>-0     [000] d..2 21926.800809: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=rcu_preempt next_pid=11 next_prio=98
+     rcu_preempt-11    [000] d..2 21926.800826: sched_switch: prev_comm=rcu_preempt prev_pid=11 prev_prio=98 prev_state=I ==> next_comm=swapper/0 next_pid=0 next_prio=120
+          <idle>-0     [002] d.s4 21926.804118: sched_waking: comm=kworker/2:2 pid=31211 prio=120 target_cpu=002
+          <idle>-0     [003] d.s4 21926.804118: sched_waking: comm=kworker/3:2 pid=31212 prio=120 target_cpu=003
+          <idle>-0     [002] dNs5 21926.804136: sched_wakeup: comm=kworker/2:2 pid=31211 prio=120 target_cpu=002
+          <idle>-0     [003] dNs5 21926.804137: sched_wakeup: comm=kworker/3:2 pid=31212 prio=120 target_cpu=003
+          <idle>-0     [002] d..2 21926.804185: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/2:2 next_pid=31211 next_prio=120
+          <idle>-0     [003] d..2 21926.804185: sched_switch: prev_comm=swapper/3 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=kworker/3:2 next_pid=31212 next_prio=120
+     kworker/3:2-31212 [003] d..2 21926.804204: sched_stat_runtime: comm=kworker/3:2 pid=31212 runtime=4868 [ns] vruntime=4250128249272 [ns]
+     kworker/2:2-31211 [002] d..2 21926.804205: sched_stat_runtime: comm=kworker/2:2 pid=31211 runtime=6076 [ns] vruntime=4287773687619 [ns]
+     kworker/3:2-31212 [003] d..2 21926.804209: sched_switch: prev_comm=kworker/3:2 prev_pid=31212 prev_prio=120 prev_state=I ==> next_comm=swapper/3 next_pid=0 next_prio=120
+     kworker/2:2-31211 [002] d..2 21926.804209: sched_switch: prev_comm=kworker/2:2 prev_pid=31211 prev_prio=120 prev_state=I ==> next_comm=swapper/2 next_pid=0 next_prio=120
+          <idle>-0     [001] d.h3 21926.809297: sched_waking: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+          <idle>-0     [001] dNh4 21926.809327: sched_wakeup: comm=alsa-sink-CS420 pid=2675 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.809364: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=alsa-sink-CS420 next_pid=2675 next_prio=120
+ alsa-sink-CS420-2675  [001] d..3 21926.809495: sched_waking: comm=pulseaudio pid=2657 prio=120 target_cpu=003
+ alsa-sink-CS420-2675  [001] d..4 21926.809508: sched_wake_idle_without_ipi: cpu=3
+ alsa-sink-CS420-2675  [001] d..4 21926.809510: sched_wakeup: comm=pulseaudio pid=2657 prio=120 target_cpu=003
+          <idle>-0     [003] d..2 21926.809538: sched_switch: prev_comm=swapper/3 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=pulseaudio next_pid=2657 next_prio=120
+      pulseaudio-2657  [003] d..3 21926.809682: sched_waking: comm=threaded-ml pid=32307 prio=120 target_cpu=001
+      pulseaudio-2657  [003] d..3 21926.809695: sched_migrate_task: comm=threaded-ml pid=32307 prio=120 orig_cpu=1 dest_cpu=2
+      pulseaudio-2657  [003] d..4 21926.809710: sched_wake_idle_without_ipi: cpu=2
+      pulseaudio-2657  [003] d..4 21926.809713: sched_wakeup: comm=threaded-ml pid=32307 prio=120 target_cpu=002
+ alsa-sink-CS420-2675  [001] d..2 21926.809714: sched_stat_runtime: comm=alsa-sink-CS420 pid=2675 runtime=359051 [ns] vruntime=58904224008 [ns]
+ alsa-sink-CS420-2675  [001] d..2 21926.809727: sched_switch: prev_comm=alsa-sink-CS420 prev_pid=2675 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0     [002] d..2 21926.809764: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=threaded-ml next_pid=32307 next_prio=120
+      pulseaudio-2657  [003] d..2 21926.809789: sched_stat_runtime: comm=pulseaudio pid=2657 runtime=285973 [ns] vruntime=59571564865 [ns]
+      pulseaudio-2657  [003] d..2 21926.809795: sched_switch: prev_comm=pulseaudio prev_pid=2657 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120
+     threaded-ml-32307 [002] d..2 21926.809865: sched_stat_runtime: comm=threaded-ml pid=32307 runtime=161124 [ns] vruntime=1115818157905 [ns]
+     threaded-ml-32307 [002] d..2 21926.809874: sched_switch: prev_comm=threaded-ml prev_pid=32307 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120
+          <idle>-0     [000] d..3 21926.810734: sched_waking: comm=ksoftirqd/0 pid=9 prio=120 target_cpu=000
+          <idle>-0     [000] dN.4 21926.810764: sched_wakeup: comm=ksoftirqd/0 pid=9 prio=120 target_cpu=000
+          <idle>-0     [000] d..2 21926.810801: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=ksoftirqd/0 next_pid=9 next_prio=120
+     ksoftirqd/0-9     [000] d.s2 21926.810811: sched_waking: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+     ksoftirqd/0-9     [000] dNs3 21926.810822: sched_wakeup: comm=rcu_preempt pid=11 prio=98 target_cpu=000
+     ksoftirqd/0-9     [000] dN.2 21926.810847: sched_stat_runtime: comm=ksoftirqd/0 pid=9 runtime=46198 [ns] vruntime=4164553829951 [ns]
+     ksoftirqd/0-9     [000] d..2 21926.810852: sched_switch: prev_comm=ksoftirqd/0 prev_pid=9 prev_prio=120 prev_state=R+ ==> next_comm=rcu_preempt next_pid=11 next_prio=98
+     rcu_preempt-11    [000] d..2 21926.810870: sched_switch: prev_comm=rcu_preempt prev_pid=11 prev_prio=98 prev_state=I ==> next_comm=ksoftirqd/0 next_pid=9 next_prio=120
+     ksoftirqd/0-9     [000] d.s3 21926.810878: sched_waking: comm=cat pid=34423 prio=120 target_cpu=000
+     ksoftirqd/0-9     [000] d.s4 21926.810886: sched_stat_runtime: comm=ksoftirqd/0 pid=9 runtime=16642 [ns] vruntime=4164553846593 [ns]
+     ksoftirqd/0-9     [000] d.s4 21926.810888: sched_wakeup: comm=cat pid=34423 prio=120 target_cpu=000
+     ksoftirqd/0-9     [000] d..2 21926.810891: sched_stat_runtime: comm=ksoftirqd/0 pid=9 runtime=9473 [ns] vruntime=4164553856066 [ns]
+     ksoftirqd/0-9     [000] d..2 21926.810895: sched_switch: prev_comm=ksoftirqd/0 prev_pid=9 prev_prio=120 prev_state=S ==> next_comm=cat next_pid=34423 next_prio=120
+           <...>-34423 [000] d.h3 21926.811256: sched_waking: comm=ThreadPoolForeg pid=31715 prio=120 target_cpu=000
+           <...>-34423 [000] d.h3 21926.811260: sched_migrate_task: comm=ThreadPoolForeg pid=31715 prio=120 orig_cpu=0 dest_cpu=1
+           <...>-34423 [000] d.h4 21926.811274: sched_wake_idle_without_ipi: cpu=1
+           <...>-34423 [000] d.h4 21926.811276: sched_wakeup: comm=ThreadPoolForeg pid=31715 prio=120 target_cpu=001
+          <idle>-0     [001] d..2 21926.811329: sched_switch: prev_comm=swapper/1 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=ThreadPoolForeg next_pid=31715 next_prio=120
+ ThreadPoolForeg-31715 [001] d..2 21926.811410: sched_stat_runtime: comm=ThreadPoolForeg pid=31715 runtime=140240 [ns] vruntime=1112940850788 [ns]
+ ThreadPoolForeg-31715 [001] d..2 21926.811443: sched_switch: prev_comm=ThreadPoolForeg prev_pid=31715 prev_prio=120 prev_state=S ==> next_comm=swapper/1 next_pid=0 next_prio=120
+          <idle>-0     [002] d.h3 21926.813089: sched_waking: comm=Xorg pid=1243 prio=120 target_cpu=002
+          <idle>-0     [002] dNh4 21926.813107: sched_wakeup: comm=Xorg pid=1243 prio=120 target_cpu=002
+          <idle>-0     [002] d..2 21926.813122: sched_switch: prev_comm=swapper/2 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=Xorg next_pid=1243 next_prio=120
+            Xorg-1243  [002] d..2 21926.813177: sched_stat_runtime: comm=Xorg pid=1243 runtime=47553 [ns] vruntime=107379041854 [ns]
+            Xorg-1243  [002] d..2 21926.813187: sched_switch: prev_comm=Xorg prev_pid=1243 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120

@@ -2,9 +2,13 @@
 
 """The actual tracer"""
 
+import asyncio
+import dis
+import inspect
 import os
 import sys
 import threading
+import weakref
 
 from .trace import *
 
@@ -33,7 +37,7 @@ class Tracer:
         self.stop()
 
     def __call__(self, frame, event, arg):
-        raise NotImplementedError()
+        raise codeNotImplementedError()
     
 
 class FunctionTracer(Tracer):
@@ -88,45 +92,43 @@ class AsyncioTracer(FunctionTracer):
 
     def __init__(self):
         super().__init__()
-        self._ids = {}
+        self._ids = set({})
 
     def __call__(self, frame, event, arg):
         code = frame.f_code
+        frame_id = id(frame)
 
-        # Emit the flow event before closing it out 
-        if (code.co_filename.endswith("asyncio/base_events.py") and
-            code.co_name == "create_task" and
-            event == "return"):
-            flow_id = len(self._ids)
-            frame = arg.get_coro().cr_frame
-            task_name = arg.get_name()
-            self._ids[id(frame)] = (task_name, flow_id)
-            self._trace.add_event(FlowTraceEvent(
-                name=task_name,
-                cat="async task",
-                ph=Phase.Flow.START,
-                id=flow_id
-            ))
-        elif id(frame) in self._ids and event == "return":
-            details = self._ids[id(frame)]
-            # optimistically add another line
-            self._trace.add_event(FlowTraceEvent(
-                name=details[0],
-                cat="async task",
-                ph=Phase.Flow.START,
-                bp=FlowBindingPoint.ENCLOSING,
-                id=details[1],
-            ))
+        if event == "return" and self._is_coroutine_function(frame):
+            if self._is_coroutine_finished(arg):
+                self._ids.discard(frame_id)
+            else:
+                self._ids.add(frame_id)
+                self._trace.add_event(FlowTraceEvent(
+                    name=code.co_name,
+                    cat="Coroutine",
+                    ph=Phase.Flow.START,
+                    bp=FlowBindingPoint.ENCLOSING,
+                    id=frame_id,
+                ))
 
         super().__call__(frame, event, arg)
 
         # Emit the end point after starting the run
         if id(frame) in self._ids and event == "call":
-            details = self._ids[id(frame)]
             self._trace.add_event(FlowTraceEvent(
-                name=details[0],
-                cat="async task",
+                name=code.co_name,
+                cat="Coroutine",
                 ph=Phase.Flow.END,
                 bp=FlowBindingPoint.ENCLOSING,
-                id=details[1],
+                id=id(frame),
             ))
+
+    @staticmethod
+    def _is_coroutine_finished(arg):
+        return not isinstance(arg, asyncio.Future)
+
+    @staticmethod
+    def _is_coroutine_function(frame):
+        coroutine_flag = 128
+        code = frame.f_code
+        return code.co_flags & coroutine_flag > 0
