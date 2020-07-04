@@ -5,6 +5,7 @@
 import asyncio
 import dis
 import inspect
+import opcode
 import os
 import sys
 import threading
@@ -87,8 +88,22 @@ class FunctionTracer(Tracer):
         name = os.path.splitext(os.path.basename(code.co_filename))[0]
         return f"{name}.{code.co_name}"
 
+_CODE_FLAGS = {}
+for flag, name in dis.COMPILER_FLAG_NAMES.items():
+    _CODE_FLAGS[name] = flag
 
 class AsyncioTracer(FunctionTracer):
+
+    CONTINUABLE_CODE_TYPES = [
+        "GENERATOR",
+        "ASYNC_GENERATOR",
+        "COROUTINE",
+        "ITERABLE_COROUTINE",
+    ]
+
+    CONTINUABLE_CODE_FLAGS = 0
+    for flag in CONTINUABLE_CODE_TYPES:
+        CONTINUABLE_CODE_FLAGS |= _CODE_FLAGS[flag]
 
     def __init__(self):
         super().__init__()
@@ -98,14 +113,14 @@ class AsyncioTracer(FunctionTracer):
         code = frame.f_code
         frame_id = id(frame)
 
-        if event == "return" and self._is_coroutine_function(frame):
-            if self._is_coroutine_finished(arg):
+        if event == "return" and self._is_continuable_code(code):
+            if self._is_frame_finished(frame, arg):
                 self._ids.discard(frame_id)
             else:
                 self._ids.add(frame_id)
                 self._trace.add_event(FlowTraceEvent(
                     name=code.co_name,
-                    cat="Coroutine",
+                    cat=self._code_category(code),
                     ph=Phase.Flow.START,
                     bp=FlowBindingPoint.ENCLOSING,
                     id=frame_id,
@@ -117,18 +132,25 @@ class AsyncioTracer(FunctionTracer):
         if id(frame) in self._ids and event == "call":
             self._trace.add_event(FlowTraceEvent(
                 name=code.co_name,
-                cat="Coroutine",
+                cat=self._code_category(code),
                 ph=Phase.Flow.END,
                 bp=FlowBindingPoint.ENCLOSING,
                 id=id(frame),
             ))
 
     @staticmethod
-    def _is_coroutine_finished(arg):
-        return not isinstance(arg, asyncio.Future)
-
-    @staticmethod
-    def _is_coroutine_function(frame):
-        coroutine_flag = 128
+    def _is_frame_finished(frame, arg):
         code = frame.f_code
-        return code.co_flags & coroutine_flag > 0
+        offset = frame.f_lasti
+        return opcode.opname[code.co_code[offset]] == "RETURN_VALUE"
+
+    @classmethod
+    def _is_continuable_code(cls, code):
+        return code.co_flags & cls.CONTINUABLE_CODE_FLAGS > 0
+
+    @classmethod
+    def _code_category(cls, code):
+        for flag in cls.CONTINUABLE_CODE_TYPES:
+            if _CODE_FLAGS[flag] & code.co_flags > 0:
+                return flag
+        return "UNKNOWN"

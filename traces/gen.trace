@@ -1,0 +1,5768 @@
+{
+  "traceEvents": [
+    {
+      "name": "runners.run",
+      "cat": "/usr/lib/python3.8/asyncio/runners.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135283.889,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135299.4,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135308.886,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135320.953,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135329.513,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135336.335,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135342.902,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135349.052,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c3133c0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135357.369,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c3133c0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135364.71,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135375.93,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.new_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135386.435,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135396.623,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._init_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135407.169,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<frozen importlib.parent",
+      "cat": "<frozen importlib._bootstrap>",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135420.02,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method rpartition of str object at 0x7f6a5c76c070>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135441.753,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method rpartition of str object at 0x7f6a5c76c070>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135450.032,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<frozen importlib.parent",
+      "cat": "<frozen importlib._bootstrap>",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135461.349,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<frozen importlib._handle_fromlist",
+      "cat": "<frozen importlib._bootstrap>",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135474.711,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135484.208,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135505.329,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function hasattr>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135513.281,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function hasattr>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135520.585,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<frozen importlib._handle_fromlist",
+      "cat": "<frozen importlib._bootstrap>",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135531.828,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135544.321,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135554.956,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135569.031,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135579.879,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._init_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135590.809,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135600.49,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.new_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135610.422,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135622.349,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135633.558,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135643.79,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_clock_info>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135656.496,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_clock_info>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135666.725,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "coroutines._is_debug_mode",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135679.476,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_collections_abc.get",
+      "cat": "/usr/lib/python3.8/_collections_abc.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135693.293,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "os.__getitem__",
+      "cat": "/usr/lib/python3.8/os.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135705.077,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "os.encode",
+      "cat": "/usr/lib/python3.8/os.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135715.878,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135723.279,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135729.555,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method encode of str object at 0x7f6a5c31bdf0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135736.977,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method encode of str object at 0x7f6a5c31bdf0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135744.383,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "os.encode",
+      "cat": "/usr/lib/python3.8/os.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135754.613,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "os.__getitem__",
+      "cat": "/usr/lib/python3.8/os.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135767.418,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_collections_abc.get",
+      "cat": "/usr/lib/python3.8/_collections_abc.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135779.169,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "coroutines._is_debug_mode",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135789.855,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.set_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135799.768,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135811.168,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135821.049,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.set_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135831.19,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__init__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135844.497,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__init__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135856.957,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135867.669,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135880.035,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135890.403,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135902.335,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135912.728,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135924.061,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__init__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135941.597,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__.debug",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135954.788,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__.isEnabledFor",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135965.724,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__._acquireLock",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135977.331,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method acquire of _thread.RLock object at 0x7f6a5c7d0990>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936135985.995,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method acquire of _thread.RLock object at 0x7f6a5c7d0990>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936135993.538,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__._acquireLock",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136003.162,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__.getEffectiveLevel",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136015.601,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__.getEffectiveLevel",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136027.418,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__._releaseLock",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136037.463,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method release of _thread.RLock object at 0x7f6a5c7d0990>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136045.021,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method release of _thread.RLock object at 0x7f6a5c7d0990>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136051.844,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__._releaseLock",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136061.358,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__.isEnabledFor",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136072.168,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__init__.debug",
+      "cat": "/usr/lib/python3.8/logging/__init__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136082.343,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._make_self_pipe",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136093.111,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.socketpair",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136104.916,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function socketpair>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136114.047,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function socketpair>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136133.03,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method detach of _socket.socket object at 0x7f6a5c1dfc60>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136142.214,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method detach of _socket.socket object at 0x7f6a5c1dfc60>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136149.691,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.__init__",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136161.746,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.__init__",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136177.716,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method detach of _socket.socket object at 0x7f6a5c1dfc90>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136186.365,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method detach of _socket.socket object at 0x7f6a5c1dfc90>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136193.669,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.__init__",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136203.677,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.__init__",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136215.964,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.socketpair",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136226.351,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method setblocking of socket object at 0x7f6a5c22ca00>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136235.731,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method setblocking of socket object at 0x7f6a5c22ca00>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136245.548,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method setblocking of socket object at 0x7f6a5c22ca60>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136252.671,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method setblocking of socket object at 0x7f6a5c22ca60>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136260.081,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method fileno of socket object at 0x7f6a5c22ca00>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136267.914,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method fileno of socket object at 0x7f6a5c22ca00>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136279.557,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._add_reader",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136291.857,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136302.653,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136312.802,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136328.58,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function copy_context>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136336.974,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function copy_context>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136348.88,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136360.62,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136370.612,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136380.874,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.get_key",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136391.779,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.get_map",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136401.867,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.get_map",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136411.651,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__getitem__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136422.611,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136433.633,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136447.297,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136456.817,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136463.737,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136474.044,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136496.964,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method format of str object at 0x7f6a5c74d1c0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136508.082,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method format of str object at 0x7f6a5c74d1c0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136517.47,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__getitem__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136540.634,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method format of str object at 0x7f6a5c74d1c0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136567.996,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method format of str object at 0x7f6a5c74d1c0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136576.648,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.get_key",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136587.987,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.register",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136601.421,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.register",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136613.322,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136625.405,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136635.558,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136643.191,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136650.242,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136660.316,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136670.935,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<string>.__new__",
+      "cat": "<string>",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136682.688,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method __new__ of type object at 0x7f6a5d4fa640>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136691.024,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method __new__ of type object at 0x7f6a5d4fa640>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136698.909,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<string>.__new__",
+      "cat": "<string>",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136708.643,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.register",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136719.981,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method register of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136730.427,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method register of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136743.857,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.register",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136754.579,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._add_reader",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136770.445,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._make_self_pipe",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136781.125,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "weakref.__init__",
+      "cat": "/usr/lib/python3.8/weakref.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136795.431,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "weakref.update",
+      "cat": "/usr/lib/python3.8/weakref.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136810.345,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function hasattr>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136818.837,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function hasattr>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136826.044,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method items of dict object at 0x7f6a5c1ec700>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136835.276,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method items of dict object at 0x7f6a5c1ec700>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136843.003,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method items of dict object at 0x7f6a5c1e1f00>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136850.946,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method items of dict object at 0x7f6a5c1e1f00>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136858.454,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "weakref.update",
+      "cat": "/usr/lib/python3.8/weakref.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136869.659,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "weakref.__init__",
+      "cat": "/usr/lib/python3.8/weakref.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136880.257,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136893.997,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136905.151,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.new_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136916.233,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.new_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136925.869,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136935.528,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136944.916,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136954.406,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136964.453,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136974.637,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936136983.013,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136989.5,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936136999.802,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137009.81,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137019.958,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.set_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137029.538,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137038.968,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137048.604,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.set_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137058.259,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.run_until_complete",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137071.16,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137081.386,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137091.17,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137101.019,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137110.422,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137120.018,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137127.156,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137133.816,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137143.471,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_futures.isfuture",
+      "cat": "/usr/lib/python3.8/asyncio/base_futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137154.041,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function hasattr>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137161.373,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function hasattr>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137168.919,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_futures.isfuture",
+      "cat": "/usr/lib/python3.8/asyncio/base_futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137187.005,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137200.998,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137213.465,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137224.28,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137235.226,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137244.815,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137254.511,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137268.284,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137278.155,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137293.217,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137303.245,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137312.883,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137323.389,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137333.783,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137346.356,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137356.698,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137366.831,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method append of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137375.996,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method append of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137383.618,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137393.901,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137404.279,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137415.67,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c313580>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137424.59,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c313580>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137432.088,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137441.989,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137453.859,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137464.294,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add_done_callback of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137473.872,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add_done_callback of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137481.693,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.run_forever",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137492.193,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137502.027,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137525.604,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137535.919,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137545.751,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137555.913,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137563.327,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137570.222,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137623.015,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137634.585,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137645.379,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_ident>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137653.18,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_ident>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137659.893,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137670.872,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137677.968,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function set_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137685.752,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function set_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137693.71,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _set_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137704.596,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _set_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137712.227,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137727.146,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137736.826,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137745.059,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137758.383,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137767.324,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137774.989,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function max>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137782.534,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function max>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137790.845,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method poll of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137800.817,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method poll of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137812.701,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137827.86,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137839.795,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137850.925,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137861.392,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function monotonic>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137868.6,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function monotonic>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137875.219,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137884.83,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137893.899,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137901.878,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method popleft of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137913.045,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method popleft of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137921.486,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137932.962,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method run of Context object at 0x7f6a5c1f2280>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137943.561,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.gen_consumer",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137955.347,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._asyncgen_firstiter_hook",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137966.259,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137976.773,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c240200>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936137985.003,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c240200>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936137992.142,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138002.11,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._asyncgen_firstiter_hook",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138012.007,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138024.931,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138036.894,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138044.892,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138059.544,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138069.503,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138082.305,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138089.546,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138097.671,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138107.148,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138117.095,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138124.086,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138131.135,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138140.31,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138150.242,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138157.298,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138164.962,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138174.198,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.sleepy_generator",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138184.207,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138196.589,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method discard of set object at 0x7f6a5c240200>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138208.24,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method discard of set object at 0x7f6a5c240200>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138216.572,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138226.792,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138234.461,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function print>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138262.1,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "__main__.gen_consumer",
+      "cat": "/home/knl/dev/panopticon/panopticon/__main__.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936138292.54,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138305.728,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936138316.125,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139144.937,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139192.293,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139213.904,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139233.442,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139253.857,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139283.986,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method append of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139300.279,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method append of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139308.816,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139320.62,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139332.225,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method run of Context object at 0x7f6a5c1f2280>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139343.731,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139356.19,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139370.804,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139384.144,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139394.25,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139402.965,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139417.277,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139426.885,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139435.19,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function max>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139443.307,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function max>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139456.248,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method poll of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139467.653,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method poll of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139479.789,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139492.953,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139505.926,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139517.69,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139528.389,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function monotonic>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139536.052,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function monotonic>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139544.395,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139557.705,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139568.301,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139577.004,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method popleft of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139589.351,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method popleft of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139598.404,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139610.478,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method run of Context object at 0x7f6a5c1f2840>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139621.266,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_until_complete_cb",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139633.103,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method cancelled of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139642.298,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method cancelled of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139650.363,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method exception of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139658.385,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method exception of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139666.09,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139673.742,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139680.525,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139704.897,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method get_loop of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139714.081,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method get_loop of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139721.325,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139731.22,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.stop",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139745.094,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.stop",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139755.299,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_until_complete_cb",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139765.033,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method run of Context object at 0x7f6a5c1f2840>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139773.422,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139784.356,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139796.578,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _set_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139805.136,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _set_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139813.245,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139822.935,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139834.106,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function set_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139842.366,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function set_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139849.958,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.run_forever",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139859.709,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method remove_done_callback of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139869.093,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method remove_done_callback of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139876.627,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method done of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139884.583,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method done of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139898.995,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method result of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139907.014,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method result of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139914.2,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.run_until_complete",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139924.335,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139950.056,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method discard of set object at 0x7f6a5c313580>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139960.197,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method discard of set object at 0x7f6a5c313580>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139968.128,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936139978.48,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "runners._cancel_all_tasks",
+      "cat": "/usr/lib/python3.8/asyncio/runners.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936139990.739,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "tasks.all_tasks",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140002.421,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140018.075,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140025.587,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140031.918,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140038.289,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140044.313,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140054.088,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140066.747,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140073.713,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140080.033,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140086.336,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140092.418,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140102.138,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__iter__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140112.62,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__init__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140123.746,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__init__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140135.094,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__enter__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140145.89,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c313660>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140154.624,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c313660>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140161.995,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__enter__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140171.945,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__exit__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140183.339,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method remove of set object at 0x7f6a5c313660>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140192.83,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method remove of set object at 0x7f6a5c313660>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140200.369,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset._commit_removals",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140211.005,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset._commit_removals",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140224.416,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__exit__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140235.184,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__iter__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140246.315,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "tasks.<setcomp>",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140258.426,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "tasks.<setcomp>",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140269.247,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "tasks.all_tasks",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140279.909,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "runners._cancel_all_tasks",
+      "cat": "/usr/lib/python3.8/asyncio/runners.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140290.949,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.run_until_complete",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140305.466,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140315.392,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140327.723,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140337.211,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140346.495,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140356.287,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140363.703,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140370.553,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140380.202,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_futures.isfuture",
+      "cat": "/usr/lib/python3.8/asyncio/base_futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140390.075,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function hasattr>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140397.101,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function hasattr>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140404.728,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_futures.isfuture",
+      "cat": "/usr/lib/python3.8/asyncio/base_futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140414.37,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140424.716,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140434.851,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "coroutines.iscoroutine",
+      "cat": "/usr/lib/python3.8/asyncio/coroutines.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140445.587,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140456.309,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140465.973,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140475.59,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140487.789,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140514.386,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140531.572,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140542.153,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140555.178,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140566.59,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140591.968,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140602.456,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140612.145,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140622.226,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method append of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140630.863,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method append of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140638.174,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140648.209,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140658.475,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140668.87,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c313580>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140677.46,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add of set object at 0x7f6a5c313580>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140684.806,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.add",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140694.806,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.create_task",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140705.636,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "tasks.ensure_future",
+      "cat": "/usr/lib/python3.8/asyncio/tasks.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140716.224,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add_done_callback of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140725.365,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method add_done_callback of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140732.98,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.run_forever",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140743.157,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140752.905,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140765.368,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140777.304,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140786.718,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140796.363,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140803.346,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _get_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140809.84,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140819.527,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140829.363,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140840.085,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_ident>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140849.917,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_ident>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140857.093,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140864.194,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function get_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140871.199,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function set_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140878.219,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function set_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140885.876,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _set_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140892.242,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _set_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140899.2,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140935.105,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140944.821,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140967.753,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140980.823,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936140989.516,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936140997.205,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function max>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141004.748,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function max>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141012.871,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method poll of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141022.749,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method poll of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141033.957,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141045.948,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141057.345,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141068.513,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141078.511,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function monotonic>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141085.501,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function monotonic>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141091.946,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141101.515,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141110.515,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141118.897,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method popleft of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141129.124,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method popleft of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141137.522,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141148.83,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method run of Context object at 0x7f6a5c1f2280>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141158.629,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.shutdown_asyncgens",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141175.593,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141184.427,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141196.735,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141203.667,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141209.873,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141216.035,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141222.381,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset.__len__",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141232.927,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141240.486,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.shutdown_asyncgens",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141252.709,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141264.507,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141274.019,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._check_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141283.64,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141293.513,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141303.702,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141313.826,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141323.509,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.__init__",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141333.701,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method append of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141342.156,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method append of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141349.408,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141359.327,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.call_soon",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141369.592,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method run of Context object at 0x7f6a5c1f2280>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141378.691,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141389.735,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141401.827,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141413.607,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141422.448,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141430.569,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141445.099,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141454.043,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141461.796,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function max>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141469.196,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function max>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141477.149,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method poll of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141486.096,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method poll of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141496.22,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.select",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141508.039,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141519.263,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._process_events",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141530.251,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141540.252,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function monotonic>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141547.225,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function monotonic>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141553.69,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.time",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141563.433,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141571.963,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function len>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141579.842,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method popleft of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141597.231,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method popleft of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141605.662,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141616.778,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method run of Context object at 0x7f6a5c1f2840>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141626.317,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_until_complete_cb",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141636.607,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method cancelled of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141644.63,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method cancelled of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141651.96,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method exception of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141659.308,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method exception of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141666.401,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141673.36,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141679.703,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141689.878,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method get_loop of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141697.792,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method get_loop of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141707.716,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "futures._get_loop",
+      "cat": "/usr/lib/python3.8/asyncio/futures.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141718.06,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.stop",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141730.557,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.stop",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141741.002,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_until_complete_cb",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141750.838,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method run of Context object at 0x7f6a5c1f2840>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141759.294,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events._run",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141770.424,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._run_once",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141782.209,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _set_running_loop>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141790.478,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function _set_running_loop>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141798.072,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141807.665,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events._set_coroutine_origin_tracking",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141818.483,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function set_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141825.954,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function set_asyncgen_hooks>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141832.761,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.run_forever",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141842.409,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method remove_done_callback of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141850.969,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method remove_done_callback of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141858.42,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method done of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141866.026,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method done of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141873.092,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method result of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141880.021,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method result of _asyncio.Task object at 0x7f6a5c8e7ea0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141887.048,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.run_until_complete",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141897.131,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141907.682,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method discard of set object at 0x7f6a5c313580>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141916.084,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method discard of set object at 0x7f6a5c313580>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141923.405,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "_weakrefset._remove",
+      "cat": "/usr/lib/python3.8/_weakrefset.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141933.346,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141944.577,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141954.401,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.get_event_loop_policy",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141964.035,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141974.362,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936141987.629,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936141998.917,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142009.15,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.set_event_loop",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142019.249,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142032.1,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142042.868,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142054.474,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142064.66,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142074.724,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142084.527,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._close_self_pipe",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142094.423,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method fileno of socket object at 0x7f6a5c22ca00>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142103.405,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method fileno of socket object at 0x7f6a5c22ca00>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142110.658,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._remove_reader",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142121.357,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142131.287,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142140.91,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.get_key",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142151.33,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.get_map",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142161.464,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.get_map",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142171.186,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__getitem__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142182.14,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142192.541,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142202.67,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142210.082,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142216.518,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142226.49,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142236.738,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.__getitem__",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142247.211,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.get_key",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142256.954,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.unregister",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142270.018,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.unregister",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142280.759,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142290.912,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142303.211,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142310.854,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function isinstance>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142319.485,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_to_fd",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142329.504,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors._fileobj_lookup",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142339.746,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method pop of dict object at 0x7f6a5c1dec40>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142347.952,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method pop of dict object at 0x7f6a5c1dec40>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142355.831,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.unregister",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142365.959,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method unregister of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142374.29,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method unregister of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142385.32,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.unregister",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142395.913,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142410.908,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142421.116,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.get_debug",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142431.36,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "events.cancel",
+      "cat": "/usr/lib/python3.8/asyncio/events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142441.493,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._remove_reader",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142451.913,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142463.387,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket._real_close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142476.404,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method close of socket object at 0x7f6a5c22ca00>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142484.868,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method close of socket object at 0x7f6a5c22ca00>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142502.332,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket._real_close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142513.143,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142522.972,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142533.601,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket._real_close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142543.287,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method close of socket object at 0x7f6a5c22ca60>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142550.84,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method close of socket object at 0x7f6a5c22ca60>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142563.493,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket._real_close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142573.762,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "socket.close",
+      "cat": "/usr/lib/python3.8/socket.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142597.073,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events._close_self_pipe",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142609.184,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142620.784,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142631.281,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_running",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142641.517,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method clear of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142651.279,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method clear of collections.deque object at 0x7f6a5c22c8e0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142659.368,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method clear of list object at 0x7f6a5c22e0c0>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142667.772,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method clear of list object at 0x7f6a5c22e0c0>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142688.176,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142699.194,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.close",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142712.415,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method close of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142721.013,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method close of select.epoll object at 0x7f6a5c1db670>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142732.347,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.close",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142771.492,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method clear of dict object at 0x7f6a5c1dec40>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142780.537,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in method clear of dict object at 0x7f6a5c1dec40>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142790.494,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.close",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142801.876,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selectors.close",
+      "cat": "/usr/lib/python3.8/selectors.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142811.921,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "selector_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/selector_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142822.523,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function is_finalizing>",
+      "cat": "c function",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142830.865,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "<built-in function is_finalizing>",
+      "cat": "c function",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142837.785,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "unix_events.close",
+      "cat": "/usr/lib/python3.8/asyncio/unix_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142850.454,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "runners.run",
+      "cat": "/usr/lib/python3.8/asyncio/runners.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142861.196,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.__del__",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142873.275,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "B",
+      "args": null,
+      "ts": 18936142882.884,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.is_closed",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142892.512,
+      "pid": 27472,
+      "tid": 27472
+    },
+    {
+      "name": "base_events.__del__",
+      "cat": "/usr/lib/python3.8/asyncio/base_events.py",
+      "ph": "E",
+      "args": null,
+      "ts": 18936142905.208,
+      "pid": 27472,
+      "tid": 27472
+    }
+  ],
+  "displayTimeUnit": "ns",
+  "otherData": {
+    "version": "Panopticon 0.1"
+  }
+}
