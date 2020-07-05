@@ -16,8 +16,8 @@ from .trace import *
 
 class Tracer:
 
-    def __init__(self):
-        self._trace = Trace()
+    def __init__(self, trace = None):
+        self._trace = trace or Trace()
 
     def start(self):
         threading.setprofile(self) # Avoid noise
