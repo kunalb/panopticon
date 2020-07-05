@@ -96,6 +96,8 @@ for flag, name in dis.COMPILER_FLAG_NAMES.items():
 
 class AsyncioTracer(FunctionTracer):
 
+    RETURN_OPCODE = opcode.opmap["RETURN_VALUE"] # 83
+
     CONTINUABLE_CODE_TYPES = [
         "GENERATOR",
         "ASYNC_GENERATOR",
@@ -140,11 +142,11 @@ class AsyncioTracer(FunctionTracer):
                 id=id(frame),
             ))
 
-    @staticmethod
-    def _is_frame_finished(frame, arg):
+    @classmethod
+    def _is_frame_finished(cls, frame, arg):
         code = frame.f_code
         offset = frame.f_lasti
-        return opcode.opname[code.co_code[offset]] == "RETURN_VALUE"
+        return opcode.opname[code.co_code[offset]] == cls.RETURN_OPCODE
 
     @classmethod
     def _is_continuable_code(cls, code):
