@@ -38,6 +38,16 @@ class Tracer:
         self.stop()
 
     def __call__(self, frame, event, arg):
+        if self._skip(frame):
+            return
+
+        self._call(frame, event, arg)
+
+    @staticmethod
+    def _skip(frame):
+        return isinstance(frame.f_locals.get('self'), Tracer)
+
+    def _call(self, frame, event, arg):
         raise codeNotImplementedError()
     
 
@@ -48,10 +58,7 @@ class FunctionTracer(Tracer):
         self._state = threading.local()
         self._state.active = None
 
-    def __call__(self, frame, event, arg):
-        if self._skip(frame):
-            return
-
+    def _call(self, frame, event, arg):
         code = frame.f_code
 
         if event == 'call' or event == 'c_call':
@@ -79,11 +86,6 @@ class FunctionTracer(Tracer):
             ))
 
     @staticmethod
-    def _skip(frame):
-        # TODO Move this into Tracer
-        return isinstance(frame.f_locals.get('self'), Tracer)
-
-    @staticmethod
     def _name(code):
         name = os.path.splitext(os.path.basename(code.co_filename))[0]
         return f"{name}.{code.co_name}"
@@ -109,7 +111,7 @@ class AsyncioTracer(FunctionTracer):
         super().__init__()
         self._ids = set({})
 
-    def __call__(self, frame, event, arg):
+    def _call(self, frame, event, arg):
         code = frame.f_code
         frame_id = id(frame)
 
@@ -126,7 +128,7 @@ class AsyncioTracer(FunctionTracer):
                     id=frame_id,
                 ))
 
-        super().__call__(frame, event, arg)
+        super()._call(frame, event, arg)
 
         # Emit the end point after starting the run
         if id(frame) in self._ids and event == "call":
