@@ -22,7 +22,6 @@ def main():
 
     parser.add_argument('arguments', nargs=argparse.REMAINDER,
                         help='Arguments to pass to the program')
-
     args = parser.parse_args()
 
     # Adapted from trace.py
@@ -41,7 +40,6 @@ def main():
             '__package__': None,
             '__cached__': None,
         }
-
         with AsyncioTracer() as at:
             exec(code, run_globals)
 
