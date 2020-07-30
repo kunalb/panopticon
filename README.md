@@ -18,7 +18,7 @@ Usage
 ### Run a command directly
 
 ``` {.python}
-python3 -m panopticon -c "print('hello') -o print_hello.trace
+python3 -m panopticon -c "print('hello')" -o print_hello.trace
 ```
 
 ### Run a file
