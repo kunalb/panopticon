@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "minasyncio.py", line 15, in <module>
-    asyncio.run(asyncio.gather(*futures))
-  File "/usr/lib/python3.8/asyncio/runners.py", line 37, in run
-    raise ValueError("a coroutine was expected, got {!r}".format(main))
-ValueError: a coroutine was expected, got <_GatheringFuture pending>

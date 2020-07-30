@@ -10,7 +10,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 
 setuptools.setup(
-    name="panopticon-knl",
+    name="panopticon",
     version="0.0.1",
     author="Kunal Bhalla",
     author_email="bhalla.kunal@gmail.com",

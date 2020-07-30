@@ -18,7 +18,7 @@ python3 -m panopticon -c "print('hello') -o print_hello.trace
 ### Run a file
 
 ``` {.python}
-python3 -m panopticon custom_file.py -o file.trace
+python3 -m panopticon -o file.trace file.py 
 ```
 
 ### In code
