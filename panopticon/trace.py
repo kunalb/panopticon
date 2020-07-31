@@ -28,7 +28,7 @@ class Trace:
                 "displayTimeUnit": "ns",
                 "otherData": {"version": "Panopticon 0.1"},
             },
-            indent="  "
+            indent="  ",
         )
 
 

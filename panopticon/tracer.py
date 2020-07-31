@@ -15,12 +15,11 @@ from .trace import *
 
 
 class Tracer:
-
-    def __init__(self, trace = None):
+    def __init__(self, trace=None):
         self._trace = trace or Trace()
 
     def start(self):
-        threading.setprofile(self) # Avoid noise
+        threading.setprofile(self)  # Avoid noise
         sys.setprofile(self)
         return self
 
@@ -45,14 +44,13 @@ class Tracer:
 
     @staticmethod
     def _skip(frame):
-        return isinstance(frame.f_locals.get('self'), Tracer)
+        return isinstance(frame.f_locals.get("self"), Tracer)
 
     def _call(self, frame, event, arg):
         raise codeNotImplementedError()
-    
+
 
 class FunctionTracer(Tracer):
-
     def __init__(self):
         super().__init__()
         self._state = threading.local()
@@ -61,17 +59,17 @@ class FunctionTracer(Tracer):
     def _call(self, frame, event, arg):
         code = frame.f_code
 
-        if event == 'call' or event == 'c_call':
+        if event == "call" or event == "c_call":
             ph = Phase.Duration.START
-        elif event == 'return' or event == 'c_return':
+        elif event == "return" or event == "c_return":
             ph = Phase.Duration.END
         else:
             ph = None
 
-        if event == 'c_call' or event == 'c_return':
+        if event == "c_call" or event == "c_return":
             name = str(arg)
-            cat = 'c function'
-        elif event == 'call' or event == 'return':
+            cat = "c function"
+        elif event == "call" or event == "return":
             name = self._name(code)
             cat = code.co_filename
         else:
@@ -79,24 +77,22 @@ class FunctionTracer(Tracer):
             cat = None
 
         if ph:
-            self._trace.add_event(DurationTraceEvent(
-                name=name,
-                cat=cat,
-                ph=ph,
-            ))
+            self._trace.add_event(DurationTraceEvent(name=name, cat=cat, ph=ph,))
 
     @staticmethod
     def _name(code):
         name = os.path.splitext(os.path.basename(code.co_filename))[0]
         return f"{name}.{code.co_name}"
 
+
 _CODE_FLAGS = {}
 for flag, name in dis.COMPILER_FLAG_NAMES.items():
     _CODE_FLAGS[name] = flag
 
+
 class AsyncioTracer(FunctionTracer):
 
-    RETURN_OPCODE = opcode.opmap["RETURN_VALUE"] # 83
+    RETURN_OPCODE = opcode.opmap["RETURN_VALUE"]  # 83
 
     CONTINUABLE_CODE_TYPES = [
         "GENERATOR",
@@ -122,25 +118,29 @@ class AsyncioTracer(FunctionTracer):
                 self._ids.discard(frame_id)
             else:
                 self._ids.add(frame_id)
-                self._trace.add_event(FlowTraceEvent(
-                    name=code.co_name,
-                    cat=self._code_category(code),
-                    ph=Phase.Flow.START,
-                    bp=FlowBindingPoint.ENCLOSING,
-                    id=frame_id,
-                ))
+                self._trace.add_event(
+                    FlowTraceEvent(
+                        name=code.co_name,
+                        cat=self._code_category(code),
+                        ph=Phase.Flow.START,
+                        bp=FlowBindingPoint.ENCLOSING,
+                        id=frame_id,
+                    )
+                )
 
         super()._call(frame, event, arg)
 
         # Emit the end point after starting the run
         if id(frame) in self._ids and event == "call":
-            self._trace.add_event(FlowTraceEvent(
-                name=code.co_name,
-                cat=self._code_category(code),
-                ph=Phase.Flow.END,
-                bp=FlowBindingPoint.ENCLOSING,
-                id=id(frame),
-            ))
+            self._trace.add_event(
+                FlowTraceEvent(
+                    name=code.co_name,
+                    cat=self._code_category(code),
+                    ph=Phase.Flow.END,
+                    bp=FlowBindingPoint.ENCLOSING,
+                    id=id(frame),
+                )
+            )
 
     @classmethod
     def _is_frame_finished(cls, frame, arg):
