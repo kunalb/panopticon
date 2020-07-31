@@ -5,4 +5,6 @@
 __pycache__
 .mypy_cache
 panopticon/__pycache__
-
+dist
+build
+*.egg-info
