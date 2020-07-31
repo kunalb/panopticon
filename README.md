@@ -3,6 +3,8 @@ Panopticon
 
 Panopticon is a debugger-powered tracer for Python code to quickly visualize and explore code execution. Traces generated are [Catapult](<https://chromium.googlesource.com/catapult/+/HEAD/tracing/README.md>) compatible — available at \`chrome://tracing\` if you\'re using Chrome. 
 
+**Alpha**: I'm still working on adding tests, polishing the api, and cleaning up the code in general. It should be handy as a debugging tool -- and please report issues if you come across bugs!
+
 ![Sample trace with async functions](https://github.com/kunalb/panopticon/blob/master/images/async_hello.png?raw=true)
 
 Motivation & Internals 
