@@ -1,4 +1,5 @@
 #!/bin/env python3
 
+import panopticon.version
 
-from .tracer import AsyncioTracer
+__version__ = version.version

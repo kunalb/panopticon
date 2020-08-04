@@ -13,6 +13,8 @@ from enum import Enum
 from typing import Dict
 from time import perf_counter_ns
 
+from panopticon.version import version
+
 
 class Trace:
     def __init__(self):
@@ -26,7 +28,7 @@ class Trace:
             {
                 "traceEvents": [asdict(x) for x in self._events],
                 "displayTimeUnit": "ns",
-                "otherData": {"version": "Panopticon 0.1"},
+                "otherData": {"version": f"Panopticon {version}"},
             },
             indent="  ",
         )

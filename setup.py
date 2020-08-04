@@ -5,13 +5,18 @@ from os import path
 
 
 this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
+
+version = {}
+with open(path.join(this_directory, "panopticon/version.py", encoding="utf-8") as v:
+    exec(v.read(), version)
+    assert "version" in version, "version.py must set the module version!"
 
 
 setuptools.setup(
     name="panopticon",
-    version="0.0.1",
+    version=version["version"],
     author="Kunal Bhalla",
     author_email="bhalla.kunal@gmail.com",
     description="A python tracer",
@@ -24,5 +29,5 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.7',
+    python_requires=">=3.7",
 )
