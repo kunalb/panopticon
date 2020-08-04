@@ -1,8 +1,10 @@
 #!/bin/env python3
 
+"""
+A tracing module to visualize code execution for debugging and understanding.
+"""
+
 import argparse
-import asyncio
-import runpy
 import sys
 import os
 

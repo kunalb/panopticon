@@ -7,7 +7,7 @@ import panopticon.version
 from panopticon.trace import StreamingTrace
 from panopticon.tracer import AsyncioTracer
 
-__version__ = version.version
+__version__ = panopticon.version.version
 
 
 @contextmanager

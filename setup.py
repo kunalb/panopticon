@@ -9,7 +9,9 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 version = {}
-with open(path.join(this_directory, "panopticon/version.py"), encoding="utf-8") as v:
+with open(
+    path.join(this_directory, "panopticon/version.py"), encoding="utf-8"
+) as v:
     exec(v.read(), version)
     assert "version" in version, "version.py must set the module version!"
 

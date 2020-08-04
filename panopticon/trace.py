@@ -11,7 +11,7 @@ import threading
 
 from dataclasses import asdict, dataclass, field
 from enum import Enum
-from typing import Dict
+from typing import Dict, Optional, Any
 from time import perf_counter_ns
 
 from panopticon.version import version
@@ -124,7 +124,7 @@ class FlowBindingPoint(_SerializableEnum):
 
 @dataclass
 class FlowTraceEvent(TraceEvent):
-    id: int = 0  #  ick
+    id: int = 0  # ick
     ph: Phase.Flow = Phase.Flow.START
     bp: FlowBindingPoint = FlowBindingPoint.ENCLOSING
 

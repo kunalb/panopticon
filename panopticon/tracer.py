@@ -2,14 +2,11 @@
 
 """The actual tracer"""
 
-import asyncio
 import dis
-import inspect
 import opcode
 import os
 import sys
 import threading
-import weakref
 
 from .trace import *
 
@@ -47,7 +44,7 @@ class Tracer:
         return isinstance(frame.f_locals.get("self"), Tracer)
 
     def _call(self, frame, event, arg):
-        raise codeNotImplementedError()
+        raise NotImplementedError()
 
 
 class FunctionTracer(Tracer):
