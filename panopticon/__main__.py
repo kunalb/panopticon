@@ -11,17 +11,22 @@ from .tracer import AsyncioTracer
 
 def main():
     parser = argparse.ArgumentParser(
-        prog="panopticon", description="Generate async-aware traces from python code."
+        prog="panopticon",
+        description="Generate async-aware traces from python code.",
     )
 
     parser.add_argument("-o", "--output")
 
     group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument("-c", "--command", help="Run python statements as command")
+    group.add_argument(
+        "-c", "--command", help="Run python statements as command"
+    )
     group.add_argument("path", nargs="?")
 
     parser.add_argument(
-        "arguments", nargs=argparse.REMAINDER, help="Arguments to pass to the program"
+        "arguments",
+        nargs=argparse.REMAINDER,
+        help="Arguments to pass to the program",
     )
     args = parser.parse_args()
 
@@ -34,7 +39,9 @@ def main():
         sys.path[0] = os.path.dirname(args.path)
 
         with open(args.path) as program:
-            code = compile(program.read(), args.path, "exec", dont_inherit=True)
+            code = compile(
+                program.read(), args.path, "exec", dont_inherit=True
+            )
         run_globals = {
             "__file__": args.path,
             "__name__": "__main__",

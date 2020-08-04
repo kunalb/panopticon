@@ -77,7 +77,9 @@ class FunctionTracer(Tracer):
             cat = None
 
         if ph:
-            self._trace.add_event(DurationTraceEvent(name=name, cat=cat, ph=ph,))
+            self._trace.add_event(
+                DurationTraceEvent(name=name, cat=cat, ph=ph,)
+            )
 
     @staticmethod
     def _name(code):
