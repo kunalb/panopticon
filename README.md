@@ -7,31 +7,28 @@ Panopticon is a debugger-powered tracer for Python code to quickly visualize and
 
 ![Sample trace with async functions](https://github.com/kunalb/panopticon/blob/master/images/async_hello.png?raw=true)
 
-Motivation & Internals 
-----------------------
-
-Python already has an excellent tracer module, but I wanted a more convenient way to observe what's actually going on across threads and coroutines. I'd used Catapult in a past life while working on Android, and that seemed like an excellent way to quickly get detailed visualizations of code execution that I could parse.
-
-The current version is fairly simple, and relies on [Python's setprofile](https://explog.in/notes/settrace.html) to observe function transitions. Coroutines and other "continuable" frames are identified by their location in memory, and "closed" when they end with a RETURN_VALUE opcode.
 
 Usage
 -----
 
+You can read a more detailed guide with several examples of simple Python programs, different interfaces to visualize them and the corresponding traces at [explog.in/panopticon](https://explog.in/panopticon/index.html).
+
+
 ### Run a command directly
 
-``` {.python}
+```sh
 python3 -m panopticon -c "print('hello')" -o print_hello.trace
 ```
 
 ### Run a file
 
-``` {.python}
+```sh
 python3 -m panopticon -o file.trace file.py 
 ```
 
 ### In code
 
-``` {.python}
+```python
 with panopticon.tracer.AsyncTracer() as at:
     print("Hello")
 
