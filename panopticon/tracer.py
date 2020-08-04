@@ -51,8 +51,8 @@ class Tracer:
 
 
 class FunctionTracer(Tracer):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, trace=None):
+        super().__init__(trace)
         self._state = threading.local()
         self._state.active = None
 
@@ -105,8 +105,8 @@ class AsyncioTracer(FunctionTracer):
     for flag in CONTINUABLE_CODE_TYPES:
         CONTINUABLE_CODE_FLAGS |= _CODE_FLAGS[flag]
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, trace=None):
+        super().__init__(trace)
         self._ids = set({})
 
     def _call(self, frame, event, arg):

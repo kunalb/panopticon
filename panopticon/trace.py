@@ -4,6 +4,7 @@
 
 from __future__ import annotations
 
+import io
 import json
 import os
 import threading
@@ -32,6 +33,20 @@ class Trace:
             },
             indent="  ",
         )
+
+
+class StreamingTrace(Trace):
+    """Streams data to a file without keeping it in memory"""
+
+    def __init__(self, stream: io.IOBase):
+        self._out = stream
+        self._out.write("[\n")  # Opening brace
+        self._out.flush()
+
+    def add_event(self, event: TraceEvent):
+        json.dump(asdict(event), self._out)
+        self._out.write(",\n")
+        self._out.flush()
 
 
 class _SerializableEnum(str, Enum):
