@@ -1,5 +1,7 @@
 #!/bin/env python3
 
+"""Defines the external facing API for usage in code"""
+
 from contextlib import contextmanager
 
 import panopticon.version
