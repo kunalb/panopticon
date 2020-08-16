@@ -42,7 +42,13 @@ class Tracer(abc.ABC):
 
     @staticmethod
     def _skip(frame):
-        return isinstance(frame.f_locals.get("self"), Tracer)
+        """Skip anything belonging to the Panopticon module.
+
+        TODO: Also skip any children triggered from here."""
+        path = frame.f_code.co_filename
+        package_path, module = os.path.split(path)
+        package = os.path.basename(package_path)
+        return package == "panopticon"
 
     @abc.abstractmethod
     def _call(self, frame, event, arg):
