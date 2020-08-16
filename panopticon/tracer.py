@@ -2,6 +2,7 @@
 
 """The actual tracer"""
 
+import abc
 import dis
 import opcode
 import os
@@ -11,7 +12,7 @@ import threading
 from .trace import *
 
 
-class Tracer:
+class Tracer(abc.ABC):
     def __init__(self, trace=None):
         self._trace = trace or Trace()
 
@@ -43,8 +44,9 @@ class Tracer:
     def _skip(frame):
         return isinstance(frame.f_locals.get("self"), Tracer)
 
+    @abc.abstractmethod
     def _call(self, frame, event, arg):
-        raise NotImplementedError()
+        ...
 
 
 class FunctionTracer(Tracer):
