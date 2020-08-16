@@ -2,7 +2,7 @@ Panopticon
 ==========
 [![License: MIT](https://img.shields.io/pypi/l/panopticon)](https://github.com/kunalb/panopticon/blob/master/LICENSE)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Alpha](https://img.shields.io/badge/State-Alpha-red)
+![Alpha](https://img.shields.io/badge/State-Alpha-red)
 
 
 Panopticon is a debugger-powered tracer for Python code to quickly visualize and explore code execution. Traces generated are [Catapult](<https://chromium.googlesource.com/catapult/+/HEAD/tracing/README.md>) compatible — available at \`chrome://tracing\` if you\'re using Chrome. 
