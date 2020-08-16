@@ -8,11 +8,10 @@ import io
 import json
 import os
 import threading
-
 from dataclasses import asdict, dataclass, field
 from enum import Enum
-from typing import Dict, Optional, Any
 from time import perf_counter_ns
+from typing import Any, Dict, Optional
 
 from panopticon.version import version
 

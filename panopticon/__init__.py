@@ -3,7 +3,6 @@
 from contextlib import contextmanager
 
 import panopticon.version
-
 from panopticon.trace import StreamingTrace
 from panopticon.tracer import AsyncioTracer
 

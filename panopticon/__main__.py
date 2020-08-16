@@ -5,8 +5,8 @@ A tracing module to visualize code execution for debugging and understanding.
 """
 
 import argparse
-import sys
 import os
+import sys
 
 from .tracer import AsyncioTracer
 
