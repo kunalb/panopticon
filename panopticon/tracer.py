@@ -9,8 +9,13 @@ import os
 import sys
 import threading
 
-from .trace import (DurationTraceEvent, FlowBindingPoint, FlowTraceEvent,
-                    Phase, Trace)
+from .trace import (
+    DurationTraceEvent,
+    FlowBindingPoint,
+    FlowTraceEvent,
+    Phase,
+    Trace,
+)
 
 
 class Tracer(abc.ABC):
@@ -87,8 +92,8 @@ class FunctionTracer(Tracer):
                 DurationTraceEvent(name=name, cat=cat, ph=ph,)
             )
 
-    @staticmethod
-    def _name(code):
+    @classmethod
+    def _name(self, code):
         name = os.path.splitext(os.path.basename(code.co_filename))[0]
         return f"{name}.{code.co_name}"
 

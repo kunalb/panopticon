@@ -8,12 +8,35 @@ Exploring a new API to trace specific functions and classes
 
 import inspect
 import io
+import sys
 from typing import Any, Callable, Optional, TypeVar
 
 from panopticon.trace import StreamingTrace, Trace
-from panopticon.tracer import AsyncioTracer
+from panopticon.tracer import AsyncioTracer, FunctionTracer
 
 F = TypeVar("F", bound=Callable[..., Any])
+
+
+class _IncompleteFrameTracer(FunctionTracer):
+    def start(self):
+        sys.setprofile(self)
+        return self
+
+    def stop(self):
+        sys.setprofile(None)
+
+    @classmethod
+    def _name(self, code):
+        return "<<< " + super()._name(code) + " >>>"
+
+
+class _InnerFrameTracer(AsyncioTracer):
+    def start(self):
+        sys.setprofile(self)
+        return self
+
+    def stop(self):
+        sys.setprofile(None)
 
 
 class Probe:
@@ -21,7 +44,8 @@ class Probe:
 
     def __init__(self, f: Callable[..., Any], trace: Trace) -> None:
         self._f = f
-        self._tracer = AsyncioTracer(trace=trace)
+        self._tracer = _IncompleteFrameTracer(trace=trace)
+        self._inner_tracer = _InnerFrameTracer(trace=trace)
 
     def get_trace(self) -> Trace:
         return self._tracer.get_trace()
@@ -32,7 +56,7 @@ class Probe:
 
         self._emit_call(inspect.currentframe())
         try:
-            with AsyncioTracer(self._tracer.get_trace()):
+            with self._inner_tracer:
                 return self._f(*args, **kwargs)
         finally:
             self._emit_return(inspect.currentframe())
