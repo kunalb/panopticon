@@ -5,7 +5,7 @@
 from contextlib import contextmanager
 
 import panopticon.version
-from panopticon.trace import StreamingTrace
+import panopticon.trace
 from panopticon.tracer import AsyncioTracer
 
 __version__ = panopticon.version.version
@@ -14,5 +14,5 @@ __version__ = panopticon.version.version
 @contextmanager
 def trace(trace_file: str):
     with open(trace_file, "w") as out:
-        with AsyncioTracer(trace=StreamingTrace(out)):
+        with AsyncioTracer(trace=panopticon.trace.StreamingTrace(out)):
             yield
