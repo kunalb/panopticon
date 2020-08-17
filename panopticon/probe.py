@@ -40,7 +40,9 @@ class _InnerFrameTracer(AsyncioTracer):
 
 
 class Probe:
-    """Inserted into code when establishing a panopticon isn't possible"""
+    """Inserted into code when establishing a panopticon isn't possible
+
+    TODO: Handle nested probes"""
 
     def __init__(self, f: Callable[..., Any], trace: Trace) -> None:
         self._f = f
