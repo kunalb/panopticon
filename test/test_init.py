@@ -6,13 +6,13 @@ import tempfile
 import unittest
 from test.utils import parse_json_trace
 
-from panopticon import trace
+from panopticon import record_trace
 
 
 class TestInit(unittest.TestCase):
     def test_simple_trace(self):
         with tempfile.NamedTemporaryFile(mode="w+") as outfile:
-            with trace(outfile.name):
+            with record_trace(outfile.name):
                 print("Hello")
             trace_contents = outfile.read()
 

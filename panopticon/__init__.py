@@ -12,7 +12,7 @@ __version__ = panopticon.version.version
 
 
 @contextmanager
-def trace(trace_file: str):
+def record_trace(trace_file: str):
     with open(trace_file, "w") as out:
         with AsyncioTracer(trace=panopticon.trace.StreamingTrace(out)):
             yield
