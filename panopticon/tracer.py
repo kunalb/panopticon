@@ -83,7 +83,7 @@ class FunctionTracer(Tracer):
             cat = "c function"
         elif event == "call" or event == "return":
             name = self._name(frame)
-            cat = code.co_filename
+            cat = f"{code.co_filename}:{code.co_firstlineno}"
         else:
             name = None
             cat = None
