@@ -9,13 +9,8 @@ import os
 import sys
 import threading
 
-from .trace import (
-    Trace,
-    DurationTraceEvent,
-    FlowTraceEvent,
-    FlowBindingPoint,
-    Phase,
-)
+from .trace import (DurationTraceEvent, FlowBindingPoint, FlowTraceEvent,
+                    Phase, Trace)
 
 
 class Tracer(abc.ABC):

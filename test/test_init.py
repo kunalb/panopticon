@@ -2,9 +2,9 @@
 
 """Test the external API defined in __init__.py"""
 
-import json
 import tempfile
 import unittest
+from test.utils import parse_json_trace
 
 from panopticon import trace
 
@@ -17,7 +17,7 @@ class TestInit(unittest.TestCase):
             trace_contents = outfile.read()
 
         # Add trailing ] to make it valid json
-        trace_json = _parse_json_trace(trace_contents)
+        trace_json = parse_json_trace(trace_contents)
 
         tests = {"name": "<built-in function print>", "cat": "c function"}
 
@@ -27,10 +27,3 @@ class TestInit(unittest.TestCase):
 
         self.assertEquals(trace_json[1]["ph"], "B")
         self.assertEquals(trace_json[2]["ph"], "E")
-
-
-def _parse_json_trace(text):
-    if not text.endswith("]"):
-        text = text.rstrip().rstrip(",") + "\n]"
-
-    return json.loads(text)
