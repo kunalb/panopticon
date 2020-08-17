@@ -11,7 +11,7 @@ import io
 from typing import Any, Callable, Optional, TypeVar
 
 from panopticon.trace import StreamingTrace, Trace
-from panopticon.tracer import AsyncioTracer, Tracer
+from panopticon.tracer import AsyncioTracer
 
 F = TypeVar("F", bound=Callable[..., Any])
 
@@ -30,11 +30,10 @@ class Probe:
         # Capture arguments and log as additional values
         # Capture return value and log as additional values
 
-        # Tentatively enable tracing within this function
-        # Tentatively end tracing after finishing this function
         self._emit_call(inspect.currentframe())
         try:
-            return self._f(*args, **kwargs)
+            with AsyncioTracer(self._tracer.get_trace()):
+                return self._f(*args, **kwargs)
         finally:
             self._emit_return(inspect.currentframe())
 
