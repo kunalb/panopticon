@@ -58,12 +58,15 @@ class TestProbe(unittest.TestCase):
             "test_probe.outer_hello",
             "test_probe.inner_hello",
             "test_probe.unprobed",
-            "<<< test_probe.test_nested_probe >>>",
+            "<<< test_probe.TestProbe.test_nested_probe >>>",
         ]
         for fn_name in check_functions:
-            self.assertEqual(
-                sum(1 for x in json_trace if x["name"] == fn_name), 2
-            )
+            with self.subTest("{fn_name}", fn_name=fn_name):
+                self.assertEqual(
+                    sum(1 for x in json_trace if x["name"] == fn_name),
+                    2,
+                    msg=f"{fn_name}",
+                )
 
     def test_nested_probe_warning(self):
         output1 = io.StringIO()

@@ -8,9 +8,15 @@ import opcode
 import os
 import sys
 import threading
+from typing import Optional
 
-from .trace import (DurationTraceEvent, FlowBindingPoint, FlowTraceEvent,
-                    Phase, Trace)
+from .trace import (
+    DurationTraceEvent,
+    FlowBindingPoint,
+    FlowTraceEvent,
+    Phase,
+    Trace,
+)
 
 
 class Tracer(abc.ABC):
@@ -76,7 +82,7 @@ class FunctionTracer(Tracer):
             name = str(arg)
             cat = "c function"
         elif event == "call" or event == "return":
-            name = self._name(code)
+            name = self._name(frame)
             cat = code.co_filename
         else:
             name = None
@@ -88,9 +94,45 @@ class FunctionTracer(Tracer):
             )
 
     @classmethod
-    def _name(self, code):
-        name = os.path.splitext(os.path.basename(code.co_filename))[0]
-        return f"{name}.{code.co_name}"
+    def _name(cls, frame):
+        code = frame.f_code
+
+        classname = cls._get_class_name(frame)
+        classname = "." + classname if classname else ""
+
+        module = cls._get_module_name(frame)
+
+        return f"{module}{classname}.{code.co_name}"
+
+    @classmethod
+    def _get_class_name(cls, frame) -> Optional[str]:
+        """Heuristics to extract classname for a method"""
+        code_name = frame.f_code.co_name
+        local_self = frame.f_locals.get("self")
+        # print(local_self)
+
+        if (
+            local_self
+            and hasattr(local_self, code_name)
+            and callable(getattr(local_self, code_name))
+        ):
+            return type(local_self).__name__
+        return None
+
+    @classmethod
+    def _get_module_name(cls, frame) -> str:
+        """Some heuristics to get useful names for modules"""
+        code = frame.f_code
+        filename = code.co_filename
+
+        module, _ = os.path.splitext(os.path.basename(filename))
+
+        if module == "__init__" or module == "__main__":
+            module = (
+                os.path.basename(os.path.split(filename)[0]) + "." + module
+            )
+
+        return module
 
 
 _CODE_FLAGS = {}

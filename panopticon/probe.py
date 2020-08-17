@@ -26,8 +26,8 @@ class _IncompleteFrameTracer(FunctionTracer):
         sys.setprofile(None)
 
     @classmethod
-    def _name(self, code):
-        return "<<< " + super()._name(code) + " >>>"
+    def _name(cls, frame):
+        return "<<< " + super()._name(frame) + " >>>"
 
 
 class _InnerFrameTracer(AsyncioTracer):
