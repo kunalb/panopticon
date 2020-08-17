@@ -7,7 +7,7 @@ Panopticon
 
 Panopticon is a debugger-powered tracer for Python code to quickly visualize and explore code execution. Traces generated are [Catapult](<https://chromium.googlesource.com/catapult/+/HEAD/tracing/README.md>) compatible — available at \`chrome://tracing\` if you\'re using Chrome. 
 
-**Alpha**: I'm still working on adding tests, polishing the api, and cleaning up the code in general. It should be handy as a debugging tool -- and please report issues if you come across bugs!
+**Alpha**: I'm still working on adding tests, polishing the api, and cleaning up the code in general. Expect the API to change drastically as it meanders towards v1. It should still be immediately useful as a debugging tool. Please report issues if you come across bugs!
 
 ![Sample trace with async functions](https://github.com/kunalb/panopticon/blob/master/images/async_hello.png?raw=true)
 
@@ -33,11 +33,23 @@ python3 -m panopticon -o file.trace file.py
 ### In code
 
 ```python
-with panopticon.tracer.AsyncTracer() as at:
-    print("Hello")
+from panopticon import record_trace
 
-with open("print_hello.trace", "w") as outfile:
-    outfile.write(str(at))
+with record_trace("print_hello.trace"):
+    print("Hello")
+```
+
+
+### Probe a specific function
+It can be tricky to control how a program is executed: using the probe decorator allows instrumenting a specific function instead.
+
+```python
+from panopticon.probe import probe
+from panopticon.trace import StreamingTrace
+
+@probe(trace=StreamingTrace(open("probe.trace", "w")))
+def myfunction():
+    ...
 ```
 
 Asynchronous Functions
@@ -50,9 +62,10 @@ You can enable/disable connections for different types of functions by choosing 
 Changelog
 ---------
 
+### 0.0.2
+- Added a simplified record_trace API
+- Added support for @probe to instrument functions
+
 ### 0.0.1
-
--   Initial version of Panopticon
--   CLI supports running commands and files for tracing
-
-
+- Initial version of Panopticon
+- CLI supports running commands and files for tracing
