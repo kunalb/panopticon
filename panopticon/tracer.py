@@ -4,11 +4,12 @@
 
 import abc
 import dis
-import opcode
 import os
 import sys
 import threading
 from typing import Optional
+
+import opcode
 
 from .trace import (
     DurationTraceEvent,
