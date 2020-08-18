@@ -4,8 +4,8 @@
 
 from contextlib import contextmanager
 
-import panopticon.version
 import panopticon.trace
+import panopticon.version
 from panopticon.tracer import AsyncioTracer
 
 __version__ = panopticon.version.version
