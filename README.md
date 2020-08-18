@@ -64,7 +64,7 @@ Changelog
 
 ### 0.0.2
 - Added a simplified record_trace API
-- Added support for @probe to instrument functions
+- Added support for @probe to instrument functions and classes
 
 ### 0.0.1
 - Initial version of Panopticon
