@@ -113,7 +113,7 @@ class FunctionTracer(Tracer):
         # print(local_self)
 
         if (
-            local_self
+            local_self is not None
             and hasattr(local_self, code_name)
             and callable(getattr(local_self, code_name))
         ):
