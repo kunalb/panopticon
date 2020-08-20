@@ -1,6 +1,7 @@
 #!/bin/env python3
 
 import inspect
+import json
 import unittest
 from unittest.mock import Mock
 
@@ -8,6 +9,20 @@ from panopticon.tracer import FunctionTracer
 
 
 class TestTracer(unittest.TestCase):
+    def test_argument_capture(self):
+
+        with FunctionTracer(capture_args=lambda _1, _2, _3: True) as ft:
+            some_function()
+
+        json_trace = json.loads(str(ft.get_trace()))
+
+        self.assertEquals(
+            json_trace["traceEvents"][1]["args"]["x"], "2",
+        )
+        self.assertEquals(
+            json_trace["traceEvents"][2]["args"]["[return value]"], "4",
+        )
+
     def test_method_name(self):
         self.assertEqual(
             FunctionTracer._name(inspect.currentframe()),
@@ -34,3 +49,11 @@ class TestTracer(unittest.TestCase):
         self.assertEqual(
             FunctionTracer._name(mock_frame), "package.__init__.some_fn"
         )
+
+
+def some_function():
+    inner_function(2)
+
+
+def inner_function(x):
+    return x * x

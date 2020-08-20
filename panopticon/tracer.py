@@ -7,7 +7,7 @@ import dis
 import os
 import sys
 import threading
-from typing import Optional
+from typing import Any, Dict, Optional
 
 import opcode
 
@@ -64,10 +64,11 @@ class Tracer(abc.ABC):
 
 
 class FunctionTracer(Tracer):
-    def __init__(self, trace=None):
+    def __init__(self, trace=None, capture_args=None):
         super().__init__(trace)
         self._state = threading.local()
         self._state.active = None
+        self._capture_args = capture_args
 
     def _call(self, frame, event, arg):
         code = frame.f_code
@@ -91,8 +92,27 @@ class FunctionTracer(Tracer):
 
         if ph:
             self._trace.add_event(
-                DurationTraceEvent(name=name, cat=cat, ph=ph,)
+                DurationTraceEvent(
+                    name=name,
+                    cat=cat,
+                    ph=ph,
+                    args=self._capture_arguments(frame, event, arg),
+                )
             )
+
+    def _capture_arguments(
+        self, frame, event, arg
+    ) -> Optional[Dict[str, Any]]:
+        if not self._capture_args or not self._capture_args(frame, event, arg):
+            return None
+
+        if event == "call":
+            return {key: repr(val) for key, val in frame.f_locals.items()}
+
+        if event == "return":
+            return {"[return value]": repr(arg)}
+
+        return None
 
     @classmethod
     def _name(cls, frame):
@@ -156,9 +176,9 @@ class AsyncioTracer(FunctionTracer):
     for flag in CONTINUABLE_CODE_TYPES:
         CONTINUABLE_CODE_FLAGS |= _CODE_FLAGS[flag]
 
-    def __init__(self, trace=None):
-        super().__init__(trace)
-        self._ids = set({})
+    def __init__(self, trace=None, capture_args=None):
+        super().__init__(trace, capture_args)
+        self._ids = set()
 
     def _call(self, frame, event, arg):
         code = frame.f_code
