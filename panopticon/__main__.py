@@ -5,9 +5,11 @@ A tracing module to visualize code execution for debugging and understanding.
 """
 
 import argparse
+import json
 import os
 import sys
 
+from .post import flatten
 from .tracer import AsyncioTracer
 
 
@@ -25,12 +27,25 @@ def main():
     )
     group.add_argument("path", nargs="?")
 
+    group.add_argument(
+        "-f", "--flatten", help="Flatten a trace for easier readability"
+    )
+
     parser.add_argument(
         "arguments",
         nargs=argparse.REMAINDER,
         help="Arguments to pass to the program",
     )
     args = parser.parse_args()
+
+    if args.flatten:
+        flattened_trace = flatten(trace_file=args.flatten)
+        if args.output:
+            with open(args.output, "w") as outfile:
+                json.dump(flattened_trace, outfile)
+        else:
+            print(json.dump(flattened_trace))
+        return
 
     # Adapted from trace.py
     if args.command:

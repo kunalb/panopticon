@@ -9,19 +9,24 @@ import inspect
 import json
 import os
 from pathlib import Path
-from typing import TypeVar
+from typing import Dict, List, TypeVar
 
 from panopticon.trace import Trace
 
 _RECORDED_TRACES = set()
 
-T = TypeVar("T", Trace, str)
+T = TypeVar("T", Trace, str, List, Dict)
 
 
 def record(trace: T) -> T:
     """Saves traces from the tests for debugging under test/traces.
 
     These can be very useful for debugging and working with tests."""
+
+    if not isinstance(trace, Trace) and not isinstance(trace, str):
+        trace_str = json.dumps(trace)
+    else:
+        trace_str = str(trace)
 
     output_dir = Path(__file__).parent / "traces"
     output_dir.mkdir(exist_ok=True)
@@ -42,7 +47,7 @@ def record(trace: T) -> T:
 
     def save_trace():
         with open(output_dir / trace_name, "w") as out:
-            out.write(str(trace))
+            out.write(trace_str)
 
     atexit.register(save_trace)
 

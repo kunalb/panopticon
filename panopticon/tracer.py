@@ -150,7 +150,6 @@ class FunctionTracer(Tracer):
         """Heuristics to extract classname for a method"""
         code_name = frame.f_code.co_name
         local_self = frame.f_locals.get("self")
-        # print(local_self)
 
         if (
             local_self is not None
