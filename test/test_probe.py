@@ -6,6 +6,7 @@ from unittest.mock import Mock
 
 from panopticon.probe import probe
 from panopticon.trace import StreamingTrace
+from panopticon.tracer import FunctionTracer
 
 
 class TestProbe(unittest.TestCase):
@@ -30,6 +31,28 @@ class TestProbe(unittest.TestCase):
             )
             self.assertEquals(json_trace[i]["ph"], "B")
             self.assertEquals(json_trace[events - i - 1]["ph"], "E")
+
+    def test_args_and_return(self):
+        output = io.StringIO()
+        trace = StreamingTrace(output)
+
+        @probe(trace)
+        def strange(x, y, _z):
+            return x * y
+
+        strange(2, 3, "quirk")
+
+        json_trace = parse_json_trace(output.getvalue())
+        probe_events = [
+            x for x in json_trace if not x["name"].startswith("<<<")
+        ]
+
+        self.assertEquals(probe_events[0]["args"]["x"], "2")
+        self.assertEquals(probe_events[0]["args"]["y"], "3")
+        self.assertEquals(probe_events[0]["args"]["_z"], "'quirk'")
+        self.assertEquals(
+            probe_events[1]["args"][FunctionTracer._RETURN_KEY], "6"
+        )
 
     def test_nested_probe(self):
         output = io.StringIO()

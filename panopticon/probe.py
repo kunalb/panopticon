@@ -38,19 +38,24 @@ def probe(trace: Trace) -> Callable:
 
 
 def _inner_probe(trace, f):
-    outer_tracer = _OuterFrameTracer(trace)
-    inner_tracer = _InnerFrameTracer(trace)
-
     def wrapper(*args, **kwargs):
+        current_frame = inspect.currentframe()
+
+        def capture_args(frame, event, arg):
+            return frame.f_back == current_frame
+
+        outer_tracer = _OuterFrameTracer(trace)
+        inner_tracer = _InnerFrameTracer(trace, capture_args)
+
         if _is_probe_active(trace):
             return f(*args, **kwargs)
 
-        _emit_call(outer_tracer, inspect.currentframe())
+        _emit_call(outer_tracer, current_frame)
         try:
             with inner_tracer:
                 return f(*args, **kwargs)
         finally:
-            _emit_return(outer_tracer, inspect.currentframe())
+            _emit_return(outer_tracer, current_frame)
 
     return wrapper
 

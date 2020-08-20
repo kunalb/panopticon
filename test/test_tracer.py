@@ -20,7 +20,8 @@ class TestTracer(unittest.TestCase):
             json_trace["traceEvents"][1]["args"]["x"], "2",
         )
         self.assertEquals(
-            json_trace["traceEvents"][2]["args"]["[return value]"], "4",
+            json_trace["traceEvents"][2]["args"][FunctionTracer._RETURN_KEY],
+            "4",
         )
 
     def test_method_name(self):

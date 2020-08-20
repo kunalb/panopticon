@@ -64,6 +64,8 @@ class Tracer(abc.ABC):
 
 
 class FunctionTracer(Tracer):
+    _RETURN_KEY = "[return value]"
+
     def __init__(self, trace=None, capture_args=None):
         super().__init__(trace)
         self._state = threading.local()
@@ -110,7 +112,7 @@ class FunctionTracer(Tracer):
             return {key: repr(val) for key, val in frame.f_locals.items()}
 
         if event == "return":
-            return {"[return value]": repr(arg)}
+            return {self._RETURN_KEY: repr(arg)}
 
         return None
 
