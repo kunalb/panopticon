@@ -1,7 +1,7 @@
 import io
 import unittest
 import warnings
-from test.utils import parse_json_trace, record
+from tests.utils import parse_json_trace, record
 from unittest.mock import Mock
 
 from panopticon.probe import probe

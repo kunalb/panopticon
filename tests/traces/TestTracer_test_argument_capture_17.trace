@@ -2,45 +2,45 @@
   "traceEvents": [
     {
       "name": "test_tracer.some_function",
-      "cat": "/home/knl/dev/panopticon/test/test_tracer.py:56",
+      "cat": "/home/knl/dev/panopticon/tests/test_tracer.py:55",
       "ph": "B",
       "args": {},
-      "ts": 277579653790.293,
-      "pid": 126083,
-      "tid": 126083
+      "ts": 277718786109.39,
+      "pid": 126180,
+      "tid": 126180
     },
     {
       "name": "test_tracer.inner_function",
-      "cat": "/home/knl/dev/panopticon/test/test_tracer.py:60",
+      "cat": "/home/knl/dev/panopticon/tests/test_tracer.py:59",
       "ph": "B",
       "args": {
         "x": "2"
       },
-      "ts": 277579653813.85,
-      "pid": 126083,
-      "tid": 126083
+      "ts": 277718786145.815,
+      "pid": 126180,
+      "tid": 126180
     },
     {
       "name": "test_tracer.inner_function",
-      "cat": "/home/knl/dev/panopticon/test/test_tracer.py:60",
+      "cat": "/home/knl/dev/panopticon/tests/test_tracer.py:59",
       "ph": "E",
       "args": {
         "[return value]": "4"
       },
-      "ts": 277579653830.441,
-      "pid": 126083,
-      "tid": 126083
+      "ts": 277718786164.907,
+      "pid": 126180,
+      "tid": 126180
     },
     {
       "name": "test_tracer.some_function",
-      "cat": "/home/knl/dev/panopticon/test/test_tracer.py:56",
+      "cat": "/home/knl/dev/panopticon/tests/test_tracer.py:55",
       "ph": "E",
       "args": {
         "[return value]": "None"
       },
-      "ts": 277579653848.255,
-      "pid": 126083,
-      "tid": 126083
+      "ts": 277718786180.393,
+      "pid": 126180,
+      "tid": 126180
     }
   ],
   "displayTimeUnit": "ns",

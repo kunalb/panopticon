@@ -1,6 +1,0 @@
-[
-{"name": "contextlib._GeneratorContextManager.__enter__", "cat": "/usr/lib/python3.8/contextlib.py:108", "ph": "E", "args": null, "ts": 277579684518.224, "pid": 126083, "tid": 126083},
-{"name": "<built-in function print>", "cat": "c function", "ph": "B", "args": null, "ts": 277579684608.626, "pid": 126083, "tid": 126083},
-{"name": "<built-in function print>", "cat": "c function", "ph": "E", "args": null, "ts": 277579684705.348, "pid": 126083, "tid": 126083},
-{"name": "contextlib._GeneratorContextManager.__exit__", "cat": "/usr/lib/python3.8/contextlib.py:117", "ph": "B", "args": null, "ts": 277579684797.144, "pid": 126083, "tid": 126083},
-{"name": "<built-in function next>", "cat": "c function", "ph": "B", "args": null, "ts": 277579684877.119, "pid": 126083, "tid": 126083},

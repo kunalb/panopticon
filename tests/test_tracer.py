@@ -3,7 +3,7 @@
 import inspect
 import json
 import unittest
-from test.utils import parse_json_trace, record
+from tests.utils import parse_json_trace, record
 from unittest.mock import Mock
 
 from panopticon.tracer import FunctionTracer

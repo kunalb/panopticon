@@ -4,7 +4,7 @@
 
 import tempfile
 import unittest
-from test.utils import parse_json_trace, record
+from tests.utils import parse_json_trace, record
 
 from panopticon import record_trace
 
