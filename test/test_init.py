@@ -4,7 +4,7 @@
 
 import tempfile
 import unittest
-from test.utils import parse_json_trace
+from test.utils import parse_json_trace, record
 
 from panopticon import record_trace
 
@@ -14,7 +14,7 @@ class TestInit(unittest.TestCase):
         with tempfile.NamedTemporaryFile(mode="w+") as outfile:
             with record_trace(outfile.name):
                 print("Hello")
-            trace_contents = outfile.read()
+            trace_contents = record(outfile.read())
 
         # Add trailing ] to make it valid json
         trace_json = parse_json_trace(trace_contents)

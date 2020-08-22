@@ -1,0 +1,50 @@
+{
+  "traceEvents": [
+    {
+      "name": "test_tracer.some_function",
+      "cat": "/home/knl/dev/panopticon/test/test_tracer.py:56",
+      "ph": "B",
+      "args": {},
+      "ts": 277579653790.293,
+      "pid": 126083,
+      "tid": 126083
+    },
+    {
+      "name": "test_tracer.inner_function",
+      "cat": "/home/knl/dev/panopticon/test/test_tracer.py:60",
+      "ph": "B",
+      "args": {
+        "x": "2"
+      },
+      "ts": 277579653813.85,
+      "pid": 126083,
+      "tid": 126083
+    },
+    {
+      "name": "test_tracer.inner_function",
+      "cat": "/home/knl/dev/panopticon/test/test_tracer.py:60",
+      "ph": "E",
+      "args": {
+        "[return value]": "4"
+      },
+      "ts": 277579653830.441,
+      "pid": 126083,
+      "tid": 126083
+    },
+    {
+      "name": "test_tracer.some_function",
+      "cat": "/home/knl/dev/panopticon/test/test_tracer.py:56",
+      "ph": "E",
+      "args": {
+        "[return value]": "None"
+      },
+      "ts": 277579653848.255,
+      "pid": 126083,
+      "tid": 126083
+    }
+  ],
+  "displayTimeUnit": "ns",
+  "otherData": {
+    "version": "Panopticon 0.0.3"
+  }
+}

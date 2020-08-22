@@ -3,6 +3,7 @@
 import inspect
 import json
 import unittest
+from test.utils import parse_json_trace, record
 from unittest.mock import Mock
 
 from panopticon.tracer import FunctionTracer
@@ -10,11 +11,10 @@ from panopticon.tracer import FunctionTracer
 
 class TestTracer(unittest.TestCase):
     def test_argument_capture(self):
-
         with FunctionTracer(capture_args=lambda _1, _2, _3: True) as ft:
             some_function()
 
-        json_trace = json.loads(str(ft.get_trace()))
+        json_trace = parse_json_trace(str(record(ft.get_trace())))
 
         self.assertEquals(
             json_trace["traceEvents"][1]["args"]["x"], "2",

@@ -1,18 +1,18 @@
 import io
 import unittest
 import warnings
-from test.utils import parse_json_trace
+from test.utils import parse_json_trace, record
 from unittest.mock import Mock
 
 from panopticon.probe import probe
-from panopticon.trace import StreamingTrace
+from panopticon.trace import StreamingTrace, Trace
 from panopticon.tracer import FunctionTracer
 
 
 class TestProbe(unittest.TestCase):
     def test_simple_probe(self):
         output = io.StringIO()
-        trace = StreamingTrace(output)
+        trace = record(StreamingTrace(output))
 
         @probe(trace)
         def hello_world():
@@ -34,7 +34,7 @@ class TestProbe(unittest.TestCase):
 
     def test_args_and_return(self):
         output = io.StringIO()
-        trace = StreamingTrace(output)
+        trace = record(StreamingTrace(output))
 
         @probe(trace)
         def strange(x, y, _z):
@@ -56,7 +56,7 @@ class TestProbe(unittest.TestCase):
 
     def test_nested_probe(self):
         output = io.StringIO()
-        trace = StreamingTrace(output)
+        trace = record(StreamingTrace(output))
 
         @probe(trace)
         def inner_hello():
@@ -93,10 +93,10 @@ class TestProbe(unittest.TestCase):
 
     def test_nested_probe_warning(self):
         output1 = io.StringIO()
-        trace1 = StreamingTrace(output1)
+        trace1 = record(StreamingTrace(output1))
 
         output2 = io.StringIO()
-        trace2 = StreamingTrace(output2)
+        trace2 = record(StreamingTrace(output2))
 
         @probe(trace1)
         def inner_hello():
@@ -120,7 +120,7 @@ class TestProbe(unittest.TestCase):
 
     def test_probe_class(self):
         output = io.StringIO()
-        trace = StreamingTrace(output)
+        trace = record(StreamingTrace(output))
 
         @probe(trace)
         class Test:

@@ -47,6 +47,14 @@ class StreamingTrace(Trace):
         self._out.write(",\n")
         self._out.flush()
 
+    def __str__(self) -> str:
+        if hasattr(self._out, "getvalue") and callable(
+            getattr(self._out, "getvalue")
+        ):
+            return self._out.getvalue()
+        else:
+            return f"StreamingTrace ({self._out})"
+
 
 class _SerializableEnum(str, Enum):
     ...
