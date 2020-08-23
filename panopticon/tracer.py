@@ -73,6 +73,12 @@ class FunctionTracer(Tracer):
         self._capture_args = capture_args
         self._name_cache = {}
 
+    def stop(self):
+        super().stop()
+
+        # Prevent leaking frames
+        self._name_cache.clear()
+
     def _call(self, frame, event, arg):
         code = frame.f_code
 
@@ -120,7 +126,16 @@ class FunctionTracer(Tracer):
         return None
 
     def _name(self, frame, event, arg):
-        return self._get_frame_name(frame)
+        name = self._name_cache.get(frame)
+        if not name:
+            name = self._get_frame_name(frame)
+
+        if event == "c_return" or event == "return":
+            self._name_cache.pop(frame, None)
+        else:
+            self._name_cache[frame] = name
+
+        return name
 
     @classmethod
     def _get_frame_name(cls, frame):
@@ -217,6 +232,18 @@ class AsyncioTracer(FunctionTracer):
                     id=id(frame),
                 )
             )
+
+    def _name(self, frame, event, arg):
+        name = self._name_cache.get(frame)
+        if not name:
+            name = self._get_frame_name(frame)
+
+        if self._is_frame_finished(frame, arg):
+            self._name_cache.pop(frame, None)
+        else:
+            self._name_cache[frame] = name
+
+        return name
 
     @classmethod
     def _is_frame_finished(cls, frame, arg):

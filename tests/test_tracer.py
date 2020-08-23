@@ -1,10 +1,13 @@
 #!/bin/env python3
 
+import asyncio
 import inspect
+import io
 import unittest
 from unittest.mock import Mock
 
-from panopticon.tracer import FunctionTracer
+from panopticon.trace import StreamingTrace
+from panopticon.tracer import AsyncioTracer, FunctionTracer
 from tests.utils import parse_json_trace, record
 
 
@@ -50,6 +53,55 @@ class TestTracer(unittest.TestCase):
             FunctionTracer._get_frame_name(mock_frame),
             "package.__init__.some_fn",
         )
+
+    def test_method_name_with_self_removal(self):
+        stream = io.StringIO()
+        trace = record(StreamingTrace(stream))
+
+        tr = TabulaRasa()
+        with FunctionTracer(trace) as ft:
+            tr.clear()
+
+        trace_json = parse_json_trace(stream.getvalue())
+        for key in ["name", "cat"]:
+            self.assertEqual(
+                trace_json[0][key], trace_json[-1][key],
+            )
+
+
+class TestAsyncTracer(unittest.IsolatedAsyncioTestCase):
+    async def test_async_method_name_with_self_removal(self):
+        stream = io.StringIO()
+        trace = record(StreamingTrace(stream))
+
+        tr = TabulaRasa()
+        with AsyncioTracer(trace) as at:
+            await tr.async_clear()
+
+        expected_name = "test_tracer.TabulaRasa.async_clear"
+        trace_json = parse_json_trace(stream.getvalue())
+        self.assertEqual(
+            sum(1 for x in trace_json if x["name"] == expected_name), 6
+        )
+
+        self.assertEqual(len(at._name_cache), 0)
+
+
+class TabulaRasa:
+    def clear(self):
+        print("Before")
+        self = None
+        print("After")
+
+    async def async_clear(self):
+        print("Before")
+        self = None
+        await asyncio.sleep(0.0001)
+
+        print("After")
+        await asyncio.sleep(0.0001)
+
+        print("Exiting")
 
 
 def some_function():
