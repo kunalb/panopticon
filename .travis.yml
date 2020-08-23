@@ -1,0 +1,10 @@
+language: python
+python:
+  - 3.7
+  - 3.8
+before_install:
+  - pip install -U nose2
+  - pip install codecov
+script: nose2
+after_success:
+  - codecov
