@@ -8,9 +8,8 @@ import glob
 import inspect
 import json
 import os
-import unittest
 from pathlib import Path
-from typing import TypeVar, Union
+from typing import TypeVar
 
 from panopticon.trace import Trace
 
@@ -34,7 +33,7 @@ def record(trace: T) -> T:
 
     trace_name = f"{test_case}_{test_name}"
 
-    if not trace_name in _RECORDED_TRACES:
+    if trace_name not in _RECORDED_TRACES:
         _RECORDED_TRACES.add(trace_name)
         for t in glob.glob(str(output_dir / trace_name) + "*.trace"):
             os.remove(t)
@@ -53,5 +52,5 @@ def record(trace: T) -> T:
 def parse_json_trace(text):
     try:
         return json.loads(text)
-    except:
+    except json.JSONDecodeError:
         return json.loads(text.rstrip().rstrip(",") + "\n]")

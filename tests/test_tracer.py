@@ -1,7 +1,6 @@
 #!/bin/env python3
 
 import inspect
-import json
 import unittest
 from tests.utils import parse_json_trace, record
 from unittest.mock import Mock

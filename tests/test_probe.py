@@ -5,7 +5,7 @@ from tests.utils import parse_json_trace, record
 from unittest.mock import Mock
 
 from panopticon.probe import probe
-from panopticon.trace import StreamingTrace, Trace
+from panopticon.trace import StreamingTrace
 from panopticon.tracer import FunctionTracer
 
 
