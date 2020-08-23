@@ -71,8 +71,8 @@ class TestTracer(unittest.TestCase):
 
 
 if sys.version_info >= (3, 8):
-    class TestAsyncTracer(unittest.IsolatedAsyncioTestCase):
 
+    class TestAsyncTracer(unittest.IsolatedAsyncioTestCase):
         async def test_async_method_name_with_self_removal(self):
             stream = io.StringIO()
             trace = record(StreamingTrace(stream))

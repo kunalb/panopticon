@@ -19,7 +19,10 @@ F = TypeVar("F", bound=Callable[..., Any])
 
 
 def probe(trace: Trace) -> Callable:
-    """Decorator to instrument functions and classes"""
+    """Decorator to instrument functions and classes
+
+    TODO: Replace this with a version that doesn't rely on settrace
+    and only captures the probed function"""
 
     def decorator(o):
         if inspect.isclass(o):
@@ -31,14 +34,25 @@ def probe(trace: Trace) -> Callable:
                         update_wrapper(_inner_probe(trace, method), method),
                     )
             return o
+        elif inspect.iscoroutinefunction(o):
+            return _async_probe(trace, o)
         else:  # Treat it as a function
             return update_wrapper(_inner_probe(trace, o), o)
 
     return decorator
 
 
-def _inner_probe(trace, f):
-    def wrapper(*args, **kwargs):
+def _async_probe(trace, f):
+    """This is a very sloppy implementation.
+
+    TODO: Replace this with a wrapper that implements 
+    abc.collections.Coroutine, along with Generator and 
+    AsyncGenerator instead."""
+
+    async def wrapper(*args, **kwargs):
+        if _is_probe_active(trace):
+            return f(*args, **kwargs)
+
         current_frame = inspect.currentframe()
 
         def capture_args(frame, event, arg):
@@ -47,8 +61,28 @@ def _inner_probe(trace, f):
         outer_tracer = _OuterFrameTracer(trace)
         inner_tracer = _InnerFrameTracer(trace, capture_args)
 
+        _emit_call(outer_tracer, current_frame)
+        try:
+            with inner_tracer:
+                return await f(*args, **kwargs)
+        finally:
+            _emit_return(outer_tracer, current_frame)
+
+    return wrapper
+
+
+def _inner_probe(trace, f):
+    def wrapper(*args, **kwargs):
         if _is_probe_active(trace):
             return f(*args, **kwargs)
+
+        current_frame = inspect.currentframe()
+
+        def capture_args(frame, event, arg):
+            return frame.f_back == current_frame
+
+        outer_tracer = _OuterFrameTracer(trace)
+        inner_tracer = _InnerFrameTracer(trace, capture_args)
 
         _emit_call(outer_tracer, current_frame)
         try:
