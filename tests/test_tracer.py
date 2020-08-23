@@ -2,10 +2,10 @@
 
 import inspect
 import unittest
-from tests.utils import parse_json_trace, record
 from unittest.mock import Mock
 
 from panopticon.tracer import FunctionTracer
+from tests.utils import parse_json_trace, record
 
 
 class TestTracer(unittest.TestCase):
@@ -25,14 +25,14 @@ class TestTracer(unittest.TestCase):
 
     def test_method_name(self):
         self.assertEqual(
-            FunctionTracer._name(inspect.currentframe()),
+            FunctionTracer._get_frame_name(inspect.currentframe()),
             "test_tracer.TestTracer.test_method_name",
         )
 
     def test_function_name(self):
         def test_fn():
             self.assertEqual(
-                FunctionTracer._name(inspect.currentframe()),
+                FunctionTracer._get_frame_name(inspect.currentframe()),
                 "test_tracer.test_fn",
             )
 
@@ -47,7 +47,8 @@ class TestTracer(unittest.TestCase):
         mock_frame.f_code.co_filename = "a/b/c/package/__init__.py"
 
         self.assertEqual(
-            FunctionTracer._name(mock_frame), "package.__init__.some_fn"
+            FunctionTracer._get_frame_name(mock_frame),
+            "package.__init__.some_fn",
         )
 
 

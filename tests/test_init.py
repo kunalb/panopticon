@@ -4,9 +4,9 @@
 
 import tempfile
 import unittest
-from tests.utils import parse_json_trace, record
 
 from panopticon import record_trace
+from tests.utils import parse_json_trace, record
 
 
 class TestInit(unittest.TestCase):

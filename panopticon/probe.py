@@ -68,9 +68,8 @@ class _OuterFrameTracer(FunctionTracer):
     def stop(self):
         sys.setprofile(None)
 
-    @classmethod
-    def _name(cls, frame):
-        return "<<< " + super()._name(frame) + " >>>"
+    def _name(self, frame, event, arg):
+        return "<<< " + super()._name(frame, event, arg) + " >>>"
 
 
 class _InnerFrameTracer(AsyncioTracer):

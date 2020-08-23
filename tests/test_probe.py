@@ -1,12 +1,12 @@
 import io
 import unittest
 import warnings
-from tests.utils import parse_json_trace, record
 from unittest.mock import Mock
 
 from panopticon.probe import probe
 from panopticon.trace import StreamingTrace
 from panopticon.tracer import FunctionTracer
+from tests.utils import parse_json_trace, record
 
 
 class TestProbe(unittest.TestCase):

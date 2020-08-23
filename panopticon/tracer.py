@@ -71,6 +71,7 @@ class FunctionTracer(Tracer):
         self._state = threading.local()
         self._state.active = None
         self._capture_args = capture_args
+        self._name_cache = {}
 
     def _call(self, frame, event, arg):
         code = frame.f_code
@@ -82,11 +83,13 @@ class FunctionTracer(Tracer):
         else:
             ph = None
 
+        # Names on .*return events are superfluous but helpful
+        # for debugging and testing.
         if event == "c_call" or event == "c_return":
             name = str(arg)
             cat = "c function"
         elif event == "call" or event == "return":
-            name = self._name(frame)
+            name = self._name(frame, event, arg)
             cat = f"{code.co_filename}:{code.co_firstlineno}"
         else:
             name = None
@@ -116,15 +119,15 @@ class FunctionTracer(Tracer):
 
         return None
 
-    @classmethod
-    def _name(cls, frame):
-        code = frame.f_code
+    def _name(self, frame, event, arg):
+        return self._get_frame_name(frame)
 
+    @classmethod
+    def _get_frame_name(cls, frame):
+        code = frame.f_code
         classname = cls._get_class_name(frame)
         classname = "." + classname if classname else ""
-
         module = cls._get_module_name(frame)
-
         return f"{module}{classname}.{code.co_name}"
 
     @classmethod
