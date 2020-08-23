@@ -70,23 +70,24 @@ class TestTracer(unittest.TestCase):
             )
 
 
-@unittest.skipUnless(sys.version_info >= (3, 8), "Needs Python 3.8")
-class TestAsyncTracer(unittest.IsolatedAsyncioTestCase):
-    async def test_async_method_name_with_self_removal(self):
-        stream = io.StringIO()
-        trace = record(StreamingTrace(stream))
+if sys.version_info >= (3, 8):
+    class TestAsyncTracer(unittest.IsolatedAsyncioTestCase):
 
-        tr = TabulaRasa()
-        with AsyncioTracer(trace) as at:
-            await tr.async_clear()
+        async def test_async_method_name_with_self_removal(self):
+            stream = io.StringIO()
+            trace = record(StreamingTrace(stream))
 
-        expected_name = "test_tracer.TabulaRasa.async_clear"
-        trace_json = parse_json_trace(stream.getvalue())
-        self.assertEqual(
-            sum(1 for x in trace_json if x["name"] == expected_name), 6
-        )
+            tr = TabulaRasa()
+            with AsyncioTracer(trace) as at:
+                await tr.async_clear()
 
-        self.assertEqual(len(at._name_cache), 0)
+            expected_name = "test_tracer.TabulaRasa.async_clear"
+            trace_json = parse_json_trace(stream.getvalue())
+            self.assertEqual(
+                sum(1 for x in trace_json if x["name"] == expected_name), 6
+            )
+
+            self.assertEqual(len(at._name_cache), 0)
 
 
 class TabulaRasa:
