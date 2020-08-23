@@ -3,6 +3,7 @@
 import asyncio
 import inspect
 import io
+import sys
 import unittest
 from unittest.mock import Mock
 
@@ -69,6 +70,7 @@ class TestTracer(unittest.TestCase):
             )
 
 
+@unittest.skipUnless(sys.version_info >= (3, 8), "Needs Python 3.8")
 class TestAsyncTracer(unittest.IsolatedAsyncioTestCase):
     async def test_async_method_name_with_self_removal(self):
         stream = io.StringIO()
