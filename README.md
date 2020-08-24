@@ -63,10 +63,11 @@ You can enable/disable connections for different types of functions by choosing 
 Changelog
 ---------
 
-### Master
+### 0.0.3
 - Added basic support for capturing arguments in traces
 - New utility to "flatten" complex or sparse traces for readability
 - Improved naming behavior when `self` is modified
+- Extremely basic support for async probes
 
 ### 0.0.2
 - Added a simplified record_trace API
