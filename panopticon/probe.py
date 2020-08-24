@@ -1,147 +1,213 @@
 #!/bin/env python3
 
 """
-WARNING: EXPERIMENTAL
-
-Exploring a new API to trace specific functions and classes
+A lighter probe implementation.
 """
 
+import collections
 import inspect
-import sys
-import warnings
+import re
 from functools import update_wrapper
-from typing import Any, Callable, TypeVar
+from typing import Callable
 
-from panopticon.trace import Trace
-from panopticon.tracer import AsyncioTracer, FunctionTracer
-
-F = TypeVar("F", bound=Callable[..., Any])
+from panopticon.trace import DurationTraceEvent, Phase, Trace
+from panopticon.tracer import FunctionTracer
 
 
 def probe(trace: Trace) -> Callable:
-    """Decorator to instrument functions and classes
+    tracer = _Tracer(trace)
 
-    TODO: Replace this with a version that doesn't rely on settrace
-    and only captures the probed function"""
-
-    def decorator(o):
-        if inspect.isclass(o):
-            for method_name, method in vars(o).items():
+    def decorator(x):
+        if inspect.isclass(x):
+            for method_name, method in vars(x).items():
                 if callable(method):
                     setattr(
-                        o,
-                        method_name,
-                        update_wrapper(_inner_probe(trace, method), method),
+                        x, method_name, decorator(method),
                     )
-            return o
-        elif inspect.iscoroutinefunction(o):
-            return _async_probe(trace, o)
-        else:  # Treat it as a function
-            return update_wrapper(_inner_probe(trace, o), o)
+            return x
+        if inspect.isgeneratorfunction(x):
+            replacement = _probe_generator(tracer, x)
+        elif inspect.iscoroutinefunction(x):
+            replacement = _probe_coroutine(tracer, x)
+        elif inspect.isasyncgenfunction(x):
+            replacement = _probe_async_generator(tracer, x)
+        else:
+            replacement = _probe_function(tracer, x)
+
+        return update_wrapper(replacement, x)
 
     return decorator
 
 
-def _async_probe(trace, f):
-    """This is a very sloppy implementation.
-
-    TODO: Replace this with a wrapper that implements 
-    abc.collections.Coroutine, along with Generator and 
-    AsyncGenerator instead."""
-
-    async def wrapper(*args, **kwargs):
-        if _is_probe_active(trace):
-            return f(*args, **kwargs)
-
-        current_frame = inspect.currentframe()
-
-        def capture_args(frame, event, arg):
-            return frame.f_back == current_frame
-
-        outer_tracer = _OuterFrameTracer(trace)
-        inner_tracer = _InnerFrameTracer(trace, capture_args)
-
-        _emit_call(outer_tracer, current_frame)
-        try:
-            with inner_tracer:
-                return await f(*args, **kwargs)
-        finally:
-            _emit_return(outer_tracer, current_frame)
-
-    return wrapper
+def _probe_generator(tracer, x):
+    ...
 
 
-def _inner_probe(trace, f):
+def _probe_coroutine(tracer, x):
     def wrapper(*args, **kwargs):
-        if _is_probe_active(trace):
-            return f(*args, **kwargs)
+        tracer.call_backtrace(inspect.currentframe())
+        tracer.call_fn(x, args, kwargs)
 
-        current_frame = inspect.currentframe()
-
-        def capture_args(frame, event, arg):
-            return frame.f_back == current_frame
-
-        outer_tracer = _OuterFrameTracer(trace)
-        inner_tracer = _InnerFrameTracer(trace, capture_args)
-
-        _emit_call(outer_tracer, current_frame)
         try:
-            with inner_tracer:
-                return f(*args, **kwargs)
+            return _CoroutineProbe(
+                tracer,
+                x(*args, **kwargs),
+                tracer._fn_name(x),
+                tracer._fn_cat(x),
+            )
         finally:
-            _emit_return(outer_tracer, current_frame)
+            tracer.return_fn(x, None)
+            tracer.return_backtrace(inspect.currentframe())
 
     return wrapper
 
 
-class _OuterFrameTracer(FunctionTracer):
+class _CoroutineProbe(collections.abc.Coroutine):
+    def __init__(self, tracer, x, name, cat):
+        self._tracer = tracer
+        self._x = x
+        self._trace_args = {"name": name, "cat": cat}
+
+    def send(self, val):
+        # TODO Instrument
+        self._x.send(val)
+
+    def throw(self, typ, val=None, tb=None):
+        # TODO Instrument
+        self._x.throw(typ, val, tb)
+
+    def close(self):
+        # TODO Instrument
+        self._x.close()
+
+    def __await__(self):
+        __panopticon_marker = self._tracer
+
+        while True:
+            self._tracer.call_backtrace(inspect.currentframe())
+            self._tracer.event(ph=Phase.Duration.START, **self._trace_args)
+            try:
+                result = self._x.send(None)
+                yield result
+            except StopIteration as stop:
+                self._tracer.event(
+                    ph=Phase.Duration.END,
+                    args={self._tracer._RETURN_KEY: repr(stop.value)},
+                    **self._trace_args,
+                )
+                break
+            except:
+                self._tracer.event(
+                    ph=Phase.Duration.END, **self._trace_args,
+                )
+                raise
+            else:
+                self._tracer.event(
+                    ph=Phase.Duration.END,
+                    args={self._tracer._RETURN_KEY: repr(result)},
+                    **self._trace_args,
+                )
+            finally:
+                self._tracer.return_backtrace(inspect.currentframe())
+
+
+def _probe_async_generator(tracer, x):
+    ...
+
+
+def _probe_function(tracer, x):
+    def wrapper(*args, **kwargs):
+        __panopticon_marker = tracer
+
+        frame = inspect.currentframe()
+        tracer.call_backtrace(frame)
+        tracer.call_fn(x, args, kwargs)
+
+        return_value = None
+        try:
+            return_value = x(*args, **kwargs)
+            return return_value
+        finally:
+            tracer.return_fn(x, return_value)
+            tracer.return_backtrace(frame)
+
+    return wrapper
+
+
+class _Tracer(FunctionTracer):
+    """TODO Refactor/simplify this class"""
+
+    _FN_REGEX = re.compile(r"<function (.*?) at 0x[^ ]+>")
+
     def start(self):
-        sys.setprofile(self)
         return self
 
     def stop(self):
-        sys.setprofile(None)
+        ...
 
-    def _name(self, frame, event, arg):
-        return "<<< " + super()._name(frame, event, arg) + " >>>"
-
-
-class _InnerFrameTracer(AsyncioTracer):
-    def start(self):
-        sys.setprofile(self)
-        return self
-
-    def stop(self):
-        sys.setprofile(None)
-
-
-def _is_probe_active(current_trace) -> bool:
-    """Check if another probe is already rendering"""
-    current_profiler = sys.getprofile()
-    is_active = isinstance(current_profiler, _InnerFrameTracer)
-
-    if is_active and current_profiler.get_trace() != current_trace:
-        warnings.warn(
-            "Multiple traces from overlapping probes aren't supported!",
-            RuntimeWarning,
+    def call_fn(self, fn, args, kwargs):
+        self.event(
+            name=self._fn_name(fn),
+            cat=self._fn_cat(fn),
+            ph=Phase.Duration.START,
+            args=self._fn_args(fn, args, kwargs),
         )
 
-    return is_active
+    def return_fn(self, fn, return_value):
+        self.event(
+            name=self._fn_name(fn),
+            cat=self._fn_cat(fn),
+            ph=Phase.Duration.END,
+            args={self._RETURN_KEY: repr(return_value)},
+        )
 
+    def event(self, name, cat, ph, args=None):
+        self._trace.add_event(
+            DurationTraceEvent(name=name, cat=cat, ph=ph, args=args,)
+        )
 
-def _emit_call(outer_tracer, frame):
-    # Invert the stack
-    stack = []
-    while frame is not None:
-        stack.append(frame)
-        frame = frame.f_back
+    @classmethod
+    def _fn_name(cls, fn):
+        return cls._FN_REGEX.search(str(fn)).group(1)
 
-    while stack:
-        frame = stack.pop()
-        outer_tracer(frame, "call", None)
+    @staticmethod
+    def _fn_cat(fn):
+        code = fn.__code__
+        return f"{code.co_filename}:{code.co_firstlineno}"
 
+    @staticmethod
+    def _fn_args(fn, args, kwargs):
+        bound_arguments = inspect.signature(fn).bind(*args, **kwargs)
+        result = {}
+        for key, val in bound_arguments.arguments.items():
+            result[key] = repr(val)
+        return result
 
-def _emit_return(outer_tracer, frame):
-    while frame:
-        outer_tracer(frame, "return", None)
-        frame = frame.f_back
+    def call_backtrace(self, frame):
+        # Invert the stack
+        stack = []
+        while frame is not None and not self._is_traced_frame(frame):
+            stack.append(frame)
+            frame = frame.f_back
+
+        while stack:
+            frame = stack.pop()
+            self(frame, "call", None)
+
+    def return_backtrace(self, frame):
+        while frame and not self._is_traced_frame(frame):
+            self(frame, "return", None)
+            frame = frame.f_back
+
+    def _is_traced_frame(self, frame):
+        return (
+            frame is not None
+            and frame.f_back is not None
+            and frame.f_back.f_locals.get("__panopticon_marker")
+            and frame.f_back.f_locals.get("__panopticon_marker").get_trace()
+            == self.get_trace()
+        )
+
+    def _name(self, frame, event, arg):
+        # Avoiding name cache
+        return "... " + super()._get_frame_name(frame) + " ..."

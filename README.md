@@ -63,6 +63,10 @@ You can enable/disable connections for different types of functions by choosing 
 Changelog
 ---------
 
+### Master
+- Reimplement probes to be more robust and avoid capturing all contents
+- Probes can now write to multiple traces
+
 ### 0.0.3
 - Added basic support for capturing arguments in traces
 - New utility to "flatten" complex or sparse traces for readability
