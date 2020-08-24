@@ -5,7 +5,7 @@ import io
 import sys
 import unittest
 
-from panopticon.probe import probe
+from panopticon.probe2 import probe
 from panopticon.trace import StreamingTrace
 from tests.utils import parse_json_trace, record
 
