@@ -4,6 +4,7 @@
 
 import abc
 import dis
+import logging
 import os
 import sys
 import threading
@@ -18,6 +19,8 @@ from .trace import (
     Phase,
     Trace,
 )
+
+logger = logging.getLogger(__name__)
 
 
 class Tracer(abc.ABC):
@@ -118,12 +121,28 @@ class FunctionTracer(Tracer):
             return None
 
         if event == "call":
-            return {key: repr(val) for key, val in frame.f_locals.items()}
+            return {
+                key: self._safe_repr(key, val)
+                for key, val in frame.f_locals.items()
+            }
 
         if event == "return":
-            return {self._RETURN_KEY: repr(arg)}
+            return {self._RETURN_KEY: self._safe_repr(self._RETURN_KEY, arg)}
 
         return None
+
+    @staticmethod
+    def _safe_repr(key, val) -> str:
+        try:
+            return repr(val)
+        except:
+            logger.exception(f"Couldn't represent value for {key}")
+
+        try:
+            return str(val)
+            logger.exception(f"Couldn't stringify value for {key}")
+        except:
+            return "<couldn't convert>"
 
     def _name(self, frame, event, arg):
         name = self._name_cache.get(frame)
