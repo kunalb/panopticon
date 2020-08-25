@@ -41,7 +41,7 @@ def probe(trace: Trace) -> Callable:
 
 def _probe_generator(tracer, x):
     def wrapper(*args, **kwargs):
-        __panopticon_marker = tracer  # Should be unnecessary
+        _panopticon_marker = tracer  # Should be unnecessary
         tracer.call_backtrace(inspect.currentframe())
         tracer.call_fn(x, args, kwargs)
 
@@ -72,7 +72,7 @@ class _GeneratorProbe(collections.abc.Generator):
         return self._x.throw()
 
     def __next__(self):
-        __panopticon_marker = self._tracer
+        _panopticon_marker = self._tracer
         self._tracer.call_backtrace(inspect.currentframe())
         self._tracer.event(ph=Phase.Duration.START, **self._trace_args)
 
@@ -91,7 +91,7 @@ class _GeneratorProbe(collections.abc.Generator):
 
 def _probe_coroutine(tracer, x):
     def wrapper(*args, **kwargs):
-        __panopticon_marker = tracer  # Should be unnecessary
+        _panopticon_marker = tracer  # Should be unnecessary
         tracer.call_backtrace(inspect.currentframe())
         tracer.call_fn(x, args, kwargs)
 
@@ -128,7 +128,7 @@ class _CoroutineProbe(collections.abc.Coroutine):
         self._x.close()
 
     def __await__(self):
-        __panopticon_marker = self._tracer
+        _panopticon_marker = self._tracer
         it = self._x.__await__()
 
         while True:
@@ -165,7 +165,7 @@ def _probe_async_generator(tracer, x):
 
 def _probe_function(tracer, x):
     def wrapper(*args, **kwargs):
-        __panopticon_marker = tracer
+        _panopticon_marker = tracer
 
         frame = inspect.currentframe()
         tracer.call_backtrace(frame)
@@ -251,8 +251,8 @@ class _Tracer(FunctionTracer):
         return (
             frame is not None
             and frame.f_back is not None
-            and frame.f_back.f_locals.get("__panopticon_marker")
-            and frame.f_back.f_locals.get("__panopticon_marker").get_trace()
+            and frame.f_back.f_locals.get("_panopticon_marker")
+            and frame.f_back.f_locals.get("_panopticon_marker").get_trace()
             == self.get_trace()
         )
 

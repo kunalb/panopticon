@@ -155,3 +155,23 @@ class TestProbe(unittest.TestCase):
                 gen_events[x * 2 + 1]["args"][FunctionTracer._RETURN_KEY],
                 repr(x),
             )
+
+    def test_nested_generator(self):
+        output = io.StringIO()
+        trace = record(StreamingTrace(output))
+
+        @probe(trace)
+        def outer_gen():
+            for y in inner_gen():
+                yield y * y
+
+        @probe(trace)
+        def inner_gen():
+            for x in range(5):
+                yield x
+
+        _results = list(outer_gen())
+
+        json_trace = parse_json_trace(output.getvalue())
+        name = "... nose2.<module> ..."
+        self.assertEqual(sum(1 for x in json_trace if x["name"] == name), 14)
