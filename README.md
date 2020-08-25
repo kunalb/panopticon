@@ -4,7 +4,7 @@ Panopticon
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Build Status](https://travis-ci.org/kunalb/panopticon.svg?branch=master)](https://travis-ci.org/github/kunalb/panopticon)
 [![codecov](https://codecov.io/gh/kunalb/panopticon/branch/master/graph/badge.svg)](https://codecov.io/gh/kunalb/panopticon)
-[![Alpha](https://img.shields.io/badge/development%20status-Alpha-red)](https://pypi.org/project/panopticon/)
+[![Alpha](https://img.shields.io/badge/development%20status-alpha-red)](https://pypi.org/project/panopticon/)
 
 Panopticon is a debugger-powered tracer for Python code to quickly visualize and explore code execution. Traces generated are [Catapult](<https://chromium.googlesource.com/catapult/+/HEAD/tracing/README.md>) compatible — available at \`chrome://tracing\` if you\'re using Chrome. 
 
@@ -58,13 +58,14 @@ Asynchronous Functions
 
 Python supports suspending and continuing execution of a frame through generators, coroutines and asynchronous generators. Panopticon creates \"flow\" events to connect a single frame executing through time, making it easier to visualize what\'s actually happening.
 
-You can enable/disable connections for different types of functions by choosing to enable/disable flow events in Catpult (top-right).
+You can enable/disable connections for different types of functions by choosing to enable/disable flow events in Catapult (top-right).
 
 Changelog
 ---------
 
-### Master
+### 0.0.4
 - Reimplement probes to be more robust and avoid capturing all contents
+- Support for probing functions, coroutines, generators and async generators
 - Probes can now write to multiple traces
 
 ### 0.0.3
