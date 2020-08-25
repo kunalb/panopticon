@@ -78,3 +78,42 @@ if sys.version_info >= (3, 8):
 
             async for y in agen(2):
                 print(y)
+
+            json_trace = parse_json_trace(output.getvalue())
+            name = "TestAsyncProbe.test_probe_async_generator.<locals>.agen"
+
+            agen_traces = [x for x in json_trace if x["name"] == name]
+            self.assertEquals(len(agen_traces), 12)
+            self.assertEquals(agen_traces[0]["args"]["x"], repr(2))
+            self.assertEquals(
+                agen_traces[5]["args"][FunctionTracer._RETURN_KEY], repr(2),
+            )
+            self.assertEquals(
+                agen_traces[9]["args"][FunctionTracer._RETURN_KEY], repr(4),
+            )
+
+        async def test_nested_async_generator(self):
+            output = io.StringIO()
+            trace = record(StreamingTrace(output))
+
+            @probe(trace)
+            async def outer():
+                async for x in unprobed():
+                    yield x
+
+            async def unprobed():
+                async for x in inner():
+                    yield x
+
+            @probe(trace)
+            async def inner():
+                yield 1337
+
+            async for x in outer():
+                print(x)
+
+            json_trace = parse_json_trace(output.getvalue())
+            name = "... nose2.<module> ..."
+            self.assertEquals(
+                sum(1 for x in json_trace if x["name"] == name), 6
+            )
