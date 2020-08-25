@@ -3,4 +3,4 @@
 """Used across setup tools and __init__: keep this minimal."""
 
 
-version = "0.0.4"
+version = "0.0.5"
