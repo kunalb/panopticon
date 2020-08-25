@@ -41,3 +41,26 @@ if sys.version_info >= (3, 8):
                 coroutine_traces[-1]["args"][FunctionTracer._RETURN_KEY],
                 repr(4),
             )
+
+        async def test_nested_async_functions(self):
+            output = io.StringIO()
+            trace = record(StreamingTrace(output))
+
+            @probe(trace)
+            async def outer():
+                return await unprobed()
+
+            async def unprobed():
+                return await inner()
+
+            @probe(trace)
+            async def inner():
+                return 1
+
+            await outer()
+
+            json_trace = parse_json_trace(output.getvalue())
+            name = "... nose2.<module> ..."
+            self.assertEquals(
+                sum(1 for x in json_trace if x["name"] == name), 4
+            )
