@@ -7,7 +7,7 @@ import unittest
 
 from panopticon.probe import probe
 from panopticon.trace import StreamingTrace
-from panopticon.tracer import FunctionTracer
+from panopticon.tracer import AsyncioTracer, FunctionTracer
 from tests.utils import parse_json_trace, record
 
 if sys.version_info >= (3, 8):
@@ -64,3 +64,17 @@ if sys.version_info >= (3, 8):
             self.assertEquals(
                 sum(1 for x in json_trace if x["name"] == name), 4
             )
+
+        async def test_probe_async_generator(self):
+            output = io.StringIO()
+            trace = record(StreamingTrace(output))
+
+            @probe(trace)
+            async def agen(x):
+                await asyncio.sleep(0.0001)
+                yield x
+                await asyncio.sleep(0.0001)
+                yield x * x
+
+            async for y in agen(2):
+                print(y)
