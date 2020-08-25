@@ -40,11 +40,58 @@ def probe(trace: Trace) -> Callable:
 
 
 def _probe_generator(tracer, x):
-    ...
+    def wrapper(*args, **kwargs):
+        __panopticon_marker = tracer  # Should be unnecessary
+        tracer.call_backtrace(inspect.currentframe())
+        tracer.call_fn(x, args, kwargs)
+
+        try:
+            return _GeneratorProbe(
+                tracer,
+                x(*args, **kwargs),
+                tracer._fn_name(x),
+                tracer._fn_cat(x),
+            )
+        finally:
+            tracer.return_fn(x, None)
+            tracer.return_backtrace(inspect.currentframe())
+
+    return wrapper
+
+
+class _GeneratorProbe(collections.abc.Generator):
+    def __init__(self, tracer, x, name, cat):
+        self._tracer = tracer
+        self._x = x
+        self._trace_args = {"name": name, "cat": cat}
+
+    def send(self):
+        return self._x.send()
+
+    def throw(self):
+        return self._x.throw()
+
+    def __next__(self):
+        __panopticon_marker = self._tracer
+        self._tracer.call_backtrace(inspect.currentframe())
+        self._tracer.event(ph=Phase.Duration.START, **self._trace_args)
+
+        return_value = None
+        try:
+            return_value = self._x.send(None)
+            return return_value
+        finally:
+            self._tracer.event(
+                ph=Phase.Duration.END,
+                args={self._tracer._RETURN_KEY: repr(return_value)},
+                **self._trace_args,
+            )
+            self._tracer.return_backtrace(inspect.currentframe())
 
 
 def _probe_coroutine(tracer, x):
     def wrapper(*args, **kwargs):
+        __panopticon_marker = tracer  # Should be unnecessary
         tracer.call_backtrace(inspect.currentframe())
         tracer.call_fn(x, args, kwargs)
 
@@ -82,12 +129,13 @@ class _CoroutineProbe(collections.abc.Coroutine):
 
     def __await__(self):
         __panopticon_marker = self._tracer
+        it = self._x.__await__()
 
         while True:
             self._tracer.call_backtrace(inspect.currentframe())
             self._tracer.event(ph=Phase.Duration.START, **self._trace_args)
             try:
-                result = self._x.send(None)
+                result = next(it)
                 yield result
             except StopIteration as stop:
                 self._tracer.event(

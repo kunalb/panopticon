@@ -131,3 +131,27 @@ class TestProbe(unittest.TestCase):
             ...
 
         self.assertEquals(test_fn.__doc__, "This is a docstring")
+
+    def test_generator(self):
+        output = io.StringIO()
+        trace = record(StreamingTrace(output))
+
+        @probe(trace)
+        def custom_gen(k):
+            for x in range(5):
+                yield x + k
+
+        self.assertEqual(list(custom_gen(1)), list(range(1, 6)))
+
+        json_trace = parse_json_trace(output.getvalue())
+        name = "TestProbe.test_generator.<locals>.custom_gen"
+
+        gen_events = [x for x in json_trace if x["name"] == name]
+        self.assertEqual(len(gen_events), 14)
+        self.assertEqual(gen_events[0]["args"]["k"], "1")
+
+        for x in range(1, 6):
+            self.assertEqual(
+                gen_events[x * 2 + 1]["args"][FunctionTracer._RETURN_KEY],
+                repr(x),
+            )
