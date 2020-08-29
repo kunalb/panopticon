@@ -79,8 +79,14 @@ class TestProbe(unittest.TestCase):
         json_trace = parse_json_trace(output.getvalue())
 
         check_functions = [
-            "TestProbe.test_nested_probe.<locals>.outer_hello",
-            "TestProbe.test_nested_probe.<locals>.inner_hello",
+            (
+                "tests.test_probe.TestProbe."
+                "test_nested_probe.<locals>.outer_hello"
+            ),
+            (
+                "tests.test_probe.TestProbe."
+                "test_nested_probe.<locals>.inner_hello"
+            ),
             "... test_probe.unprobed ...",
             "... test_probe.TestProbe.test_nested_probe ...",
         ]
@@ -113,9 +119,9 @@ class TestProbe(unittest.TestCase):
         json_trace = parse_json_trace(output.getvalue())
 
         check_functions = [
-            "TestProbe.test_probe_class.<locals>.Test.__init__",
-            "TestProbe.test_probe_class.<locals>.Test.foo",
-            "TestProbe.test_probe_class.<locals>.Test.bar",
+            "tests.test_probe.TestProbe.test_probe_class.<locals>.Test.__init__",
+            "tests.test_probe.TestProbe.test_probe_class.<locals>.Test.foo",
+            "tests.test_probe.TestProbe.test_probe_class.<locals>.Test.bar",
         ]
         for fn_name in check_functions:
             self.assertEqual(
@@ -144,7 +150,9 @@ class TestProbe(unittest.TestCase):
         self.assertEqual(list(custom_gen(1)), list(range(1, 6)))
 
         json_trace = parse_json_trace(output.getvalue())
-        name = "TestProbe.test_generator.<locals>.custom_gen"
+        name = (
+            "tests.test_probe." "TestProbe.test_generator.<locals>.custom_gen"
+        )
 
         gen_events = [x for x in json_trace if x["name"] == name]
         self.assertEqual(len(gen_events), 14)

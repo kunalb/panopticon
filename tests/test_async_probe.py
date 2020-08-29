@@ -30,8 +30,9 @@ if sys.version_info >= (3, 8):
             json_trace = parse_json_trace(output.getvalue())
 
             name = (
-                "TestAsyncProbe.test_probe_async_function"
-                ".<locals>.test_function"
+                "tests.test_async_probe."
+                "TestAsyncProbe.test_probe_async_function."
+                "<locals>.test_function"
             )
             coroutine_traces = [x for x in json_trace if x["name"] == name]
 
@@ -80,7 +81,11 @@ if sys.version_info >= (3, 8):
                 print(y)
 
             json_trace = parse_json_trace(output.getvalue())
-            name = "TestAsyncProbe.test_probe_async_generator.<locals>.agen"
+            name = (
+                "tests.test_async_probe."
+                "TestAsyncProbe.test_probe_async_generator."
+                "<locals>.agen"
+            )
 
             agen_traces = [x for x in json_trace if x["name"] == name]
             self.assertEquals(len(agen_traces), 12)

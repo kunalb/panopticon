@@ -270,8 +270,7 @@ class _Tracer(FunctionTracer):
 
     @classmethod
     def _fn_name(cls, fn):
-        match = cls._FN_REGEX.search(str(fn))
-        return match.group(1) if match else str(fn)
+        return f"{fn.__module__}.{fn.__qualname__}"
 
     @staticmethod
     def _fn_cat(fn):
