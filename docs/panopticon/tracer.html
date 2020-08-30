@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.1" />
+<title>panopticon.tracer API documentation</title>
+<meta name="description" content="The actual tracer" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>panopticon.tracer</code></h1>
+</header>
+<section id="section-intro">
+<p>The actual tracer</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/bin/env python3
+
+&#34;&#34;&#34;The actual tracer&#34;&#34;&#34;
+
+import abc
+import dis
+import logging
+import os
+import sys
+import threading
+from typing import Any, Dict, Optional
+
+import opcode
+
+from .trace import (
+    DurationTraceEvent,
+    FlowBindingPoint,
+    FlowTraceEvent,
+    Phase,
+    Trace,
+)
+
+logger = logging.getLogger(__name__)
+
+
+class Tracer(abc.ABC):
+    def __init__(self, trace=None):
+        self._trace = trace or Trace()
+
+    def start(self):
+        threading.setprofile(self)  # Avoid noise
+        sys.setprofile(self)
+        return self
+
+    def stop(self):
+        sys.setprofile(None)
+        threading.setprofile(None)
+
+    def get_trace(self):
+        return self._trace
+
+    def __enter__(self):
+        return self.start()
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.stop()
+
+    def __call__(self, frame, event, arg):
+        if self._skip(frame):
+            return
+
+        self._call(frame, event, arg)
+
+    @staticmethod
+    def _skip(frame):
+        &#34;&#34;&#34;Skip anything belonging to the Panopticon module.
+
+        TODO: Also skip any children triggered from here.&#34;&#34;&#34;
+        path = frame.f_code.co_filename
+        package_path, module = os.path.split(path)
+        package = os.path.basename(package_path)
+        return package == &#34;panopticon&#34;
+
+    @abc.abstractmethod
+    def _call(self, frame, event, arg):
+        ...
+
+
+class FunctionTracer(Tracer):
+    _RETURN_KEY = &#34;[return value]&#34;
+
+    def __init__(self, trace=None, capture_args=None):
+        super().__init__(trace)
+        self._state = threading.local()
+        self._state.active = None
+        self._capture_args = capture_args
+        self._name_cache = {}
+
+    def stop(self):
+        super().stop()
+
+        # Prevent leaking frames
+        self._name_cache.clear()
+
+    def _call(self, frame, event, arg):
+        code = frame.f_code
+
+        if event == &#34;call&#34; or event == &#34;c_call&#34;:
+            ph = Phase.Duration.START
+        elif event == &#34;return&#34; or event == &#34;c_return&#34;:
+            ph = Phase.Duration.END
+        else:
+            ph = None
+
+        # Names on .*return events are superfluous but helpful
+        # for debugging and testing.
+        if event == &#34;c_call&#34; or event == &#34;c_return&#34;:
+            name = str(arg)
+            cat = &#34;c function&#34;
+        elif event == &#34;call&#34; or event == &#34;return&#34;:
+            name = self._name(frame, event, arg)
+            cat = f&#34;{code.co_filename}:{code.co_firstlineno}&#34;
+        else:
+            name = None
+            cat = None
+
+        if ph:
+            self._trace.add_event(
+                DurationTraceEvent(
+                    name=name,
+                    cat=cat,
+                    ph=ph,
+                    args=self._capture_arguments(frame, event, arg),
+                )
+            )
+
+    def _capture_arguments(
+        self, frame, event, arg
+    ) -&gt; Optional[Dict[str, Any]]:
+        if not self._capture_args or not self._capture_args(frame, event, arg):
+            return None
+
+        if event == &#34;call&#34;:
+            return {
+                key: self._safe_repr(key, val)
+                for key, val in frame.f_locals.items()
+            }
+
+        if event == &#34;return&#34;:
+            return {self._RETURN_KEY: self._safe_repr(self._RETURN_KEY, arg)}
+
+        return None
+
+    @staticmethod
+    def _safe_repr(key, val) -&gt; str:
+        try:
+            return repr(val)
+        except:
+            logger.exception(f&#34;Couldn&#39;t represent value for {key}&#34;)
+
+        try:
+            return str(val)
+            logger.exception(f&#34;Couldn&#39;t stringify value for {key}&#34;)
+        except:
+            return &#34;&lt;couldn&#39;t convert&gt;&#34;
+
+    def _name(self, frame, event, arg):
+        name = self._name_cache.get(frame)
+        if not name:
+            name = self._get_frame_name(frame)
+
+        if event == &#34;c_return&#34; or event == &#34;return&#34;:
+            self._name_cache.pop(frame, None)
+        else:
+            self._name_cache[frame] = name
+
+        return name
+
+    @classmethod
+    def _get_frame_name(cls, frame):
+        code = frame.f_code
+        classname = cls._get_class_name(frame)
+        classname = &#34;.&#34; + classname if classname else &#34;&#34;
+        module = cls._get_module_name(frame)
+        return f&#34;{module}{classname}.{code.co_name}&#34;
+
+    @classmethod
+    def _get_class_name(cls, frame) -&gt; Optional[str]:
+        &#34;&#34;&#34;Heuristics to extract classname for a method&#34;&#34;&#34;
+        code_name = frame.f_code.co_name
+        local_self = frame.f_locals.get(&#34;self&#34;)
+
+        if (
+            local_self is not None
+            and hasattr(local_self, code_name)
+            and callable(getattr(local_self, code_name))
+        ):
+            return type(local_self).__name__
+        return None
+
+    @classmethod
+    def _get_module_name(cls, frame) -&gt; str:
+        &#34;&#34;&#34;Some heuristics to get useful names for modules&#34;&#34;&#34;
+        code = frame.f_code
+        filename = code.co_filename
+
+        module, _ = os.path.splitext(os.path.basename(filename))
+
+        if module == &#34;__init__&#34; or module == &#34;__main__&#34;:
+            module = (
+                os.path.basename(os.path.split(filename)[0]) + &#34;.&#34; + module
+            )
+
+        return module
+
+
+_CODE_FLAGS = {}
+for flag, name in dis.COMPILER_FLAG_NAMES.items():
+    _CODE_FLAGS[name] = flag
+
+
+class AsyncioTracer(FunctionTracer):
+
+    RETURN_OPCODE = opcode.opmap[&#34;RETURN_VALUE&#34;]  # 83
+
+    CONTINUABLE_CODE_TYPES = [
+        &#34;GENERATOR&#34;,
+        &#34;ASYNC_GENERATOR&#34;,
+        &#34;COROUTINE&#34;,
+        &#34;ITERABLE_COROUTINE&#34;,
+    ]
+
+    CONTINUABLE_CODE_FLAGS = 0
+    for flag in CONTINUABLE_CODE_TYPES:
+        CONTINUABLE_CODE_FLAGS |= _CODE_FLAGS[flag]
+
+    def __init__(self, trace=None, capture_args=None):
+        super().__init__(trace, capture_args)
+        self._ids = set()
+
+    def _call(self, frame, event, arg):
+        code = frame.f_code
+        frame_id = id(frame)
+
+        if event == &#34;return&#34; and self._is_continuable_code(code):
+            if self._is_frame_finished(frame, arg):
+                self._ids.discard(frame_id)
+            else:
+                self._ids.add(frame_id)
+                self._trace.add_event(
+                    FlowTraceEvent(
+                        name=code.co_name,
+                        cat=self._code_category(code),
+                        ph=Phase.Flow.START,
+                        bp=FlowBindingPoint.ENCLOSING,
+                        id=frame_id,
+                    )
+                )
+
+        super()._call(frame, event, arg)
+
+        # Emit the end point after starting the run
+        if id(frame) in self._ids and event == &#34;call&#34;:
+            self._trace.add_event(
+                FlowTraceEvent(
+                    name=code.co_name,
+                    cat=self._code_category(code),
+                    ph=Phase.Flow.END,
+                    bp=FlowBindingPoint.ENCLOSING,
+                    id=id(frame),
+                )
+            )
+
+    def _name(self, frame, event, arg):
+        name = self._name_cache.get(frame)
+        if not name:
+            name = self._get_frame_name(frame)
+
+        if self._is_frame_finished(frame, arg):
+            self._name_cache.pop(frame, None)
+        else:
+            self._name_cache[frame] = name
+
+        return name
+
+    @classmethod
+    def _is_frame_finished(cls, frame, arg):
+        code = frame.f_code
+        offset = frame.f_lasti
+        return code.co_code[offset] == cls.RETURN_OPCODE
+
+    @classmethod
+    def _is_continuable_code(cls, code):
+        return code.co_flags &amp; cls.CONTINUABLE_CODE_FLAGS &gt; 0
+
+    @classmethod
+    def _code_category(cls, code):
+        for flag in cls.CONTINUABLE_CODE_TYPES:
+            if _CODE_FLAGS[flag] &amp; code.co_flags &gt; 0:
+                return flag
+        return &#34;UNKNOWN&#34;</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="panopticon.tracer.AsyncioTracer"><code class="flex name class">
+<span>class <span class="ident">AsyncioTracer</span></span>
+<span>(</span><span>trace=None, capture_args=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Helper class that provides a standard way to create an ABC using
+inheritance.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class AsyncioTracer(FunctionTracer):
+
+    RETURN_OPCODE = opcode.opmap[&#34;RETURN_VALUE&#34;]  # 83
+
+    CONTINUABLE_CODE_TYPES = [
+        &#34;GENERATOR&#34;,
+        &#34;ASYNC_GENERATOR&#34;,
+        &#34;COROUTINE&#34;,
+        &#34;ITERABLE_COROUTINE&#34;,
+    ]
+
+    CONTINUABLE_CODE_FLAGS = 0
+    for flag in CONTINUABLE_CODE_TYPES:
+        CONTINUABLE_CODE_FLAGS |= _CODE_FLAGS[flag]
+
+    def __init__(self, trace=None, capture_args=None):
+        super().__init__(trace, capture_args)
+        self._ids = set()
+
+    def _call(self, frame, event, arg):
+        code = frame.f_code
+        frame_id = id(frame)
+
+        if event == &#34;return&#34; and self._is_continuable_code(code):
+            if self._is_frame_finished(frame, arg):
+                self._ids.discard(frame_id)
+            else:
+                self._ids.add(frame_id)
+                self._trace.add_event(
+                    FlowTraceEvent(
+                        name=code.co_name,
+                        cat=self._code_category(code),
+                        ph=Phase.Flow.START,
+                        bp=FlowBindingPoint.ENCLOSING,
+                        id=frame_id,
+                    )
+                )
+
+        super()._call(frame, event, arg)
+
+        # Emit the end point after starting the run
+        if id(frame) in self._ids and event == &#34;call&#34;:
+            self._trace.add_event(
+                FlowTraceEvent(
+                    name=code.co_name,
+                    cat=self._code_category(code),
+                    ph=Phase.Flow.END,
+                    bp=FlowBindingPoint.ENCLOSING,
+                    id=id(frame),
+                )
+            )
+
+    def _name(self, frame, event, arg):
+        name = self._name_cache.get(frame)
+        if not name:
+            name = self._get_frame_name(frame)
+
+        if self._is_frame_finished(frame, arg):
+            self._name_cache.pop(frame, None)
+        else:
+            self._name_cache[frame] = name
+
+        return name
+
+    @classmethod
+    def _is_frame_finished(cls, frame, arg):
+        code = frame.f_code
+        offset = frame.f_lasti
+        return code.co_code[offset] == cls.RETURN_OPCODE
+
+    @classmethod
+    def _is_continuable_code(cls, code):
+        return code.co_flags &amp; cls.CONTINUABLE_CODE_FLAGS &gt; 0
+
+    @classmethod
+    def _code_category(cls, code):
+        for flag in cls.CONTINUABLE_CODE_TYPES:
+            if _CODE_FLAGS[flag] &amp; code.co_flags &gt; 0:
+                return flag
+        return &#34;UNKNOWN&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="panopticon.tracer.FunctionTracer" href="#panopticon.tracer.FunctionTracer">FunctionTracer</a></li>
+<li><a title="panopticon.tracer.Tracer" href="#panopticon.tracer.Tracer">Tracer</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="panopticon.tracer.AsyncioTracer.CONTINUABLE_CODE_FLAGS"><code class="name">var <span class="ident">CONTINUABLE_CODE_FLAGS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.tracer.AsyncioTracer.CONTINUABLE_CODE_TYPES"><code class="name">var <span class="ident">CONTINUABLE_CODE_TYPES</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.tracer.AsyncioTracer.RETURN_OPCODE"><code class="name">var <span class="ident">RETURN_OPCODE</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.tracer.AsyncioTracer.flag"><code class="name">var <span class="ident">flag</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.tracer.FunctionTracer"><code class="flex name class">
+<span>class <span class="ident">FunctionTracer</span></span>
+<span>(</span><span>trace=None, capture_args=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Helper class that provides a standard way to create an ABC using
+inheritance.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FunctionTracer(Tracer):
+    _RETURN_KEY = &#34;[return value]&#34;
+
+    def __init__(self, trace=None, capture_args=None):
+        super().__init__(trace)
+        self._state = threading.local()
+        self._state.active = None
+        self._capture_args = capture_args
+        self._name_cache = {}
+
+    def stop(self):
+        super().stop()
+
+        # Prevent leaking frames
+        self._name_cache.clear()
+
+    def _call(self, frame, event, arg):
+        code = frame.f_code
+
+        if event == &#34;call&#34; or event == &#34;c_call&#34;:
+            ph = Phase.Duration.START
+        elif event == &#34;return&#34; or event == &#34;c_return&#34;:
+            ph = Phase.Duration.END
+        else:
+            ph = None
+
+        # Names on .*return events are superfluous but helpful
+        # for debugging and testing.
+        if event == &#34;c_call&#34; or event == &#34;c_return&#34;:
+            name = str(arg)
+            cat = &#34;c function&#34;
+        elif event == &#34;call&#34; or event == &#34;return&#34;:
+            name = self._name(frame, event, arg)
+            cat = f&#34;{code.co_filename}:{code.co_firstlineno}&#34;
+        else:
+            name = None
+            cat = None
+
+        if ph:
+            self._trace.add_event(
+                DurationTraceEvent(
+                    name=name,
+                    cat=cat,
+                    ph=ph,
+                    args=self._capture_arguments(frame, event, arg),
+                )
+            )
+
+    def _capture_arguments(
+        self, frame, event, arg
+    ) -&gt; Optional[Dict[str, Any]]:
+        if not self._capture_args or not self._capture_args(frame, event, arg):
+            return None
+
+        if event == &#34;call&#34;:
+            return {
+                key: self._safe_repr(key, val)
+                for key, val in frame.f_locals.items()
+            }
+
+        if event == &#34;return&#34;:
+            return {self._RETURN_KEY: self._safe_repr(self._RETURN_KEY, arg)}
+
+        return None
+
+    @staticmethod
+    def _safe_repr(key, val) -&gt; str:
+        try:
+            return repr(val)
+        except:
+            logger.exception(f&#34;Couldn&#39;t represent value for {key}&#34;)
+
+        try:
+            return str(val)
+            logger.exception(f&#34;Couldn&#39;t stringify value for {key}&#34;)
+        except:
+            return &#34;&lt;couldn&#39;t convert&gt;&#34;
+
+    def _name(self, frame, event, arg):
+        name = self._name_cache.get(frame)
+        if not name:
+            name = self._get_frame_name(frame)
+
+        if event == &#34;c_return&#34; or event == &#34;return&#34;:
+            self._name_cache.pop(frame, None)
+        else:
+            self._name_cache[frame] = name
+
+        return name
+
+    @classmethod
+    def _get_frame_name(cls, frame):
+        code = frame.f_code
+        classname = cls._get_class_name(frame)
+        classname = &#34;.&#34; + classname if classname else &#34;&#34;
+        module = cls._get_module_name(frame)
+        return f&#34;{module}{classname}.{code.co_name}&#34;
+
+    @classmethod
+    def _get_class_name(cls, frame) -&gt; Optional[str]:
+        &#34;&#34;&#34;Heuristics to extract classname for a method&#34;&#34;&#34;
+        code_name = frame.f_code.co_name
+        local_self = frame.f_locals.get(&#34;self&#34;)
+
+        if (
+            local_self is not None
+            and hasattr(local_self, code_name)
+            and callable(getattr(local_self, code_name))
+        ):
+            return type(local_self).__name__
+        return None
+
+    @classmethod
+    def _get_module_name(cls, frame) -&gt; str:
+        &#34;&#34;&#34;Some heuristics to get useful names for modules&#34;&#34;&#34;
+        code = frame.f_code
+        filename = code.co_filename
+
+        module, _ = os.path.splitext(os.path.basename(filename))
+
+        if module == &#34;__init__&#34; or module == &#34;__main__&#34;:
+            module = (
+                os.path.basename(os.path.split(filename)[0]) + &#34;.&#34; + module
+            )
+
+        return module</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="panopticon.tracer.Tracer" href="#panopticon.tracer.Tracer">Tracer</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li>panopticon.probe._Tracer</li>
+<li><a title="panopticon.tracer.AsyncioTracer" href="#panopticon.tracer.AsyncioTracer">AsyncioTracer</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="panopticon.tracer.FunctionTracer.stop"><code class="name flex">
+<span>def <span class="ident">stop</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def stop(self):
+    super().stop()
+
+    # Prevent leaking frames
+    self._name_cache.clear()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.tracer.Tracer"><code class="flex name class">
+<span>class <span class="ident">Tracer</span></span>
+<span>(</span><span>trace=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Helper class that provides a standard way to create an ABC using
+inheritance.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Tracer(abc.ABC):
+    def __init__(self, trace=None):
+        self._trace = trace or Trace()
+
+    def start(self):
+        threading.setprofile(self)  # Avoid noise
+        sys.setprofile(self)
+        return self
+
+    def stop(self):
+        sys.setprofile(None)
+        threading.setprofile(None)
+
+    def get_trace(self):
+        return self._trace
+
+    def __enter__(self):
+        return self.start()
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.stop()
+
+    def __call__(self, frame, event, arg):
+        if self._skip(frame):
+            return
+
+        self._call(frame, event, arg)
+
+    @staticmethod
+    def _skip(frame):
+        &#34;&#34;&#34;Skip anything belonging to the Panopticon module.
+
+        TODO: Also skip any children triggered from here.&#34;&#34;&#34;
+        path = frame.f_code.co_filename
+        package_path, module = os.path.split(path)
+        package = os.path.basename(package_path)
+        return package == &#34;panopticon&#34;
+
+    @abc.abstractmethod
+    def _call(self, frame, event, arg):
+        ...</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="panopticon.tracer.FunctionTracer" href="#panopticon.tracer.FunctionTracer">FunctionTracer</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="panopticon.tracer.Tracer.get_trace"><code class="name flex">
+<span>def <span class="ident">get_trace</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_trace(self):
+    return self._trace</code></pre>
+</details>
+</dd>
+<dt id="panopticon.tracer.Tracer.start"><code class="name flex">
+<span>def <span class="ident">start</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def start(self):
+    threading.setprofile(self)  # Avoid noise
+    sys.setprofile(self)
+    return self</code></pre>
+</details>
+</dd>
+<dt id="panopticon.tracer.Tracer.stop"><code class="name flex">
+<span>def <span class="ident">stop</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def stop(self):
+    sys.setprofile(None)
+    threading.setprofile(None)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="panopticon" href="index.html">panopticon</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="panopticon.tracer.AsyncioTracer" href="#panopticon.tracer.AsyncioTracer">AsyncioTracer</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.tracer.AsyncioTracer.CONTINUABLE_CODE_FLAGS" href="#panopticon.tracer.AsyncioTracer.CONTINUABLE_CODE_FLAGS">CONTINUABLE_CODE_FLAGS</a></code></li>
+<li><code><a title="panopticon.tracer.AsyncioTracer.CONTINUABLE_CODE_TYPES" href="#panopticon.tracer.AsyncioTracer.CONTINUABLE_CODE_TYPES">CONTINUABLE_CODE_TYPES</a></code></li>
+<li><code><a title="panopticon.tracer.AsyncioTracer.RETURN_OPCODE" href="#panopticon.tracer.AsyncioTracer.RETURN_OPCODE">RETURN_OPCODE</a></code></li>
+<li><code><a title="panopticon.tracer.AsyncioTracer.flag" href="#panopticon.tracer.AsyncioTracer.flag">flag</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.tracer.FunctionTracer" href="#panopticon.tracer.FunctionTracer">FunctionTracer</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.tracer.FunctionTracer.stop" href="#panopticon.tracer.FunctionTracer.stop">stop</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.tracer.Tracer" href="#panopticon.tracer.Tracer">Tracer</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.tracer.Tracer.get_trace" href="#panopticon.tracer.Tracer.get_trace">get_trace</a></code></li>
+<li><code><a title="panopticon.tracer.Tracer.start" href="#panopticon.tracer.Tracer.start">start</a></code></li>
+<li><code><a title="panopticon.tracer.Tracer.stop" href="#panopticon.tracer.Tracer.stop">stop</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.1</a>.</p>
+</footer>
+</body>
+</html>

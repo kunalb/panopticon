@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.1" />
+<title>panopticon.trace API documentation</title>
+<meta name="description" content="Classes to generate a tracefile in the right format" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>panopticon.trace</code></h1>
+</header>
+<section id="section-intro">
+<p>Classes to generate a tracefile in the right format</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/bin/env python3
+
+&#34;&#34;&#34;Classes to generate a tracefile in the right format&#34;&#34;&#34;
+
+from __future__ import annotations
+
+import io
+import json
+import os
+import threading
+from dataclasses import asdict, dataclass, field
+from enum import Enum
+from time import perf_counter_ns
+from typing import Any, Dict, Optional
+
+from panopticon.version import version
+
+
+class Trace:
+    def __init__(self):
+        self._events = []
+
+    def add_event(self, event: TraceEvent):
+        self._events.append(event)
+
+    def __str__(self) -&gt; str:
+        return json.dumps(
+            {
+                &#34;traceEvents&#34;: [asdict(x) for x in self._events],
+                &#34;displayTimeUnit&#34;: &#34;ns&#34;,
+                &#34;otherData&#34;: {&#34;version&#34;: f&#34;Panopticon {version}&#34;},
+            },
+            indent=&#34;  &#34;,
+        )
+
+
+class StreamingTrace(Trace):
+    &#34;&#34;&#34;Streams data to a file without keeping it in memory&#34;&#34;&#34;
+
+    def __init__(self, stream: io.IOBase):
+        self._out = stream
+        self._out.write(&#34;[\n&#34;)  # Opening brace
+        self._out.flush()
+
+    def add_event(self, event: TraceEvent):
+        json.dump(asdict(event), self._out)
+        self._out.write(&#34;,\n&#34;)
+        self._out.flush()
+
+    def __str__(self) -&gt; str:
+        if hasattr(self._out, &#34;getvalue&#34;) and callable(
+            getattr(self._out, &#34;getvalue&#34;)
+        ):
+            return self._out.getvalue()
+        else:
+            return f&#34;StreamingTrace ({self._out})&#34;
+
+
+class _SerializableEnum(str, Enum):
+    ...
+
+
+class Phase:
+    class Duration(_SerializableEnum):
+        START = &#34;B&#34;
+        END = &#34;E&#34;
+
+    class Instant(_SerializableEnum):
+        INSTANT = &#34;i&#34;
+
+    class Counter(_SerializableEnum):
+        COUNTER = &#34;c&#34;
+
+    class Complete(_SerializableEnum):
+        INSTANT = &#34;X&#34;
+
+    class Async(_SerializableEnum):
+        START = &#34;b&#34;
+        INSTANT = &#34;n&#34;
+        END = &#34;e&#34;
+
+    class Flow(_SerializableEnum):
+        START = &#34;s&#34;
+        INSTANT = &#34;t&#34;
+        END = &#34;f&#34;
+
+    class Object(_SerializableEnum):
+        NEW = &#34;N&#34;
+        SNAPSHOT = &#34;O&#34;
+        DESTROY = &#34;D&#34;
+
+
+@dataclass
+class TraceEvent:
+    name: str
+    cat: str
+    ph: str
+    args: Optional[Dict[str, Any]] = None
+    ts: int = field(init=False)
+    pid: int = field(init=False)
+    tid: int = field(init=False)
+
+    def __post_init__(self):
+        self.ts = perf_counter_ns() / 1000
+        self.pid = os.getpid()
+        self.tid = _get_thread_id()
+
+
+@dataclass
+class DurationTraceEvent(TraceEvent):
+    ph: Phase.Duration
+
+
+class InstantScope(_SerializableEnum):
+    GLOBAL = &#34;g&#34;
+    PROCESS = &#34;p&#34;
+    THREAD = &#34;t&#34;
+
+
+@dataclass
+class InstantTraceEvent(TraceEvent):
+
+    ph: Phase.Instant = Phase.Instant.INSTANT
+    s: InstantScope = InstantScope.THREAD
+
+
+class FlowBindingPoint(_SerializableEnum):
+    ENCLOSING = &#34;e&#34;
+    NEXT = &#34;n&#34;
+
+
+@dataclass
+class FlowTraceEvent(TraceEvent):
+    id: int = 0  # ick
+    ph: Phase.Flow = Phase.Flow.START
+    bp: FlowBindingPoint = FlowBindingPoint.ENCLOSING
+
+
+def _get_thread_id() -&gt; int:
+    try:
+        return threading.get_native_id()
+    except AttributeError:
+        return threading.get_ident()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="panopticon.trace.DurationTraceEvent"><code class="flex name class">
+<span>class <span class="ident">DurationTraceEvent</span></span>
+<span>(</span><span>name: str, cat: str, ph: <a title="panopticon.trace.Phase.Duration" href="#panopticon.trace.Phase.Duration">Phase.Duration</a>, args: Optional[Dict[str, Any]] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>DurationTraceEvent(name: 'str', cat: 'str', ph: 'Phase.Duration', args: 'Optional[Dict[str, Any]]' = None)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DurationTraceEvent(TraceEvent):
+    ph: Phase.Duration</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="panopticon.trace.TraceEvent" href="#panopticon.trace.TraceEvent">TraceEvent</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="panopticon.trace.DurationTraceEvent.ph"><code class="name">var <span class="ident">ph</span> : <a title="panopticon.trace.Phase.Duration" href="#panopticon.trace.Phase.Duration">Phase.Duration</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.trace.FlowBindingPoint"><code class="flex name class">
+<span>class <span class="ident">FlowBindingPoint</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FlowBindingPoint(_SerializableEnum):
+    ENCLOSING = &#34;e&#34;
+    NEXT = &#34;n&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>panopticon.trace._SerializableEnum</li>
+<li>builtins.str</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="panopticon.trace.FlowBindingPoint.ENCLOSING"><code class="name">var <span class="ident">ENCLOSING</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.FlowBindingPoint.NEXT"><code class="name">var <span class="ident">NEXT</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.trace.FlowTraceEvent"><code class="flex name class">
+<span>class <span class="ident">FlowTraceEvent</span></span>
+<span>(</span><span>name: str, cat: str, ph: <a title="panopticon.trace.Phase.Flow" href="#panopticon.trace.Phase.Flow">Phase.Flow</a> = Flow.START, args: Optional[Dict[str, Any]] = None, id: int = 0, bp: <a title="panopticon.trace.FlowBindingPoint" href="#panopticon.trace.FlowBindingPoint">FlowBindingPoint</a> = FlowBindingPoint.ENCLOSING)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>FlowTraceEvent(name: 'str', cat: 'str', ph: 'Phase.Flow' = <Flow.START: 's'>, args: 'Optional[Dict[str, Any]]' = None, id: 'int' = 0, bp: 'FlowBindingPoint' = <FlowBindingPoint.ENCLOSING: 'e'>)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FlowTraceEvent(TraceEvent):
+    id: int = 0  # ick
+    ph: Phase.Flow = Phase.Flow.START
+    bp: FlowBindingPoint = FlowBindingPoint.ENCLOSING</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="panopticon.trace.TraceEvent" href="#panopticon.trace.TraceEvent">TraceEvent</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="panopticon.trace.FlowTraceEvent.bp"><code class="name">var <span class="ident">bp</span> : <a title="panopticon.trace.FlowBindingPoint" href="#panopticon.trace.FlowBindingPoint">FlowBindingPoint</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.FlowTraceEvent.id"><code class="name">var <span class="ident">id</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.FlowTraceEvent.ph"><code class="name">var <span class="ident">ph</span> : <a title="panopticon.trace.Phase.Flow" href="#panopticon.trace.Phase.Flow">Phase.Flow</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.trace.InstantScope"><code class="flex name class">
+<span>class <span class="ident">InstantScope</span></span>
+<span>(</span><span>value, names=None, *, module=None, qualname=None, type=None, start=1)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class InstantScope(_SerializableEnum):
+    GLOBAL = &#34;g&#34;
+    PROCESS = &#34;p&#34;
+    THREAD = &#34;t&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>panopticon.trace._SerializableEnum</li>
+<li>builtins.str</li>
+<li>enum.Enum</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="panopticon.trace.InstantScope.GLOBAL"><code class="name">var <span class="ident">GLOBAL</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.InstantScope.PROCESS"><code class="name">var <span class="ident">PROCESS</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.InstantScope.THREAD"><code class="name">var <span class="ident">THREAD</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.trace.InstantTraceEvent"><code class="flex name class">
+<span>class <span class="ident">InstantTraceEvent</span></span>
+<span>(</span><span>name: str, cat: str, ph: <a title="panopticon.trace.Phase.Instant" href="#panopticon.trace.Phase.Instant">Phase.Instant</a> = Instant.INSTANT, args: Optional[Dict[str, Any]] = None, s: <a title="panopticon.trace.InstantScope" href="#panopticon.trace.InstantScope">InstantScope</a> = InstantScope.THREAD)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>InstantTraceEvent(name: 'str', cat: 'str', ph: 'Phase.Instant' = <Instant.INSTANT: 'i'>, args: 'Optional[Dict[str, Any]]' = None, s: 'InstantScope' = <InstantScope.THREAD: 't'>)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class InstantTraceEvent(TraceEvent):
+
+    ph: Phase.Instant = Phase.Instant.INSTANT
+    s: InstantScope = InstantScope.THREAD</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="panopticon.trace.TraceEvent" href="#panopticon.trace.TraceEvent">TraceEvent</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="panopticon.trace.InstantTraceEvent.ph"><code class="name">var <span class="ident">ph</span> : <a title="panopticon.trace.Phase.Instant" href="#panopticon.trace.Phase.Instant">Phase.Instant</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.InstantTraceEvent.s"><code class="name">var <span class="ident">s</span> : <a title="panopticon.trace.InstantScope" href="#panopticon.trace.InstantScope">InstantScope</a></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.trace.Phase"><code class="flex name class">
+<span>class <span class="ident">Phase</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Phase:
+    class Duration(_SerializableEnum):
+        START = &#34;B&#34;
+        END = &#34;E&#34;
+
+    class Instant(_SerializableEnum):
+        INSTANT = &#34;i&#34;
+
+    class Counter(_SerializableEnum):
+        COUNTER = &#34;c&#34;
+
+    class Complete(_SerializableEnum):
+        INSTANT = &#34;X&#34;
+
+    class Async(_SerializableEnum):
+        START = &#34;b&#34;
+        INSTANT = &#34;n&#34;
+        END = &#34;e&#34;
+
+    class Flow(_SerializableEnum):
+        START = &#34;s&#34;
+        INSTANT = &#34;t&#34;
+        END = &#34;f&#34;
+
+    class Object(_SerializableEnum):
+        NEW = &#34;N&#34;
+        SNAPSHOT = &#34;O&#34;
+        DESTROY = &#34;D&#34;</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="panopticon.trace.Phase.Async"><code class="name">var <span class="ident">Async</span></code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+</dd>
+<dt id="panopticon.trace.Phase.Complete"><code class="name">var <span class="ident">Complete</span></code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+</dd>
+<dt id="panopticon.trace.Phase.Counter"><code class="name">var <span class="ident">Counter</span></code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+</dd>
+<dt id="panopticon.trace.Phase.Duration"><code class="name">var <span class="ident">Duration</span></code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+</dd>
+<dt id="panopticon.trace.Phase.Flow"><code class="name">var <span class="ident">Flow</span></code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+</dd>
+<dt id="panopticon.trace.Phase.Instant"><code class="name">var <span class="ident">Instant</span></code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+</dd>
+<dt id="panopticon.trace.Phase.Object"><code class="name">var <span class="ident">Object</span></code></dt>
+<dd>
+<div class="desc"><p>An enumeration.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.trace.StreamingTrace"><code class="flex name class">
+<span>class <span class="ident">StreamingTrace</span></span>
+<span>(</span><span>stream: io.IOBase)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Streams data to a file without keeping it in memory</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class StreamingTrace(Trace):
+    &#34;&#34;&#34;Streams data to a file without keeping it in memory&#34;&#34;&#34;
+
+    def __init__(self, stream: io.IOBase):
+        self._out = stream
+        self._out.write(&#34;[\n&#34;)  # Opening brace
+        self._out.flush()
+
+    def add_event(self, event: TraceEvent):
+        json.dump(asdict(event), self._out)
+        self._out.write(&#34;,\n&#34;)
+        self._out.flush()
+
+    def __str__(self) -&gt; str:
+        if hasattr(self._out, &#34;getvalue&#34;) and callable(
+            getattr(self._out, &#34;getvalue&#34;)
+        ):
+            return self._out.getvalue()
+        else:
+            return f&#34;StreamingTrace ({self._out})&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="panopticon.trace.Trace" href="#panopticon.trace.Trace">Trace</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="panopticon.trace.StreamingTrace.add_event"><code class="name flex">
+<span>def <span class="ident">add_event</span></span>(<span>self, event: <a title="panopticon.trace.TraceEvent" href="#panopticon.trace.TraceEvent">TraceEvent</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_event(self, event: TraceEvent):
+    json.dump(asdict(event), self._out)
+    self._out.write(&#34;,\n&#34;)
+    self._out.flush()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.trace.Trace"><code class="flex name class">
+<span>class <span class="ident">Trace</span></span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Trace:
+    def __init__(self):
+        self._events = []
+
+    def add_event(self, event: TraceEvent):
+        self._events.append(event)
+
+    def __str__(self) -&gt; str:
+        return json.dumps(
+            {
+                &#34;traceEvents&#34;: [asdict(x) for x in self._events],
+                &#34;displayTimeUnit&#34;: &#34;ns&#34;,
+                &#34;otherData&#34;: {&#34;version&#34;: f&#34;Panopticon {version}&#34;},
+            },
+            indent=&#34;  &#34;,
+        )</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="panopticon.trace.StreamingTrace" href="#panopticon.trace.StreamingTrace">StreamingTrace</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="panopticon.trace.Trace.add_event"><code class="name flex">
+<span>def <span class="ident">add_event</span></span>(<span>self, event: <a title="panopticon.trace.TraceEvent" href="#panopticon.trace.TraceEvent">TraceEvent</a>)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_event(self, event: TraceEvent):
+    self._events.append(event)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="panopticon.trace.TraceEvent"><code class="flex name class">
+<span>class <span class="ident">TraceEvent</span></span>
+<span>(</span><span>name: str, cat: str, ph: str, args: Optional[Dict[str, Any]] = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>TraceEvent(name: 'str', cat: 'str', ph: 'str', args: 'Optional[Dict[str, Any]]' = None)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TraceEvent:
+    name: str
+    cat: str
+    ph: str
+    args: Optional[Dict[str, Any]] = None
+    ts: int = field(init=False)
+    pid: int = field(init=False)
+    tid: int = field(init=False)
+
+    def __post_init__(self):
+        self.ts = perf_counter_ns() / 1000
+        self.pid = os.getpid()
+        self.tid = _get_thread_id()</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="panopticon.trace.DurationTraceEvent" href="#panopticon.trace.DurationTraceEvent">DurationTraceEvent</a></li>
+<li><a title="panopticon.trace.FlowTraceEvent" href="#panopticon.trace.FlowTraceEvent">FlowTraceEvent</a></li>
+<li><a title="panopticon.trace.InstantTraceEvent" href="#panopticon.trace.InstantTraceEvent">InstantTraceEvent</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="panopticon.trace.TraceEvent.args"><code class="name">var <span class="ident">args</span> : Union[Dict[str, Any], NoneType]</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.TraceEvent.cat"><code class="name">var <span class="ident">cat</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.TraceEvent.name"><code class="name">var <span class="ident">name</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.TraceEvent.ph"><code class="name">var <span class="ident">ph</span> : str</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.TraceEvent.pid"><code class="name">var <span class="ident">pid</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.TraceEvent.tid"><code class="name">var <span class="ident">tid</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="panopticon.trace.TraceEvent.ts"><code class="name">var <span class="ident">ts</span> : int</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="panopticon" href="index.html">panopticon</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="panopticon.trace.DurationTraceEvent" href="#panopticon.trace.DurationTraceEvent">DurationTraceEvent</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.trace.DurationTraceEvent.ph" href="#panopticon.trace.DurationTraceEvent.ph">ph</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.trace.FlowBindingPoint" href="#panopticon.trace.FlowBindingPoint">FlowBindingPoint</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.trace.FlowBindingPoint.ENCLOSING" href="#panopticon.trace.FlowBindingPoint.ENCLOSING">ENCLOSING</a></code></li>
+<li><code><a title="panopticon.trace.FlowBindingPoint.NEXT" href="#panopticon.trace.FlowBindingPoint.NEXT">NEXT</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.trace.FlowTraceEvent" href="#panopticon.trace.FlowTraceEvent">FlowTraceEvent</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.trace.FlowTraceEvent.bp" href="#panopticon.trace.FlowTraceEvent.bp">bp</a></code></li>
+<li><code><a title="panopticon.trace.FlowTraceEvent.id" href="#panopticon.trace.FlowTraceEvent.id">id</a></code></li>
+<li><code><a title="panopticon.trace.FlowTraceEvent.ph" href="#panopticon.trace.FlowTraceEvent.ph">ph</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.trace.InstantScope" href="#panopticon.trace.InstantScope">InstantScope</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.trace.InstantScope.GLOBAL" href="#panopticon.trace.InstantScope.GLOBAL">GLOBAL</a></code></li>
+<li><code><a title="panopticon.trace.InstantScope.PROCESS" href="#panopticon.trace.InstantScope.PROCESS">PROCESS</a></code></li>
+<li><code><a title="panopticon.trace.InstantScope.THREAD" href="#panopticon.trace.InstantScope.THREAD">THREAD</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.trace.InstantTraceEvent" href="#panopticon.trace.InstantTraceEvent">InstantTraceEvent</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.trace.InstantTraceEvent.ph" href="#panopticon.trace.InstantTraceEvent.ph">ph</a></code></li>
+<li><code><a title="panopticon.trace.InstantTraceEvent.s" href="#panopticon.trace.InstantTraceEvent.s">s</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.trace.Phase" href="#panopticon.trace.Phase">Phase</a></code></h4>
+<ul class="two-column">
+<li><code><a title="panopticon.trace.Phase.Async" href="#panopticon.trace.Phase.Async">Async</a></code></li>
+<li><code><a title="panopticon.trace.Phase.Complete" href="#panopticon.trace.Phase.Complete">Complete</a></code></li>
+<li><code><a title="panopticon.trace.Phase.Counter" href="#panopticon.trace.Phase.Counter">Counter</a></code></li>
+<li><code><a title="panopticon.trace.Phase.Duration" href="#panopticon.trace.Phase.Duration">Duration</a></code></li>
+<li><code><a title="panopticon.trace.Phase.Flow" href="#panopticon.trace.Phase.Flow">Flow</a></code></li>
+<li><code><a title="panopticon.trace.Phase.Instant" href="#panopticon.trace.Phase.Instant">Instant</a></code></li>
+<li><code><a title="panopticon.trace.Phase.Object" href="#panopticon.trace.Phase.Object">Object</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.trace.StreamingTrace" href="#panopticon.trace.StreamingTrace">StreamingTrace</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.trace.StreamingTrace.add_event" href="#panopticon.trace.StreamingTrace.add_event">add_event</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.trace.Trace" href="#panopticon.trace.Trace">Trace</a></code></h4>
+<ul class="">
+<li><code><a title="panopticon.trace.Trace.add_event" href="#panopticon.trace.Trace.add_event">add_event</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="panopticon.trace.TraceEvent" href="#panopticon.trace.TraceEvent">TraceEvent</a></code></h4>
+<ul class="two-column">
+<li><code><a title="panopticon.trace.TraceEvent.args" href="#panopticon.trace.TraceEvent.args">args</a></code></li>
+<li><code><a title="panopticon.trace.TraceEvent.cat" href="#panopticon.trace.TraceEvent.cat">cat</a></code></li>
+<li><code><a title="panopticon.trace.TraceEvent.name" href="#panopticon.trace.TraceEvent.name">name</a></code></li>
+<li><code><a title="panopticon.trace.TraceEvent.ph" href="#panopticon.trace.TraceEvent.ph">ph</a></code></li>
+<li><code><a title="panopticon.trace.TraceEvent.pid" href="#panopticon.trace.TraceEvent.pid">pid</a></code></li>
+<li><code><a title="panopticon.trace.TraceEvent.tid" href="#panopticon.trace.TraceEvent.tid">tid</a></code></li>
+<li><code><a title="panopticon.trace.TraceEvent.ts" href="#panopticon.trace.TraceEvent.ts">ts</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.1</a>.</p>
+</footer>
+</body>
+</html>
