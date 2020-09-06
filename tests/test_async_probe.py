@@ -31,8 +31,8 @@ if sys.version_info >= (3, 8):
 
             name = (
                 "tests.test_async_probe."
-                "TestAsyncProbe.test_probe_async_function."
-                "<locals>.test_function"
+                + "TestAsyncProbe.test_probe_async_function."
+                + "<locals>.test_function"
             )
             coroutine_traces = [x for x in json_trace if x["name"] == name]
 

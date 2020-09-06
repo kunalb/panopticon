@@ -19,7 +19,7 @@ class TestTracer(unittest.TestCase):
 
         json_trace = parse_json_trace(str(record(ft.get_trace())))
 
-        self.assertEquals(
+        self.assertEqual(
             json_trace["traceEvents"][1]["args"]["x"], "2",
         )
         self.assertEquals(

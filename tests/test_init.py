@@ -23,7 +23,7 @@ class TestInit(unittest.TestCase):
 
         for key, expected in tests.items():
             for i in [1, 2]:
-                self.assertEquals(trace_json[i][key], expected)
+                self.assertEqual(trace_json[i][key], expected)
 
         self.assertEquals(trace_json[1]["ph"], "B")
         self.assertEquals(trace_json[2]["ph"], "E")

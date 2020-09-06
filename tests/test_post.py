@@ -26,7 +26,7 @@ class TestFlatten(unittest.TestCase):
         assert "Exactly one of" in str(e.exception)
 
     def test_flatten_noop_file(self):
-        self.assertEquals(flatten(trace_json=[]), [])
+        self.assertEqual(flatten(trace_json=[]), [])
 
     def test_flatten_noop_str(self):
         self.assertEquals(flatten(trace_str="[]"), [])

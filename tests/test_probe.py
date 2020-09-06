@@ -26,7 +26,7 @@ class TestProbe(unittest.TestCase):
         self.assertTrue(events & 1 == 0)
 
         for i in range(events // 2):
-            self.assertEquals(
+            self.assertEqual(
                 json_trace[i]["name"], json_trace[events - i - 1]["name"]
             )
             self.assertEquals(json_trace[i]["ph"], "B")
