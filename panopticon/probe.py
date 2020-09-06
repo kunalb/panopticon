@@ -41,7 +41,7 @@ def probe(trace: Trace) -> Callable:
 
 def _probe_generator(tracer, x):
     def wrapper(*args, **kwargs):
-        _panopticon_marker = tracer  # Should be unnecessary
+        _panopticon_marker = tracer  # noqa: F841
         tracer.call_backtrace(inspect.currentframe())
         tracer.call_fn(x, args, kwargs)
 
@@ -72,7 +72,7 @@ class _GeneratorProbe(collections.abc.Generator):
         return self._x.throw()
 
     def __next__(self):
-        _panopticon_marker = self._tracer
+        _panopticon_marker = self._tracer  # noqa: F841
         self._tracer.call_backtrace(inspect.currentframe())
         self._tracer.event(ph=Phase.Duration.START, **self._trace_args)
 
@@ -95,7 +95,7 @@ class _GeneratorProbe(collections.abc.Generator):
 
 def _probe_coroutine(tracer, x):
     def wrapper(*args, **kwargs):
-        _panopticon_marker = tracer  # Should be unnecessary
+        _panopticon_marker = tracer  # noqa: F841
         tracer.call_backtrace(inspect.currentframe())
         tracer.call_fn(x, args, kwargs)
 
@@ -132,7 +132,7 @@ class _CoroutineProbe(collections.abc.Coroutine):
         self._x.close()
 
     def __await__(self):
-        _panopticon_marker = self._tracer
+        _panopticon_marker = self._tracer  # noqa: F841
         it = self._x.__await__()
 
         while True:
@@ -152,7 +152,7 @@ class _CoroutineProbe(collections.abc.Coroutine):
                     **self._trace_args,
                 )
                 break
-            except:
+            except:  # noqa: E722
                 self._tracer.event(
                     ph=Phase.Duration.END, **self._trace_args,
                 )
@@ -173,7 +173,7 @@ class _CoroutineProbe(collections.abc.Coroutine):
 
 def _probe_async_generator(tracer, x):
     def wrapper(*args, **kwargs):
-        _panopticon_marker = tracer  # Should be unnecessary
+        _panopticon_marker = tracer  # noqa: F841
         tracer.call_backtrace(inspect.currentframe())
         tracer.call_fn(x, args, kwargs)
 
@@ -215,7 +215,7 @@ class _AsyncGeneratorProbe(collections.abc.AsyncGenerator):
 
 def _probe_function(tracer, x):
     def wrapper(*args, **kwargs):
-        _panopticon_marker = tracer
+        _panopticon_marker = tracer  # noqa: F841
 
         frame = inspect.currentframe()
         tracer.call_backtrace(frame)

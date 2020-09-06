@@ -135,13 +135,13 @@ class FunctionTracer(Tracer):
     def _safe_repr(key, val) -> str:
         try:
             return repr(val)
-        except:
+        except Exception:
             logger.exception(f"Couldn't represent value for {key}")
 
         try:
             return str(val)
             logger.exception(f"Couldn't stringify value for {key}")
-        except:
+        except Exception:
             return "<couldn't convert>"
 
     def _name(self, frame, event, arg):

@@ -5,7 +5,6 @@
 import json
 import logging
 from collections import defaultdict
-from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Union
 
 from .trace import Phase
@@ -25,15 +24,15 @@ def flatten(
     trace_json: Optional[Union[Dict, List]] = None,
 ) -> Union[List, Dict]:
     """
-    Destroys all the timing information in a trace to make all columns 
-    equally sized and minimize empty space. This is useful when the 
-    valuable part of the trace is understanding the code execution 
+    Destroys all the timing information in a trace to make all columns
+    equally sized and minimize empty space. This is useful when the
+    valuable part of the trace is understanding the code execution
     and not paying attention to timing information whatsoever.
 
     (Note that the timing information is distorted and misleading
     because of the overhead from panopticon anyways.)
 
-    The trace can be provided as any of a file, raw string, or 
+    The trace can be provided as any of a file, raw string, or
     parsed json blob.
     """
 
@@ -59,7 +58,7 @@ def flatten(
 
 def _flatten_events(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
-    Walks over the events maintaining per-thread stacks and an offset 
+    Walks over the events maintaining per-thread stacks and an offset
     that keeps moving forward to allow for a minimum width.
     """
 
