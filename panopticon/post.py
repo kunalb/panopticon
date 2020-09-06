@@ -87,6 +87,6 @@ def _flatten_events(events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 
 def _validate_highlander(*args):
-    values = sum(1 if x else 0 for x in args)
+    values = sum(1 for x in args if x is not None)
     if values != 1:
-        raise ValueError(f"Only one of {args} can be specified")
+        raise ValueError(f"Exactly one of {args} must be specified")

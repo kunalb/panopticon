@@ -2,6 +2,7 @@
 
 import copy
 import json
+import tempfile
 import unittest
 
 from panopticon.post import (
@@ -14,6 +15,29 @@ from tests.utils import record
 
 
 class TestFlatten(unittest.TestCase):
+    def test_flatten_no_arguments_raises(self):
+        with self.assertRaises(ValueError) as e:
+            flatten()
+        assert "Exactly one of" in str(e.exception)
+
+    def test_flatten_multiple_arguments_raises(self):
+        with self.assertRaises(ValueError) as e:
+            flatten(trace_file="a_file", trace_str="a_string")
+        assert "Exactly one of" in str(e.exception)
+
+    def test_flatten_noop_file(self):
+        self.assertEquals(flatten(trace_json=[]), [])
+
+    def test_flatten_noop_str(self):
+        self.assertEquals(flatten(trace_str="[]"), [])
+
+    def test_flatten_noop_file(self):
+        with tempfile.NamedTemporaryFile(mode="w") as test_file:
+            test_file.write("[]")
+            test_file.flush()
+
+            self.assertEquals(flatten(trace_file=test_file.name), [])
+
     def test_flatten_single_event(self):
         trace = [
             {
