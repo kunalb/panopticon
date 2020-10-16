@@ -8,14 +8,15 @@ import collections
 import inspect
 import re
 from functools import update_wrapper
-from typing import Callable
+from typing import Callable, Optional
 
+from panopticon.predicate import Predicate
 from panopticon.trace import DurationTraceEvent, Phase, Trace
 from panopticon.tracer import FunctionTracer
 
 
-def probe(trace: Trace) -> Callable:
-    tracer = _Tracer(trace)
+def probe(trace: Trace, skip: Optional[Predicate] = None) -> Callable:
+    tracer = _Tracer(trace, skip=skip)
 
     def decorator(x):
         if inspect.isclass(x):

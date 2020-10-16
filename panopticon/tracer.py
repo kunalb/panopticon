@@ -12,6 +12,7 @@ from typing import Any, Dict, Optional
 
 import opcode
 
+from .predicate import Predicate, module_equals, or_
 from .trace import (
     DurationTraceEvent,
     FlowBindingPoint,
@@ -24,8 +25,11 @@ logger = logging.getLogger(__name__)
 
 
 class Tracer(abc.ABC):
-    def __init__(self, trace=None):
+    def __init__(self, trace=None, skip: Optional[Predicate] = None):
         self._trace = trace or Trace()
+        self._skip = module_equals("panopticon")
+        if skip:
+            self._skip = or_(self._skip, skip)
 
     def start(self):
         threading.setprofile(self)  # Avoid noise
@@ -46,20 +50,10 @@ class Tracer(abc.ABC):
         self.stop()
 
     def __call__(self, frame, event, arg):
-        if self._skip(frame):
+        if self._skip(frame, event, arg):
             return
 
         self._call(frame, event, arg)
-
-    @staticmethod
-    def _skip(frame):
-        """Skip anything belonging to the Panopticon module.
-
-        TODO: Also skip any children triggered from here."""
-        path = frame.f_code.co_filename
-        package_path, module = os.path.split(path)
-        package = os.path.basename(package_path)
-        return package == "panopticon"
 
     @abc.abstractmethod
     def _call(self, frame, event, arg):
@@ -69,8 +63,8 @@ class Tracer(abc.ABC):
 class FunctionTracer(Tracer):
     _RETURN_KEY = "[return value]"
 
-    def __init__(self, trace=None, capture_args=None):
-        super().__init__(trace)
+    def __init__(self, trace=None, skip=None, capture_args=None):
+        super().__init__(trace, skip)
         self._state = threading.local()
         self._state.active = None
         self._capture_args = capture_args
@@ -214,8 +208,8 @@ class AsyncioTracer(FunctionTracer):
     for flag in CONTINUABLE_CODE_TYPES:
         CONTINUABLE_CODE_FLAGS |= _CODE_FLAGS[flag]
 
-    def __init__(self, trace=None, capture_args=None):
-        super().__init__(trace, capture_args)
+    def __init__(self, trace=None, skip=None, capture_args=None):
+        super().__init__(trace, skip, capture_args)
         self._ids = set()
 
     def _call(self, frame, event, arg):
