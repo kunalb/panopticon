@@ -17,7 +17,7 @@ Panopticon is a debugger-powered tracer for Python code to quickly visualize and
 Usage
 -----
 
-You can read a more detailed guide with several examples of simple Python programs, different interfaces to visualize them and the corresponding traces at [explog.in/panopticon](https://explog.in/panopticon/index.html).
+You can read a more detailed guide with several examples of simple Python programs, different interfaces to visualize them and the corresponding traces at [explog.in/notes/panopticon.html](https://explog.in/notes/panopticon.html).
 
 
 ### Run a command directly
