@@ -164,12 +164,16 @@ class FunctionTracer(Tracer):
         code_name = frame.f_code.co_name
         local_self = frame.f_locals.get("self")
 
-        if (
-            local_self is not None
-            and hasattr(local_self, code_name)
-            and callable(getattr(local_self, code_name))
-        ):
-            return type(local_self).__name__
+        try:
+            if  (
+                local_self is not None
+                and hasattr(local_self, code_name)
+                and callable(getattr(local_self, code_name))
+            ):
+                return type(local_self).__name__
+        except:
+            ...
+
         return None
 
     @classmethod
