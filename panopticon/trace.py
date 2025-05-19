@@ -8,9 +8,9 @@ import io
 import json
 import os
 import threading
+import time
 from dataclasses import asdict, dataclass, field
 from enum import Enum
-from time import perf_counter_ns
 from typing import Any, Dict, Optional
 
 from panopticon.version import version
@@ -97,11 +97,14 @@ class TraceEvent:
     ph: str
     args: Optional[Dict[str, Any]] = None
     ts: int = field(init=False)
+    tts: int = field(init=False)
     pid: int = field(init=False)
     tid: int = field(init=False)
 
     def __post_init__(self):
-        self.ts = perf_counter_ns() / 1000
+        # Allow aligning with other traces
+        self.ts = time.time_ns() / 1000
+        self.tts = time.thread_time_ns() / 1000
         self.pid = os.getpid()
         self.tid = _get_thread_id()
 
